@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pivotly.ca/sitemap.xml
