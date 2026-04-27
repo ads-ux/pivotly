@@ -3,15 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Free Consult – Pivotly</title>
-  <meta name="description" content="Book a free 30-minute consult with Pivotly. We'll identify where automation and AI can save you time, capture more leads, and put more money in your pocket." />
+  <title>Free Consult â Pivotly</title>
+  <meta name="description" content="Book a free 30-minute consult with Pivotly. We'll identify where automation and AI can save you time and make you more money." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 
   <!-- SEO / Open Graph -->
-  <meta property="og:title" content="Free Consult – Pivotly" />
+  <meta property="og:title" content="Free Consult â Pivotly" />
   <meta property="og:description" content="Book a free 30-minute consult. We'll identify where automation and AI can save you time, capture more leads, and put more money in your pocket." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://pivotly.ca/contact.html" />
@@ -21,7 +31,7 @@
   {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "name": "Book a Free Consult – Pivotly",
+    "name": "Book a Free Consult â Pivotly",
     "description": "Book a free 30-minute consult with Pivotly. We identify where automation and AI can save your business time and make you more money.",
     "url": "https://pivotly.ca/contact.html",
     "mainEntity": {
@@ -48,7 +58,6 @@
         <li><a href="index.html#services">What We Do</a></li>
         <li><a href="index.html#results">Results</a></li>
         <li><a href="index.html#work">Our Work</a></li>
-        <li><a href="index.html#about">About</a></li>
         <li><a href="contact.html" class="btn btn-sm">Get a Free Consult</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
@@ -57,7 +66,6 @@
       <a href="index.html#services">What We Do</a>
       <a href="index.html#results">Results</a>
       <a href="index.html#work">Work</a>
-      <a href="index.html#about">About</a>
       <a href="contact.html" class="btn">Get a Free Consult</a>
     </div>
   </header>
@@ -67,7 +75,7 @@
     <div class="container">
       <span class="badge">Free 30-Minute Consult</span>
       <h1>Let's Find What's Costing You</h1>
-      <p>Tell us a bit about your business. We'll identify exactly where automation and AI can save you time, capture more leads, and put more money in your pocket — no commitment, no sales pitch.</p>
+      <p>Tell us a bit about your business. We'll identify exactly where automation and AI can save you time, capture more leads, and put more money in your pocket â no commitment, no sales pitch.</p>
     </div>
   </section>
 
@@ -78,34 +86,34 @@
       <!-- Left: Info -->
       <div class="contact-info">
         <h2>What to Expect</h2>
-        <p>In 30 minutes, we'll map out the biggest opportunities in your business and tell you exactly what we'd fix first — whether you work with us or not.</p>
+        <p>In 30 minutes, we'll map out the biggest opportunities in your business and tell you exactly what we'd fix first â whether you work with us or not.</p>
         <div class="contact-details">
           <div class="contact-detail">
-            <div class="contact-detail-icon">🔍</div>
+            <div class="contact-detail-icon">ð</div>
             <div>
               <strong>We audit your current setup</strong>
               <span>Where are leads slipping through? What tasks are eating your time?</span>
             </div>
           </div>
           <div class="contact-detail">
-            <div class="contact-detail-icon">💡</div>
+            <div class="contact-detail-icon">ð¡</div>
             <div>
               <strong>We show you what's possible</strong>
-              <span>Specific automation and AI tools that fit your business — not generic advice.</span>
+              <span>Specific automation and AI tools that fit your business â not generic advice.</span>
             </div>
           </div>
           <div class="contact-detail">
-            <div class="contact-detail-icon">📋</div>
+            <div class="contact-detail-icon">ð</div>
             <div>
               <strong>You leave with a clear plan</strong>
               <span>A prioritized list of what to tackle first for the biggest impact.</span>
             </div>
           </div>
           <div class="contact-detail">
-            <div class="contact-detail-icon">📧</div>
+            <div class="contact-detail-icon">ð§</div>
             <div>
               <strong>Or just email us directly</strong>
-              <span>hello@pivotly.ca — we respond within 24 hours</span>
+              <span>hello@pivotly.ca â we respond within 24 hours</span>
             </div>
           </div>
         </div>
@@ -113,7 +121,9 @@
 
       <!-- Right: Form -->
       <div class="contact-form-box">
-        <form action="#" method="POST">
+        <form name="consult" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+          <input type="hidden" name="form-name" value="consult" />
+          <p style="display:none;"><label>Don't fill this out: <input name="bot-field" /></label></p>
           <div class="form-row">
             <div class="form-group">
               <label for="fname">First Name</label>
@@ -137,12 +147,12 @@
             <select id="challenge" name="challenge">
               <option value="">Select one...</option>
               <option value="leads">Not getting enough leads</option>
-              <option value="followup">Leads aren't converting — slow follow-up</option>
+              <option value="followup">Leads aren't converting â slow follow-up</option>
               <option value="time">Too much time on repetitive manual tasks</option>
               <option value="revenue">Revenue is flat and I don't know why</option>
               <option value="chaos">My day-to-day has no system or structure</option>
               <option value="website">My website isn't bringing in business</option>
-              <option value="notsure">Not sure — I just know something needs to change</option>
+              <option value="notsure">Not sure â I just know something needs to change</option>
             </select>
           </div>
           <div class="form-group">
@@ -161,15 +171,14 @@
   <footer class="footer">
     <div class="container footer-inner">
       <a href="index.html" class="logo">Pivot<span>ly</span></a>
-      <p>Automation & AI tools for small businesses — Guelph, ON and beyond.</p>
+      <p>Automation & AI tools for small businesses â Guelph, ON and beyond.</p>
       <div class="footer-links">
         <a href="index.html#services">What We Do</a>
         <a href="index.html#results">Results</a>
         <a href="index.html#work">Work</a>
-        <a href="index.html#about">About</a>
         <a href="contact.html">Contact</a>
       </div>
-      <p class="footer-copy">© 2026 Pivotly. All rights reserved.</p>
+      <p class="footer-copy">Â© 2026 Pivotly. All rights reserved.</p>
     </div>
   </footer>
 
