@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Pivotly</title>
+  <meta name="description" content="Get in touch with Pivotly. We help small businesses with websites, automation, social media, and AI tools." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav-wrapper">
+    <nav class="nav container">
+      <a href="index.html" class="logo">Pivot<span>ly</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#why">Why Pivotly</a></li>
+        <li><a href="index.html#work">Our Work</a></li>
+        <li><a href="contact.html" class="btn btn-sm">Get in Touch</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#why">Why Pivotly</a>
+      <a href="index.html#work">Work</a>
+      <a href="contact.html" class="btn">Get in Touch</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="contact-hero">
+    <div class="container">
+      <span class="badge">Let's Talk</span>
+      <h1>Ready to Make Your Move?</h1>
+      <p>Tell us a bit about your business and what you need. We'll get back to you within 24 hours — no pressure, no sales pitch.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <div class="container contact-grid">
+
+      <!-- Left: Info -->
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p>Whether you have a clear idea of what you need or you're still figuring it out — reach out. We love talking shop with small business owners.</p>
+        <div class="contact-details">
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📧</div>
+            <div>
+              <strong>Email</strong>
+              <span>hello@pivotly.ca</span>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📍</div>
+            <div>
+              <strong>Based in</strong>
+              <span>Guelph, Ontario — serving clients across Canada</span>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">⏱️</div>
+            <div>
+              <strong>Response time</strong>
+              <span>Usually within 24 hours</span>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">💬</div>
+            <div>
+              <strong>Prefer to chat?</strong>
+              <span>Mention it in the form and we'll set up a quick call</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="contact-form-box">
+        <form action="#" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" placeholder="Mark" required />
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" placeholder="Hurson" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@yourbusiness.com" required />
+          </div>
+          <div class="form-group">
+            <label for="business">Business Name (optional)</label>
+            <input type="text" id="business" name="business" placeholder="Your Business Inc." />
+          </div>
+          <div class="form-group">
+            <label for="service">What are you looking for?</label>
+            <select id="service" name="service">
+              <option value="">Select a service...</option>
+              <option value="website">Website Design &amp; Build</option>
+              <option value="automation">Process Automation</option>
+              <option value="social">Social Media Management</option>
+              <option value="ai">AI Tools &amp; Assistants</option>
+              <option value="multiple">Multiple Services</option>
+              <option value="notsure">Not Sure Yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell us about your business and what you need</label>
+            <textarea id="message" name="message" placeholder="A little background goes a long way. What does your business do? What problem are you trying to solve?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">Send Message</button>
+          <p class="form-note">We respect your privacy. No spam, ever.</p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="logo">Pivot<span>ly</span></a>
+      <p>Helping small businesses grow online — Guelph, ON and beyond.</p>
+      <div class="footer-links">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#why">Why Us</a>
+        <a href="index.html#work">Work</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="footer-copy">© 2026 Pivotly. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
