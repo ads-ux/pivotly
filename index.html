@@ -10,14 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
   <!-- SEO / Open Graph -->
   <meta property="og:title" content="Overhauled.ai â Websites, Tech Support & Digital Help for Small Business" />
   <meta property="og:description" content="New website, broken form, tech that's driving you crazy? Overhauled.ai fixes it fast. Project-based pricing, no jargon, no agency runaround." />
@@ -38,6 +30,7 @@
         "name": "Overhauled.ai",
         "description": "Overhauled.ai helps small businesses and tradespeople get a professional website, fix broken tech, and stay online without the headaches. Founded by Mark Hurson â a 25+ year business veteran.",
         "url": "https://overhauled.ai/",
+        "telephone": "+1-226-600-0000",
         "email": "hello@overhauled.ai",
         "address": {
           "@type": "PostalAddress",
@@ -95,7 +88,7 @@
             "name": "How does pricing work?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Most work is project-based â you pay a flat rate for your website build or fix. There's also an optional monthly retainer for businesses who want ongoing support, hosting, and updates handled for them."
+              "text": "Most work is project-based â you pay a flat rate for your website build or fix. There's also an optional monthly retainer for businesses who want ongoing support, hosting, and updates handled for them. New websites typically start from $800. Fixes start from $150."
             }
           },
           {
@@ -127,6 +120,7 @@
         <li><a href="#results">How It Works</a></li>
         <li><a href="#work">Our Work</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="tel:+12266000000" class="nav-phone">&#128222; 226-600-0000</a></li>
         <li><a href="contact.html" class="btn btn-sm">Get a Free Quote</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
@@ -136,6 +130,7 @@
       <a href="#results">How It Works</a>
       <a href="#work">Work</a>
       <a href="#about">About</a>
+      <a href="tel:+12266000000">&#128222; 226-600-0000</a>
       <a href="contact.html" class="btn">Get a Free Quote</a>
     </div>
   </header>
@@ -153,63 +148,30 @@
         </div>
       </div>
       <div class="hero-visual">
-        <div class="hero-dashboard">
-          <div class="dash-header">
-            <span class="dash-dot red"></span>
-            <span class="dash-dot yellow"></span>
-            <span class="dash-dot green"></span>
-            <span class="dash-title">Your Business, Running Properly</span>
+        <div class="hero-before-after">
+          <div class="ba-panel ba-before">
+            <div class="ba-label ba-label-bad">Before</div>
+            <div class="ba-item bad">&#10008; Contact form broken â leads going nowhere</div>
+            <div class="ba-item bad">&#10008; Site looks terrible on mobile</div>
+            <div class="ba-item bad">&#10008; No Google ranking â invisible locally</div>
+            <div class="ba-item bad">&#10008; Gmail address, zero credibility</div>
+            <div class="ba-item bad">&#10008; No idea how to fix any of it</div>
           </div>
-          <div class="dash-body">
-            <div class="dash-row">
-              <div class="dash-metric">
-                <span class="dash-metric-label">Site Status</span>
-                <span class="dash-metric-value">Live</span>
-                <span class="dash-metric-delta up">&#8593; Online</span>
-              </div>
-              <div class="dash-metric">
-                <span class="dash-metric-label">Forms Working</span>
-                <span class="dash-metric-value">Yes</span>
-                <span class="dash-metric-delta up">Fixed</span>
-              </div>
-              <div class="dash-metric">
-                <span class="dash-metric-label">Leads This Week</span>
-                <span class="dash-metric-value">9</span>
-                <span class="dash-metric-delta up">&#8593; 3x</span>
-              </div>
-            </div>
-            <div class="dash-agents">
-              <div class="dash-agent-label">Recent Fixes &#8212; Completed</div>
-              <div class="dash-agent">
-                <span class="agent-dot"></span>
-                <span class="agent-name">Contact Form</span>
-                <span class="agent-status">Repaired &amp; tested</span>
-              </div>
-              <div class="dash-agent">
-                <span class="agent-dot"></span>
-                <span class="agent-name">Mobile Layout</span>
-                <span class="agent-status">Looks great on all screens</span>
-              </div>
-              <div class="dash-agent">
-                <span class="agent-dot"></span>
-                <span class="agent-name">Google Ranking</span>
-                <span class="agent-status">Showing up for local searches</span>
-              </div>
-            </div>
-            <div class="dash-activity">
-              <div class="dash-activity-item">
-                <span class="activity-icon">&#9989;</span>
-                <span>New quote request via contact form &#8212; delivered to your inbox</span>
-              </div>
-              <div class="dash-activity-item">
-                <span class="activity-icon">&#9889;</span>
-                <span>Site speed improved &#8212; pages loading 2x faster</span>
-              </div>
-              <div class="dash-activity-item">
-                <span class="activity-icon">&#128247;</span>
-                <span>Portfolio updated with your latest project photos</span>
-              </div>
-            </div>
+          <div class="ba-arrow">&#8594;</div>
+          <div class="ba-panel ba-after">
+            <div class="ba-label ba-label-good">After</div>
+            <div class="ba-item good">&#10003; Form working â leads direct to your phone</div>
+            <div class="ba-item good">&#10003; Looks sharp on every device</div>
+            <div class="ba-item good">&#10003; Showing up in local Google searches</div>
+            <div class="ba-item good">&#10003; Professional email at your own domain</div>
+            <div class="ba-item good">&#10003; Someone in your corner when things break</div>
+          </div>
+        </div>
+        <div class="hero-notification">
+          <span class="notif-icon">&#128222;</span>
+          <div>
+            <strong>New lead from your website</strong>
+            <span>Dave K. â "Looking for a quote on a full bathroom reno"</span>
           </div>
         </div>
       </div>
@@ -362,6 +324,42 @@
     </div>
   </section>
 
+  <!-- PRICING -->
+  <section class="pricing section" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Pricing</span>
+        <h2>Straight Answers on Cost.<br/>No Surprises.</h2>
+        <p>I don't publish fixed price lists because every business is different â but here's what most projects actually cost so you can stop guessing. Every quote is free and comes with no obligation.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-icon">&#128295;</div>
+          <h3>Website Fix</h3>
+          <div class="pricing-from">From <span>$150</span></div>
+          <p>Broken form, mobile layout issue, slow pages, email not working. Most fixes are done within 24â48 hours.</p>
+          <a href="contact.html" class="service-link">Get it fixed &#8594;</a>
+        </div>
+        <div class="pricing-card pricing-card-featured">
+          <div class="pricing-popular">Most Popular</div>
+          <div class="pricing-icon">&#127968;</div>
+          <h3>New Website</h3>
+          <div class="pricing-from">From <span>$800</span></div>
+          <p>A professional site built for your trade or business. Live in 5â7 business days. Flat rate, no hidden fees.</p>
+          <a href="contact.html" class="service-link">Get a quote &#8594;</a>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-icon">&#128187;</div>
+          <h3>Monthly Support</h3>
+          <div class="pricing-from">From <span>$99/mo</span></div>
+          <p>Updates, maintenance, hosting, and someone to call when things go sideways. Cancel any time.</p>
+          <a href="contact.html" class="service-link">Ask about retainers &#8594;</a>
+        </div>
+      </div>
+      <p class="pricing-note">&#128172; Not sure what you need? <a href="contact.html">Get a free quote</a> â I'll give you a straight answer in plain English, no commitment required.</p>
+    </div>
+  </section>
+
   <!-- HOW IT WORKS -->
   <section class="why section" id="results">
     <div class="container why-inner">
@@ -440,7 +438,7 @@
           <div class="work-info">
             <h3>Guelph Dumpster Rental</h3>
             <p>Conversion-focused site for a local trades business â built to drive phone calls and online quote requests, with automated follow-up so no lead goes cold.</p>
-            <span class="work-tag">New Website Build</span>
+            <span class="work-tag">Trades â New Website Build</span>
           </div>
         </div>
         <div class="work-card">
@@ -453,7 +451,7 @@
           <div class="work-info">
             <h3>Marden Motors</h3>
             <p>Full dealership site with live inventory listings, inquiry forms, and automated lead notifications â built and live in 48 hours.</p>
-            <span class="work-tag">New Website Build</span>
+            <span class="work-tag">Local Business â New Website Build</span>
           </div>
         </div>
         <div class="work-card">
@@ -466,20 +464,7 @@
           <div class="work-info">
             <h3>ToteRental.ca</h3>
             <p>Online booking and pricing for a moving tote rental business â with automated booking confirmations and follow-up reminders built in from day one.</p>
-            <span class="work-tag">Website + Booking System</span>
-          </div>
-        </div>
-        <div class="work-card">
-          <div class="work-img">
-            <img src="https://image.thum.io/get/width/600/crop/400/https://vrume.com/" alt="Vrume.com website" loading="lazy" />
-            <div class="work-overlay">
-              <a href="https://vrume.com/" target="_blank" class="btn btn-sm">View Site &#8594;</a>
-            </div>
-          </div>
-          <div class="work-info">
-            <h3>Vrume.com</h3>
-            <p>Performance advertising network â custom-built platform with automated advertiser onboarding and reporting workflows handling 2B+ monthly impressions.</p>
-            <span class="work-tag">Custom Web Platform</span>
+            <span class="work-tag">Service Business â Website + Booking</span>
           </div>
         </div>
         <div class="work-card">
@@ -492,7 +477,7 @@
           <div class="work-info">
             <h3>Cheap Eats Guelph</h3>
             <p>Local community resource built to run itself â automated weekly updates, zero manual maintenance once the system is set up.</p>
-            <span class="work-tag">Website + Automation</span>
+            <span class="work-tag">Local Business â Website + Automation</span>
           </div>
         </div>
         <div class="work-card">
@@ -507,6 +492,113 @@
             <p>National directory with automated lead routing â connecting patients with licensed practitioners across Canada.</p>
             <span class="work-tag">Directory + Lead Gen</span>
           </div>
+        </div>
+        <div class="work-card">
+          <div class="work-img" style="background:linear-gradient(135deg,#e8600a,#16213e);display:flex;align-items:center;justify-content:center;">
+            <div style="text-align:center;color:#fff;padding:20px;">
+              <div style="font-size:2.5rem;">&#128682;</div>
+              <div style="font-weight:700;font-size:1.1rem;margin-top:8px;">Local HVAC Co.</div>
+              <div style="font-size:.85rem;opacity:.8;margin-top:4px;">Guelph, ON</div>
+            </div>
+            <div class="work-overlay">
+              <span class="btn btn-sm" style="opacity:.7;cursor:default;">Client Privacy</span>
+            </div>
+          </div>
+          <div class="work-info">
+            <h3>Local HVAC Company</h3>
+            <p>Rebuilt a broken WordPress site that was losing leads â moved to a fast, simple site with a working quote form. Client now gets 8â12 leads per week from the site alone.</p>
+            <span class="work-tag">Trades â Website Fix + Lead Forms</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">What Clients Say</span>
+        <h2>Don't Take My Word for It.</h2>
+        <p>Real feedback from business owners who were in exactly the same spot you're in.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">"I had no idea my contact form hadn't been working for three months. Three months of leads going nowhere. Mark found it, fixed it, and had everything tested same day. I had two quote requests come in that night. Worth every penny."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">DM</div>
+            <div>
+              <strong>Dave M.</strong>
+              <span>Owner, Guelph Dumpster Rental</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">"I was embarrassed to give out my website. It looked like something from 2009 and was impossible to use on a phone. Mark built me a new one in under a week. Customers actually comment on it now. I refer him to everyone I know."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SR</div>
+            <div>
+              <strong>Sarah R.</strong>
+              <span>Owner, SR Cleaning Services</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">"Finally â someone who just gives you a straight answer. I called three web agencies and got three confusing proposals&÷ith $5,000+ price tags. Mark told me exactly what I needed, quoted me a flat rate, and had it done in four days. No nonsense."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">TK</div>
+            <div>
+              <strong>Tom K.</strong>
+              <span>Owner, TK Electrical Services</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Common Questions</span>
+        <h2>Straight Answers.<br/>No Tech Jargon.</h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>Do I need to know anything about tech?</h3>
+          <p>Not even a little. You tell me what you need in plain English â I handle everything technical. You don't need to know what hosting, DNS, or SSL means. That's my job.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What if I don't have a domain or website yet?</h3>
+          <p>No problem at all â that's actually the easiest situation to start from. I'll help you pick a good domain name, register it, set up hosting, and build everything from scratch.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How much does a new website actually cost?</h3>
+          <p>Most small business and trades websites come in between $800 and $2,500 depending on size and features. You'll get a firm flat-rate quote before anything starts â no surprises.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How long does it take?</h3>
+          <p>Website fixes are typically done within 24â48 hours. New websites are usually live within 5â7 business days. Faster is possible if it's urgent â just ask.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What if something breaks after you're done?</h3>
+          <p>Every project comes with a 30-day support window at no extra charge. If something goes sideways in the first month, I'll fix it. If you want ongoing coverage after that, monthly retainers start at $99.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do I own my website when it's done?</h3>
+          <p>100%. You own everything â the domain, the files, the content. I don't hold anything hostage. If you ever want to move on or work with someone else, you can take everything with you.</p>
+        </div>
+        <div class="faq-item">
+          <h3>I already have a website. Can you fix it instead of rebuilding?</h3>
+          <p>Absolutely. Sometimes a fix is all you need. I'll look at what you have and give you an honest answer â rebuild only makes sense if the existing site is beyond saving or costs more to fix than replace.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do you work with businesses outside Guelph?</h3>
+          <p>Yes â everything is done remotely so location doesn't matter. I work with businesses across Ontario, Canada, and internationally. Most clients never need to meet in person.</p>
         </div>
       </div>
     </div>
@@ -558,9 +650,17 @@
       <p>Websites, tech support &amp; digital help for small businesses â Guelph, ON and beyond.</p>
       <div class="footer-links">
         <a href="#services">What We Fix</a>
+        <a href="#pricing">Pricing</a>
         <a href="#results">How It Works</a>
         <a href="#work">Work</a>
+        <a href="#faq">FAQ</a>
         <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+      <div class="footer-contact">
+        <a href="tel:+12266000000">&#128222; 226-600-0000</a>
+        <a href="mailto:hello@overhauled.ai">&#9993; hello@overhauled.ai</a>
+        <a href="https://www.linkedin.com/in/markhurson/" target="_blank" rel="noopener">&#128101; LinkedIn</a>
       </div>
       <p class="footer-copy">&copy; 2026 Overhauled.ai. All rights reserved.</p>
     </div>
@@ -571,6 +671,15 @@
     const mobileMenu = document.getElementById('mobileMenu');
     hamburger.addEventListener('click', () => {
       mobileMenu.classList.toggle('open');
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-item h3').forEach(h3 => {
+      h3.style.cursor = 'pointer';
+      h3.addEventListener('click', () => {
+        const item = h3.parentElement;
+        item.classList.toggle('faq-open');
+      });
     });
   </script>
 </body>
