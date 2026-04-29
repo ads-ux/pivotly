@@ -16,6 +16,10 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://overhauled.ai/" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:image" content="https://overhauled.ai/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:image" content="https://overhauled.ai/og-image.png" />
   <meta name="twitter:title" content="Overhauled.ai &mdash; Websites, Tech Support & Digital Help for Small Business" />
   <meta name="twitter:description" content="New website, broken form, tech that's driving you crazy? Overhauled.ai fixes it fast. Project-based pricing, no jargon." />
   <link rel="canonical" href="https://overhauled.ai/" />
@@ -118,7 +122,7 @@
       <ul class="nav-links">
         <li><a href="#services">What We Fix</a></li>
         <li><a href="#results">How It Works</a></li>
-        <li><a href="+work">Our Work</a></li>
+        <li><a href="#work">Our Work</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="tel:+12266000000" class="nav-phone">&#128222; 226-600-0000</a></li>
         <li><a href="contact.html" class="btn btn-sm">Get a Free Quote</a></li>
@@ -561,7 +565,7 @@
         </div>
         <div class="testimonial-card reveal reveal-delay-3">
           <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="testimonial-text">"Finally &mdash; someone who just gives you a straight answer. We called three web agencies and got three confusing proposals(with $5,000+ price tags. Mark told me exactly what We needed, quoted me a flat rate, and had it done in four days. No nonsense."</p>
+          <p class="testimonial-text">"Finally &mdash; someone who just gives you a straight answer. We called three web agencies and got three confusing proposals with $5,000+ price tags. Mark told me exactly what We needed, quoted me a flat rate, and had it done in four days. No nonsense."</p>
           <div class="testimonial-author">
             <div class="testimonial-avatar">TK</div>
             <div>
@@ -731,7 +735,7 @@
     function animateCounter(el) {
       const text = el.textContent;
       const num = parseFloat(text.replace(/[^0-9.]/g, ''));
-      if (isNaN(num) || num === 0 || text.toLowerCase() === 'flat' || /[-–—]/.test(text)) return;
+      if (isNaN(num) || num === 0 || text.toLowerCase() === 'flat' || /[-ââ]/.test(text)) return;
       const suffix = text.replace(/[0-9.]/g, '');
       const duration = 1200;
       const step = 16;
