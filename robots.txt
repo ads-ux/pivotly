@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pivotly.ca/sitemap.xml
+Sitemap: https://overhauled.ai/sitemap.xml
