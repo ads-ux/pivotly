@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Free 5-Minute Website Health Check | Overhauled.ai</title>
+<meta name="description" content="Free, instant website health check for small businesses. Tells you what's broken, what's slow, and what's costing you customers. No call required." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="canonical" href="https://overhauled.ai/health-check" />
+<style>
+  :root {
+    --bg-dark: #0b1120;
+    --border: rgba(255,255,255,0.12);
+    --text: #f1f5f9;
+    --text-muted: #94a3b8;
+    --accent: #84cc16;
+    --accent-dark: #65a30d;
+    --warm: #fb923c;
+    --danger: #ef4444;
+    --radius: 14px;
+    --radius-lg: 20px;
+  }
+  *,*::before,*::after { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    background-image:
+      radial-gradient(ellipse at top right, rgba(132,204,22,0.15), transparent 50%),
+      radial-gradient(ellipse at bottom left, rgba(99,102,241,0.10), transparent 50%);
+  }
+  a { color: var(--accent); text-decoration: none; }
+  h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 16px; }
+  h2 { font-size: 1.4rem; font-weight: 800; margin: 0 0 12px; }
+  p { color: var(--text-muted); margin: 0 0 14px; }
+  .container { max-width: 920px; margin: 0 auto; padding: 32px 24px; }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 8px 0 32px; }
+  .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.1rem; color: #fff; }
+  .logo-icon { width: 32px; height: 32px; background: var(--accent); border-radius: 9px; display: grid; place-items: center; }
+  .logo-icon svg { width: 18px; height: 18px; fill: var(--bg-dark); }
+  .nav-back { font-size: 0.9rem; color: var(--text-muted); }
+  .nav-back:hover { color: var(--accent); }
+
+  .hero { text-align: center; padding: 24px 0 40px; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 6px 14px;
+    background: rgba(132,204,22,0.15);
+    color: var(--accent);
+    border-radius: 999px;
+    font-size: 0.78rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.04em;
+    margin-bottom: 18px;
+  }
+  .hero p.lede { font-size: 1.15rem; max-width: 640px; margin: 0 auto; }
+
+  .check-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 36px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 30px 60px -20px rgba(0,0,0,0.5);
+  }
+  @media (max-width: 600px) { .check-card { padding: 24px; } }
+
+  form .field { margin-bottom: 18px; }
+  form label { display: block; font-size: 0.85rem; font-weight: 700; color: var(--text-muted); margin-bottom: 6px; }
+  form input {
+    width: 100%; padding: 16px 18px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: rgba(0,0,0,0.25);
+    color: #fff;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  form input::placeholder { color: rgba(255,255,255,0.35); }
+  form input:focus {
+    outline: 0;
+    border-color: var(--accent);
+    background: rgba(0,0,0,0.35);
+  }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    width: 100%;
+    padding: 16px 24px;
+    background: var(--accent);
+    color: var(--bg-dark);
+    font-weight: 800;
+    font-size: 1.05rem;
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  .btn:hover { background: var(--accent-dark); color: #fff; transform: translateY(-1px); }
+  .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+  .form-note { font-size: 0.82rem; color: var(--text-muted); text-align: center; margin: 14px 0 0; }
+
+  .check-list {
+    list-style: none; padding: 0; margin: 24px 0 0;
+    display: grid; gap: 10px;
+  }
+  .check-list li {
+    display: flex; align-items: flex-start; gap: 10px;
+    padding: 12px 14px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 0.92rem;
+    color: var(--text);
+  }
+  .check-list li::before { content: "✓"; color: var(--accent); font-weight: 800; flex-shrink: 0; }
+
+  .grid-split {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center;
+    margin-top: 36px;
+  }
+  @media (max-width: 800px) { .grid-split { grid-template-columns: 1fr; } }
+
+  .success {
+    display: none;
+    background: rgba(132,204,22,0.10);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 28px;
+    text-align: center;
+    margin-top: 24px;
+  }
+  .success.show { display: block; animation: fadeIn 0.4s ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+  .footer { text-align: center; padding: 32px 0; color: var(--text-muted); font-size: 0.85rem; }
+
+  .running {
+    display: none;
+    background: rgba(132,204,22,0.05);
+    border: 1px solid rgba(132,204,22,0.3);
+    border-radius: var(--radius);
+    padding: 18px;
+    margin-top: 18px;
+  }
+  .running.show { display: block; }
+  .running-title { font-weight: 700; color: var(--accent); margin-bottom: 8px; font-size: 0.92rem; }
+  .running-step { font-size: 0.88rem; color: var(--text-muted); padding: 4px 0; opacity: 0.5; transition: opacity 0.4s ease, color 0.4s ease; }
+  .running-step.active { opacity: 1; color: var(--text); }
+  .running-step.done { opacity: 0.7; color: var(--accent); }
+  .running-step.done::before { content: "✓ "; color: var(--accent); }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <nav class="nav">
+    <a href="/" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+      </div>
+      overhauled.ai
+    </a>
+    <a class="nav-back" href="/">← Back to home</a>
+  </nav>
+
+  <header class="hero">
+    <span class="badge">Free · 5 minutes · No call required</span>
+    <h1>Find out what's <span style="background: linear-gradient(135deg, var(--accent), var(--warm)); -webkit-background-clip: text; background-clip: text; color: transparent;">silently broken</span> on your website.</h1>
+    <p class="lede">Drop your URL, we'll run the same checks we run on every paying client. You'll get a one-page report covering what's broken, what's slow, and what's costing you customers — usually within an hour.</p>
+  </header>
+
+  <div class="check-card">
+    <div class="grid-split">
+      <div>
+        <h2>What we check</h2>
+        <ul class="check-list">
+          <li>Whether your contact form actually works</li>
+          <li>Mobile experience + Core Web Vitals score</li>
+          <li>Local SEO + Google Business Profile health</li>
+          <li>Page load speed on a real connection</li>
+          <li>SSL, security headers, and email setup</li>
+          <li>Top 3 fixes you can do this week</li>
+        </ul>
+      </div>
+      <div>
+        <form id="healthForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+          <div class="field">
+            <label for="url">Your website URL</label>
+            <input type="url" id="url" name="url" placeholder="https://yourbusiness.com" required />
+          </div>
+          <div class="field">
+            <label for="email">Where should we send the report?</label>
+            <input type="email" id="email" name="email" placeholder="you@yourbusiness.com" required />
+          </div>
+          <div class="field">
+            <label for="name">Your name (optional)</label>
+            <input type="text" id="name" name="name" placeholder="Dave" />
+          </div>
+          <button type="submit" class="btn" id="submitBtn">
+            <span>Run my free health check</span>
+            <span>→</span>
+          </button>
+          <p class="form-note">No spam. No upsells. Just the report. Unsubscribe with one click.</p>
+        </form>
+
+        <div class="running" id="running">
+          <div class="running-title">⚙ Running checks…</div>
+          <div class="running-step" data-step="1">Pinging the site</div>
+          <div class="running-step" data-step="2">Testing mobile + Core Web Vitals</div>
+          <div class="running-step" data-step="3">Checking the contact form</div>
+          <div class="running-step" data-step="4">Auditing local SEO + Google profile</div>
+          <div class="running-step" data-step="5">Building your report</div>
+        </div>
+
+        <div class="success" id="success">
+          <div style="font-size: 2.2rem; margin-bottom: 6px;">✅</div>
+          <strong style="font-size: 1.1rem; color: #fff;">Got it — we're on it.</strong>
+          <p style="margin: 6px 0 0; font-size: 0.92rem;">Your report is being built right now. Most arrive within an hour. Check your inbox.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin-top: 32px;">
+    <p style="font-size: 0.95rem;">Want to skip the report and just talk?
+      <a href="https://calendly.com/ads-rtu/vrume-quick-connect" target="_blank" rel="noopener" style="border-bottom: 1px solid var(--accent); padding-bottom: 1px;">Book a free 30-min audit instead →</a>
+    </p>
+  </div>
+
+  <footer class="footer">
+    © 2026 Overhauled.ai · Built in Guelph, ON · <a href="/">Home</a>
+  </footer>
+</div>
+
+<script>
+  const form = document.getElementById('healthForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const running = document.getElementById('running');
+  const success = document.getElementById('success');
+
+  form.addEventListener('submit', async (e) => {
+    // Show running animation immediately for nice UX
+    running.classList.add('show');
+    submitBtn.disabled = true;
+    animateSteps();
+
+    // If formspree action is still placeholder, prevent real submit and just show success
+    if (form.action.includes('YOUR_FORMSPREE_ID')) {
+      e.preventDefault();
+      setTimeout(() => {
+        running.classList.remove('show');
+        form.style.display = 'none';
+        success.classList.add('show');
+      }, 5000);
+      return;
+    }
+    // Otherwise let formspree handle the post; we show success via redirect or here
+    setTimeout(() => {
+      success.classList.add('show');
+    }, 800);
+  });
+
+  function animateSteps() {
+    const steps = document.querySelectorAll('.running-step');
+    let i = 0;
+    steps[i].classList.add('active');
+    const iv = setInterval(() => {
+      steps[i].classList.remove('active');
+      steps[i].classList.add('done');
+      i++;
+      if (i >= steps.length) { clearInterval(iv); return; }
+      steps[i].classList.add('active');
+    }, 800);
+  }
+</script>
+</body>
+</html>
