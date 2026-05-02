@@ -16,15 +16,17 @@
   to   = "/health-check.html"
   status = 200
 
-# Also handle the .html versions: redirect them to the clean URL
+# .html versions: 301-redirect to clean URL (force=true overrides static serving)
 [[redirects]]
-  from = "/ai-agents.html"
-  to   = "/ai-agents"
+  from   = "/ai-agents.html"
+  to     = "/ai-agents"
   status = 301
+  force  = true
 
 [[redirects]]
-  from = "/health-check.html"
-  to   = "/health-check"
+  from   = "/health-check.html"
+  to     = "/health-check"
   status = 301
+  force  = true
 
 # Existing pages keep .html (no rewrite needed for contact/privacy/thank-you)
