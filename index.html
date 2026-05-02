@@ -698,12 +698,16 @@
   @media (max-width: 900px) { .work-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 600px) { .work-grid { grid-template-columns: 1fr; } }
   .work-card {
+    display: block;
+    color: inherit;
+    text-decoration: none;
     background: #fff;
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     overflow: hidden;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
+  .work-card:hover h3 { color: var(--accent-dark); }
   .work-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
   .work-img {
     aspect-ratio: 16 / 10;
@@ -1380,56 +1384,56 @@
       <p>A sample of small businesses I've worked with — most start with one fix and end up sticking around.</p>
     </div>
     <div class="work-grid">
-      <div class="work-card reveal">
+      <a class="work-card reveal" href="https://guelphdumpsterrental.com/" target="_blank" rel="noopener noreferrer">
         <div class="work-img"><div class="work-img-emoji">🚛</div></div>
         <div class="work-info">
           <h3>Guelph Dumpster Rental</h3>
           <p>Conversion-focused trades site with automated follow-up so no lead goes cold.</p>
           <span class="work-tag">Trades · New build</span>
         </div>
-      </div>
-      <div class="work-card reveal">
+      </a>
+      <a class="work-card reveal" href="https://goodshave.com/" target="_blank" rel="noopener noreferrer">
         <div class="work-img"><div class="work-img-emoji">🪒</div></div>
         <div class="work-info">
           <h3>GoodShave.com</h3>
           <p>Razor review + affiliate site with comparison tables and an interactive quiz that matches readers to their best razor.</p>
           <span class="work-tag">Content + Affiliate · Quiz</span>
         </div>
-      </div>
-      <div class="work-card reveal">
+      </a>
+      <a class="work-card reveal" href="https://toterental.ca/" target="_blank" rel="noopener noreferrer">
         <div class="work-img"><div class="work-img-emoji">📦</div></div>
         <div class="work-info">
           <h3>ToteRental.ca</h3>
           <p>Online booking + pricing for moving totes. Confirmations + reminders built-in.</p>
           <span class="work-tag">Service · Booking system</span>
         </div>
-      </div>
-      <div class="work-card reveal">
+      </a>
+      <a class="work-card reveal" href="https://cheapeatsguelph.com/" target="_blank" rel="noopener noreferrer">
         <div class="work-img"><div class="work-img-emoji">🍴</div></div>
         <div class="work-info">
           <h3>Cheap Eats Guelph</h3>
           <p>Local resource that runs itself — automated weekly updates, zero manual maintenance.</p>
           <span class="work-tag">Community · Full automation</span>
         </div>
-      </div>
-      <div class="work-card reveal">
+      </a>
+      <a class="work-card reveal" href="https://acupuncturing.com/" target="_blank" rel="noopener noreferrer">
         <div class="work-img"><div class="work-img-emoji">🪡</div></div>
         <div class="work-info">
           <h3>Acupuncturing.com</h3>
           <p>National practitioner directory with automated lead routing across Canada.</p>
           <span class="work-tag">Directory · Lead routing</span>
         </div>
-      </div>
-      <div class="work-card reveal">
-        <div class="work-img"><div class="work-img-emoji">🚪</div></div>
+      </a>
+      <a class="work-card reveal" href="https://marden-motors.netlify.app/" target="_blank" rel="noopener noreferrer">
+        <div class="work-img"><div class="work-img-emoji">🚗</div></div>
         <div class="work-info">
-          <h3>Local HVAC Co.</h3>
-          <p>Rebuilt a broken WordPress site. Now 8–12 leads/week from the site alone.</p>
-          <span class="work-tag">Trades · Website fix + lead forms</span>
+          <h3>Marden Motors</h3>
+          <p>Live inventory, inquiry forms, and automated lead notifications — built and live in 48 hours.</p>
+          <span class="work-tag">Local · Website + automation</span>
         </div>
-      </div>
+      </a>
     </div>
-  </div>
+  </a>
 </section>
 
 <!-- =============== REVIEWS =============== -->
