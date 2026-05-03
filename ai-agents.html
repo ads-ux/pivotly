@@ -14,6 +14,12 @@
 <meta property="og:description" content="Custom AI agents that reply to leads at 2am, follow up on quotes, and answer customer questions. Built for small businesses. From $1,500." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://overhauled.ai/ai-agents" />
+<meta property="og:image" content="https://overhauled.ai/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Overhauled.ai — Websites, tech & AI agents for small business. Flat-rate. Plain English. Built in Guelph, ON." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://overhauled.ai/og-image.png" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -611,7 +617,7 @@
     <p>Book a free 30-min consult. We'll look at where you're losing leads, time, or sleep — and tell you whether an AI agent is the right fix (or whether something else is). No sales pitch, no pressure.</p>
     <a href="https://calendly.com/ads-rtu/vrume-quick-connect" target="_blank" rel="noopener" class="btn btn-primary btn-lg">📅 Book my free consult →</a>
     <p style="margin-top: 24px; font-size: 0.88rem;">
-      Booking 2 new AI agent projects this month. Next available start: <strong style="color: #fff;">May 8</strong>.
+      Booking 2 new AI agent projects this month. Next available start: <strong style="color: #fff;" class="next-start">about a week out</strong>.
     </p>
   </div>
 </section>
@@ -640,6 +646,17 @@
   } else {
     reveals.forEach(el => el.classList.add('visible'));
   }
+
+  // Rolling "next start" date — today + 7 days, snapped past weekends.
+  (function () {
+    const d = new Date();
+    d.setDate(d.getDate() + 7);
+    if (d.getDay() === 0) d.setDate(d.getDate() + 1); // Sun -> Mon
+    if (d.getDay() === 6) d.setDate(d.getDate() + 2); // Sat -> Mon
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const text = months[d.getMonth()] + ' ' + d.getDate();
+    document.querySelectorAll('.next-start').forEach(el => { el.textContent = text; });
+  })();
 </script>
 </body>
 </html>
