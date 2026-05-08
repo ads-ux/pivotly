@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Free 5-Minute Website Health Check | Overhauled.ai</title>
-<meta name="description" content="Free, instant website health check for small businesses. Tells you what's broken, what's slow, and what's costing you customers. No call required." />
+<title>Free Website Health Check | Overhauled.ai</title>
+<meta name="description" content="Free website health check for small businesses. Find out what's broken, what's slow, and what's costing you customers. Get a full report emailed to you." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -18,7 +18,6 @@
     --accent: #84cc16;
     --accent-dark: #65a30d;
     --warm: #fb923c;
-    --danger: #ef4444;
     --radius: 14px;
     --radius-lg: 20px;
   }
@@ -26,9 +25,7 @@
   body {
     margin: 0; min-height: 100vh;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: var(--bg-dark);
-    color: var(--text);
-    line-height: 1.6;
+    background: var(--bg-dark); color: var(--text); line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     background-image:
       radial-gradient(ellipse at top right, rgba(132,204,22,0.15), transparent 50%),
@@ -45,107 +42,56 @@
   .logo-icon svg { width: 18px; height: 18px; fill: var(--bg-dark); }
   .nav-back { font-size: 0.9rem; color: var(--text-muted); }
   .nav-back:hover { color: var(--accent); }
-
   .hero { text-align: center; padding: 24px 0 40px; }
   .badge {
-    display: inline-flex; align-items: center; gap: 6px;
-    padding: 6px 14px;
-    background: rgba(132,204,22,0.15);
-    color: var(--accent);
-    border-radius: 999px;
-    font-size: 0.78rem; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.04em;
-    margin-bottom: 18px;
+    display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px;
+    background: rgba(132,204,22,0.15); color: var(--accent); border-radius: 999px;
+    font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 18px;
   }
   .hero p.lede { font-size: 1.15rem; max-width: 640px; margin: 0 auto; }
-
   .check-card {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: 36px;
-    backdrop-filter: blur(12px);
-    box-shadow: 0 30px 60px -20px rgba(0,0,0,0.5);
+    background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+    border-radius: var(--radius-lg); padding: 36px;
+    backdrop-filter: blur(12px); box-shadow: 0 30px 60px -20px rgba(0,0,0,0.5);
   }
   @media (max-width: 600px) { .check-card { padding: 24px; } }
-
   form .field { margin-bottom: 18px; }
   form label { display: block; font-size: 0.85rem; font-weight: 700; color: var(--text-muted); margin-bottom: 6px; }
   form input {
-    width: 100%; padding: 16px 18px;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    background: rgba(0,0,0,0.25);
-    color: #fff;
-    font-size: 1rem;
-    font-family: inherit;
+    width: 100%; padding: 16px 18px; border-radius: 12px; border: 1px solid var(--border);
+    background: rgba(0,0,0,0.25); color: #fff; font-size: 1rem; font-family: inherit;
     transition: border-color 0.15s ease, background 0.15s ease;
   }
   form input::placeholder { color: rgba(255,255,255,0.35); }
-  form input:focus {
-    outline: 0;
-    border-color: var(--accent);
-    background: rgba(0,0,0,0.35);
-  }
+  form input:focus { outline: 0; border-color: var(--accent); background: rgba(0,0,0,0.35); }
   .btn {
     display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-    width: 100%;
-    padding: 16px 24px;
-    background: var(--accent);
-    color: var(--bg-dark);
-    font-weight: 800;
-    font-size: 1.05rem;
-    border: 0;
-    border-radius: 999px;
-    cursor: pointer;
+    width: 100%; padding: 16px 24px; background: var(--accent); color: var(--bg-dark);
+    font-weight: 800; font-size: 1.05rem; border: 0; border-radius: 999px; cursor: pointer;
     transition: transform 0.15s ease, background 0.15s ease;
   }
   .btn:hover { background: var(--accent-dark); color: #fff; transform: translateY(-1px); }
   .btn:disabled { opacity: 0.5; cursor: not-allowed; }
   .form-note { font-size: 0.82rem; color: var(--text-muted); text-align: center; margin: 14px 0 0; }
-
-  .check-list {
-    list-style: none; padding: 0; margin: 24px 0 0;
-    display: grid; gap: 10px;
-  }
+  .check-list { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 10px; }
   .check-list li {
-    display: flex; align-items: flex-start; gap: 10px;
-    padding: 12px 14px;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    font-size: 0.92rem;
-    color: var(--text);
+    display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px;
+    background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+    border-radius: 10px; font-size: 0.92rem; color: var(--text);
   }
   .check-list li::before { content: "✓"; color: var(--accent); font-weight: 800; flex-shrink: 0; }
-
-  .grid-split {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center;
-    margin-top: 36px;
-  }
+  .grid-split { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; margin-top: 36px; }
   @media (max-width: 800px) { .grid-split { grid-template-columns: 1fr; } }
-
   .success {
-    display: none;
-    background: rgba(132,204,22,0.10);
-    border: 1px solid var(--accent);
-    border-radius: var(--radius);
-    padding: 28px;
-    text-align: center;
-    margin-top: 24px;
+    display: none; background: rgba(132,204,22,0.10); border: 1px solid var(--accent);
+    border-radius: var(--radius); padding: 28px; text-align: center; margin-top: 24px;
   }
   .success.show { display: block; animation: fadeIn 0.4s ease; }
   @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
   .footer { text-align: center; padding: 32px 0; color: var(--text-muted); font-size: 0.85rem; }
-
   .running {
-    display: none;
-    background: rgba(132,204,22,0.05);
-    border: 1px solid rgba(132,204,22,0.3);
-    border-radius: var(--radius);
-    padding: 18px;
-    margin-top: 18px;
+    display: none; background: rgba(132,204,22,0.05); border: 1px solid rgba(132,204,22,0.3);
+    border-radius: var(--radius); padding: 18px; margin-top: 18px;
   }
   .running.show { display: block; }
   .running-title { font-weight: 700; color: var(--accent); margin-bottom: 8px; font-size: 0.92rem; }
@@ -156,9 +102,7 @@
 </style>
 </head>
 <body>
-
 <div class="container">
-
   <nav class="nav">
     <a href="/" class="logo">
       <div class="logo-icon">
@@ -170,9 +114,9 @@
   </nav>
 
   <header class="hero">
-    <span class="badge">Free · No call · Results within 24 hours</span>
+    <span class="badge">Free · No call · Report emailed to you</span>
     <h1>Something on your site is probably <span style="background: linear-gradient(135deg, var(--accent), var(--warm)); -webkit-background-clip: text; background-clip: text; color: transparent;">costing you customers</span> right now.</h1>
-    <p class="lede">Most business owners don't find out their contact form stopped working until a customer mentions it — or just doesn't come back. Drop your URL and I'll check the things that quietly kill leads. You get a plain-English report with exactly what to fix. No call, no pitch, no obligation.</p>
+    <p class="lede">Most business owners don't find out their contact form stopped working until a customer mentions it — or just doesn't come back. Drop your URL and I'll run a full audit. You get a plain-English report with exactly what to fix. No call, no pitch, no obligation.</p>
   </header>
 
   <div class="check-card">
@@ -185,13 +129,13 @@
           <li>Is Google able to find you for local searches?</li>
           <li>How slow does it load on a real connection?</li>
           <li>Are there security or email delivery issues?</li>
+          <li>Are you showing up when people ask AI tools like Perplexity?</li>
           <li>The 3 things worth fixing first</li>
         </ul>
       </div>
       <div>
-        <form id="healthForm" name="health-check" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/health-check?submitted=1">
-          <input type="hidden" name="form-name" value="health-check" />
-          <p style="display:none;"><label>Don't fill this out: <input name="bot-field" /></label></p>
+        <form id="healthForm" novalidate>
+          <p style="display:none;"><label>Don't fill this out: <input name="bot-field" id="botField" tabindex="-1" autocomplete="off" /></label></p>
           <div class="field">
             <label for="url">Your website URL</label>
             <input type="url" id="url" name="url" placeholder="https://yourbusiness.com" required />
@@ -204,7 +148,7 @@
             <label for="name">Your name (optional)</label>
             <input type="text" id="name" name="name" placeholder="Dave" />
           </div>
-          <div class="form-group">
+          <div class="field">
             <label for="phone">Phone number (optional)</label>
             <input type="tel" id="phone" name="phone" placeholder="(519) 555-0123" />
           </div>
@@ -218,16 +162,16 @@
         <div class="running" id="running">
           <div class="running-title">⚙ Running checks…</div>
           <div class="running-step" data-step="1">Pulling up your site</div>
-          <div class="running-step" data-step="2">Trying it on a phone</div>
-          <div class="running-step" data-step="3">Poking your contact form</div>
-          <div class="running-step" data-step="4">Asking Google what it sees</div>
+          <div class="running-step" data-step="2">Testing it on mobile</div>
+          <div class="running-step" data-step="3">Running SEO audit</div>
+          <div class="running-step" data-step="4">Checking speed &amp; performance</div>
           <div class="running-step" data-step="5">Writing your report</div>
         </div>
 
         <div class="success" id="success">
           <div style="font-size: 2.2rem; margin-bottom: 6px;">✅</div>
-          <strong style="font-size: 1.1rem; color: #fff;">Got it — I'm on it.</strong>
-          <p style="margin: 6px 0 0; font-size: 0.92rem;">Your report is being built right now. Most arrive within 24 hours. Check your inbox.</p>
+          <strong style="font-size: 1.1rem; color: #fff;">Got it — running the audit now.</strong>
+          <p style="margin: 8px 0 0; font-size: 0.92rem;">Your full report is being built and will land in your inbox shortly. Check your email (and your spam folder just in case).</p>
         </div>
       </div>
     </div>
@@ -245,24 +189,50 @@
 </div>
 
 <script>
-  const form = document.getElementById('healthForm');
+  const form      = document.getElementById('healthForm');
   const submitBtn = document.getElementById('submitBtn');
-  const running = document.getElementById('running');
-  const success = document.getElementById('success');
+  const running   = document.getElementById('running');
+  const success   = document.getElementById('success');
+  const botField  = document.getElementById('botField');
 
-  // If we're back from a successful submit, show the success state immediately
-  if (new URLSearchParams(window.location.search).get('submitted') === '1') {
-    form.style.display = 'none';
-    success.classList.add('show');
-    running.classList.remove('show');
-  }
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-  form.addEventListener('submit', (e) => {
-    // Show running animation immediately for nice UX; let Netlify handle the actual POST
+    const urlVal   = document.getElementById('url').value.trim();
+    const emailVal = document.getElementById('email').value.trim();
+
+    if (!urlVal || !emailVal) {
+      alert('Please enter your website URL and email address.');
+      return;
+    }
+
     running.classList.add('show');
     submitBtn.disabled = true;
     animateSteps();
-    // Netlify Forms will accept the POST and redirect back with ?submitted=1 — we'll show success on that page
+
+    const body = new URLSearchParams({
+      url:         urlVal,
+      email:       emailVal,
+      name:        document.getElementById('name').value.trim(),
+      phone:       document.getElementById('phone').value.trim(),
+      'bot-field': botField.value,
+    }).toString();
+
+    try {
+      await fetch('/.netlify/functions/audit', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body,
+      });
+    } catch (err) {
+      console.error('Submission error:', err);
+    }
+
+    setTimeout(() => {
+      running.classList.remove('show');
+      form.style.display = 'none';
+      success.classList.add('show');
+    }, 4200);
   });
 
   function animateSteps() {
