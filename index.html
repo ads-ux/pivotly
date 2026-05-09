@@ -346,67 +346,6 @@
   }
   .lead-toast strong { color: var(--accent); display: block; font-size: 0.8rem; margin-bottom: 2px; }
 
-  /* ---------- BEFORE / AFTER STRIP ---------- */
-  .ba-strip {
-    padding: 60px 0;
-    background:
-      linear-gradient(180deg, #fff 0%, var(--bg-soft) 100%);
-    border-top: 1px solid var(--border);
-  }
-  .ba-grid {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 24px;
-    align-items: stretch;
-    max-width: 980px;
-    margin: 0 auto;
-  }
-  @media (max-width: 800px) {
-    .ba-grid { grid-template-columns: 1fr; gap: 16px; }
-    .ba-arrow { display: none; }
-  }
-  .ba-card {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: 28px;
-    box-shadow: var(--shadow-sm);
-  }
-  .ba-card.before { border-top: 4px solid var(--danger); }
-  .ba-card.after { border-top: 4px solid var(--accent); }
-  .ba-card-label {
-    display: inline-block;
-    padding: 4px 12px;
-    border-radius: 999px;
-    font-size: 0.75rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 14px;
-  }
-  .ba-card.before .ba-card-label { background: #fee2e2; color: var(--danger); }
-  .ba-card.after .ba-card-label { background: var(--accent-soft); color: var(--accent-dark); }
-  .ba-line {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 0;
-    font-size: 0.98rem;
-    color: var(--text);
-    border-bottom: 1px solid var(--border);
-  }
-  .ba-line:last-child { border-bottom: 0; }
-  .ba-line .ba-mark { flex-shrink: 0; font-weight: 800; line-height: 1.4; }
-  .ba-card.before .ba-mark { color: var(--danger); }
-  .ba-card.after .ba-mark { color: var(--accent-dark); }
-  .ba-arrow {
-    display: grid;
-    place-items: center;
-    color: var(--text-soft);
-    font-size: 2rem;
-    font-weight: 300;
-  }
-
   /* ---------- ICP SELECTOR ---------- */
   .icp {
     padding: 50px 0;
@@ -642,10 +581,11 @@
   /* ---------- PRICING ---------- */
   .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 16px;
+    max-width: 1100px;
+    margin: 0 auto;
   }
-  @media (max-width: 1000px) { .pricing-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 560px) { .pricing-grid { grid-template-columns: 1fr; } }
   .pricing-card {
     background: #fff;
@@ -1091,8 +1031,8 @@
     <div class="hero-grid">
       <div class="hero-text">
         <span class="badge">Websites + AI for Small Business</span>
-        <h1>Your website should drive business.<br/>If it's not, <span class="gradient">I'll fix it.</span></h1>
-        <p class="hero-sub">Fixing broken forms, speeding up slow pages, and solving tech headaches — I specialize in fixing what's not working and building AI/Digital employees that engage your customers 24/7. Flat rates. Clear communication. Fast results.</p>
+        <h1>Your website should drive you customers and new business.<br/>If not... <span class="gradient">let's Overhaul it!</span></h1>
+        <p class="hero-sub">Professional websites built in days, fully search engine optimized and AI/LLM/Perplexity Search optimized, working forms with full automation and even AI agents that will do all the heavy lifting for you. Spend your time working on your business while we sort out your tech issues and streamline your operation for efficiency.</p>
         <div class="hero-ctas">
           <a href="https://calendly.com/ads-rtu/vrume-quick-connect" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a free 30-min audit →</a>
           <a href="#services" class="btn btn-ghost">See what I do</a>
@@ -1116,26 +1056,6 @@
   </div>
 </section>
 
-<!-- =============== BEFORE / AFTER STRIP =============== -->
-<section class="ba-strip">
-  <div class="container">
-    <div class="ba-grid">
-      <div class="ba-card before reveal">
-        <span class="ba-card-label">Before</span>
-        <div class="ba-line"><span class="ba-mark">✗</span><span>Contact form silently broken — leads going nowhere</span></div>
-        <div class="ba-line"><span class="ba-mark">✗</span><span>Embarrassing on a phone, invisible on Google</span></div>
-        <div class="ba-line"><span class="ba-mark">✗</span><span>No one in your corner when stuff breaks</span></div>
-      </div>
-      <div class="ba-arrow">→</div>
-      <div class="ba-card after reveal">
-        <span class="ba-card-label">After</span>
-        <div class="ba-line"><span class="ba-mark">✓</span><span>Working forms — leads land in your phone in seconds</span></div>
-        <div class="ba-line"><span class="ba-mark">✓</span><span>Sharp on every device, ranking locally on Google</span></div>
-        <div class="ba-line"><span class="ba-mark">✓</span><span>One person who knows your business, on speed dial</span></div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- =============== ICP SELECTOR =============== -->
 <section class="icp">
@@ -1157,7 +1077,7 @@
   <div class="container">
     <div class="section-header reveal">
       <span class="badge">What I do</span>
-      <h2>Four things I do extremely well.</h2>
+      <h2>A few things we do for our clients.</h2>
       <p>No bloated service list. No agency runaround. Just what actually moves the needle.</p>
     </div>
 
@@ -1337,6 +1257,13 @@
         <p>Updates, fixes, hosting, someone to call. 30-day money-back on first month.</p>
         <a href="https://calendly.com/ads-rtu/vrume-quick-connect" target="_blank" rel="noopener" class="service-link">Ask about retainers →</a>
       </div>
+      <div class="pricing-card reveal">
+        <div class="pricing-icon">🔍</div>
+        <h3>SEO &amp; AI Search Optimization</h3>
+        <div class="pricing-from"><span class="price">$400</span></div>
+        <p>We review your site and optimize it for Google and AI-powered search engines like Perplexity, ChatGPT Search, and AI Overviews.</p>
+        <a href="https://calendly.com/ads-rtu/vrume-quick-connect" target="_blank" rel="noopener" class="service-link">Get found →</a>
+      </div>
     </div>
     <p class="decision-help">
       💬 Not sure what fits? <a href="#book">Book a free audit</a> — I'll tell you exactly what you need (and what you don't).
@@ -1349,7 +1276,7 @@
   <div class="container">
     <div class="section-header reveal">
       <span class="badge">Recent work</span>
-      <h2>Sites I've built. Problems I've solved.</h2>
+      <h2>Some of our projects</h2>
       <p>A sample of small businesses I've worked with — most start with one fix and end up sticking around.</p>
     </div>
     <div class="work-grid">
