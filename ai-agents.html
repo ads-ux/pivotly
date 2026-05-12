@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI Agents for Small Business — Your 24/7 Digital Employee | Overhauled.ai</title>
+<meta name="description" content="Custom AI agents that reply to leads at 2am, follow up on quotes, and answer customer questions — for small businesses, tradespeople, and local shops. Built and deployed in 1-2 weeks. From $1,500." />
+<meta name="keywords" content="AI agents for small business, AI receptionist, AI lead response, AI for trades, AI for contractors, AI customer service small business, AI quote follow-up" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="canonical" href="https://overhauled.ai/ai-agents" />
+<meta property="og:title" content="AI Agents for Small Business — Your 24/7 Digital Employee | Overhauled.ai" />
+<meta property="og:description" content="Custom AI agents that reply to leads at 2am, follow up on quotes, and answer customer questions. Built for small businesses. From $1,500." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://overhauled.ai/ai-agents" />
+<meta property="og:image" content="https://overhauled.ai/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Overhauled.ai — Websites, tech & AI agents for small business. Flat-rate. Plain English. Built in Guelph, ON." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://overhauled.ai/og-image.png" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "AI Agent Development",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Overhauled.ai",
+    "url": "https://overhauled.ai/"
+  },
+  "areaServed": "Canada",
+  "description": "Custom AI agents built for small businesses — lead response, quote follow-up, customer service, and booking automation.",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "CAD",
+    "price": "1500",
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "minPrice": "1500",
+      "priceCurrency": "CAD"
+    }
+  }
+}
+</script>
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-dark: #0b1120;
+    --bg-soft: #f8fafc;
+    --border: #e2e8f0;
+    --text: #0f172a;
+    --text-muted: #475569;
+    --text-soft: #64748b;
+    --text-on-dark: #f1f5f9;
+    --text-on-dark-muted: #94a3b8;
+    --accent: #84cc16;
+    --accent-dark: #65a30d;
+    --accent-soft: #ecfccb;
+    --warm: #fb923c;
+    --shadow-md: 0 4px 6px -1px rgba(15,23,42,0.08), 0 2px 4px -2px rgba(15,23,42,0.06);
+    --shadow-lg: 0 20px 25px -5px rgba(15,23,42,0.1), 0 8px 10px -6px rgba(15,23,42,0.08);
+    --radius: 14px;
+    --radius-lg: 20px;
+  }
+  *,*::before,*::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  h1,h2,h3 { font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 0.5em; }
+  h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 900; }
+  h2 { font-size: clamp(1.9rem, 3.5vw, 2.6rem); }
+  h3 { font-size: 1.2rem; }
+  p { margin: 0 0 1em; color: var(--text-muted); }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: var(--accent-soft);
+    color: var(--accent-dark);
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 16px;
+  }
+  .badge-dark { background: rgba(132,204,22,0.15); color: var(--accent); }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 24px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.98rem;
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn-primary { background: var(--text); color: #fff; }
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: var(--shadow-md); }
+  .btn-accent { background: var(--accent); color: var(--text); }
+  .btn-accent:hover { background: var(--accent-dark); color: #fff; }
+  .btn-ghost { background: transparent; color: var(--text); border-color: var(--border); }
+  .btn-lg { padding: 16px 30px; font-size: 1.05rem; }
+
+  /* Nav */
+  .nav-wrapper {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+  .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.15rem; }
+  .logo-icon { width: 32px; height: 32px; background: var(--text); border-radius: 9px; display: grid; place-items: center; }
+  .logo-icon svg { width: 18px; height: 18px; fill: var(--accent); }
+  .logo-word span { color: var(--accent-dark); }
+  .nav-links { display: flex; gap: 24px; align-items: center; list-style: none; margin: 0; padding: 0; }
+  .nav-links a { font-size: 0.95rem; color: var(--text-muted); }
+  .nav-links a.btn { color: #fff; padding: 10px 18px; }
+  @media (max-width: 800px) { .nav-links li:not(:last-child) { display: none; } }
+
+  /* Hero */
+  .hero {
+    padding: 80px 0;
+    background:
+      radial-gradient(ellipse at top right, rgba(132,204,22,0.12), transparent 60%),
+      radial-gradient(ellipse at bottom left, rgba(99,102,241,0.08), transparent 55%);
+  }
+  .hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 50px; align-items: center; }
+  @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } .hero { padding: 50px 0; } }
+  .hero h1 .gradient {
+    background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .hero p { font-size: 1.15rem; max-width: 560px; }
+  .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 24px; }
+
+  /* Chat demo */
+  .chat-demo {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    box-shadow: var(--shadow-lg);
+  }
+  .chat-header {
+    display: flex; align-items: center; gap: 12px;
+    padding-bottom: 16px; margin-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .chat-avatar {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    display: grid; place-items: center;
+    color: #fff; font-weight: 800;
+  }
+  .chat-title { margin: 0; font-size: 1rem; font-weight: 700; }
+  .chat-status { margin: 0; font-size: 0.8rem; color: var(--accent-dark); }
+  .chat-status::before { content: "● "; }
+  .chat-msg { display: flex; margin-bottom: 12px; }
+  .chat-msg.in { justify-content: flex-start; }
+  .chat-msg.out { justify-content: flex-end; }
+  .chat-bubble {
+    max-width: 80%; padding: 10px 14px; border-radius: 16px;
+    font-size: 0.92rem; line-height: 1.5;
+  }
+  .chat-msg.in .chat-bubble {
+    background: var(--bg-soft); color: var(--text);
+    border-bottom-left-radius: 4px;
+  }
+  .chat-msg.out .chat-bubble {
+    background: var(--accent); color: var(--text);
+    border-bottom-right-radius: 4px;
+  }
+  .chat-meta { font-size: 0.72rem; color: var(--text-soft); margin-top: 12px; text-align: center; }
+
+  /* Sections */
+  section { padding: 90px 0; }
+  @media (max-width: 800px) { section { padding: 60px 0; } }
+  .section-header { text-align: center; max-width: 720px; margin: 0 auto 56px; }
+
+  /* What is */
+  .what-is {
+    background: var(--bg-soft);
+  }
+  .what-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  @media (max-width: 800px) { .what-grid { grid-template-columns: 1fr; } }
+  .what-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: var(--radius-lg); padding: 32px;
+  }
+  .what-card h3 { color: var(--accent-dark); }
+
+  /* Use cases */
+  .use-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  @media (max-width: 800px) { .use-grid { grid-template-columns: 1fr; } }
+  .use-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: var(--radius-lg); padding: 32px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .use-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+  .use-card.featured {
+    background: linear-gradient(135deg, #0b1120, #1e293b);
+    color: #fff; border: 0;
+    position: relative; overflow: hidden;
+  }
+  .use-card.featured::before {
+    content: ""; position: absolute;
+    top: -60%; right: -30%;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(132,204,22,0.18), transparent 60%);
+  }
+  .use-card.featured h3,
+  .use-card.featured .use-tag { color: #fff; position: relative; }
+  .use-card.featured p,
+  .use-card.featured ul li { color: var(--text-on-dark-muted); position: relative; }
+  .use-icon {
+    width: 50px; height: 50px;
+    background: var(--accent-soft);
+    border-radius: 12px;
+    display: grid; place-items: center;
+    font-size: 1.5rem; margin-bottom: 18px;
+  }
+  .use-card.featured .use-icon { background: rgba(132,204,22,0.18); }
+  .use-tag {
+    display: inline-block;
+    background: var(--bg-soft);
+    color: var(--text-soft);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem; font-weight: 600;
+    margin-bottom: 14px;
+  }
+  .use-card.featured .use-tag { background: rgba(255,255,255,0.1); color: var(--accent); }
+  .use-card ul { padding-left: 18px; font-size: 0.92rem; }
+  .use-card ul li { margin-bottom: 6px; }
+
+  /* Process */
+  .process { background: var(--bg-dark); color: var(--text-on-dark); }
+  .process h2 { color: #fff; }
+  .process p { color: var(--text-on-dark-muted); }
+  .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; counter-reset: step; }
+  @media (max-width: 800px) { .process-grid { grid-template-columns: 1fr; } }
+  .process-step {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    counter-increment: step;
+    position: relative;
+  }
+  .process-step::before {
+    content: "0" counter(step);
+    font-size: 3rem; font-weight: 900;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .process-step h3 { color: #fff; }
+  .process-step p { color: var(--text-on-dark-muted); margin: 0; }
+
+  /* Pricing */
+  .pricing {
+    background:
+      linear-gradient(180deg, var(--bg-soft) 0%, #fff 100%);
+  }
+  .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 980px; margin: 0 auto; }
+  @media (max-width: 800px) { .pricing-grid { grid-template-columns: 1fr; } }
+  .pricing-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+  .pricing-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .pricing-card.featured {
+    border-color: var(--text);
+    border-width: 2px;
+    transform: scale(1.02);
+  }
+  .pricing-name { font-size: 1.05rem; font-weight: 700; color: var(--text); margin: 0; }
+  .pricing-price { font-size: 2.2rem; font-weight: 900; margin: 14px 0 4px; color: var(--text); }
+  .pricing-price .small { font-size: 0.92rem; color: var(--text-soft); font-weight: 600; }
+  .pricing-blurb { font-size: 0.9rem; min-height: 48px; margin-bottom: 18px; }
+  .pricing-card ul { list-style: none; padding: 0; text-align: left; margin: 0 0 24px; }
+  .pricing-card ul li { padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.92rem; }
+  .pricing-card ul li:last-child { border: 0; }
+  .pricing-card ul li::before { content: "✓ "; color: var(--accent-dark); font-weight: 800; }
+
+  /* FAQ */
+  .faq-list { max-width: 800px; margin: 0 auto; }
+  .faq-item { border-bottom: 1px solid var(--border); padding: 22px 0; cursor: pointer; }
+  .faq-q {
+    display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    font-weight: 700; color: var(--text); font-size: 1.05rem;
+  }
+  .faq-q::after { content: "+"; color: var(--accent-dark); font-size: 1.4rem; transition: transform 0.2s ease; flex-shrink: 0; }
+  .faq-item.open .faq-q::after { transform: rotate(45deg); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease, margin 0.3s ease; }
+  .faq-item.open .faq-a { max-height: 500px; margin-top: 12px; }
+
+  /* Final CTA */
+  .final-cta {
+    background:
+      radial-gradient(ellipse at top, rgba(132,204,22,0.15), transparent 60%),
+      var(--bg-dark);
+    color: #fff; text-align: center;
+  }
+  .final-cta h2 { color: #fff; }
+  .final-cta p { color: var(--text-on-dark-muted); max-width: 600px; margin: 0 auto 28px; font-size: 1.1rem; }
+  .final-cta .btn-primary { background: var(--accent); color: var(--text); }
+
+  /* Footer */
+  .footer { background: var(--bg-dark); color: var(--text-on-dark-muted); padding: 36px 0; border-top: 1px solid rgba(255,255,255,0.06); text-align: center; font-size: 0.9rem; }
+  .footer a { color: var(--accent); }
+
+  /* Reveal */
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav-wrapper">
+  <nav class="nav container">
+    <a href="/" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+      </div>
+      <span class="logo-word">overhauled<span>.ai</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">← Back to home</a></li>
+      <li><a href="mailto:hello@overhauled.ai" class="btn btn-primary">Get in Touch →</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="reveal">
+        <span class="badge">AI Agents for Small Business</span>
+        <h1>The team member who never <span class="gradient">sleeps, forgets, or quits.</span></h1>
+        <p>An AI agent is software that does a real job for your business — replying to leads at 2am, following up on quotes, answering common customer questions, booking appointments. I build them, train them on your business, and run them for you.</p>
+        <div class="hero-ctas">
+          <a href="mailto:hello@overhauled.ai" class="btn btn-primary btn-lg">Email us to get started →</a>
+          <a href="#use-cases" class="btn btn-ghost">See what they do</a>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="chat-demo">
+          <div class="chat-header">
+            <div class="chat-avatar">🤖</div>
+            <div>
+              <p class="chat-title">Lead-response agent · Local HVAC Co.</p>
+              <p class="chat-status">Replying in 60 seconds, 24/7</p>
+            </div>
+          </div>
+          <div class="chat-msg in"><div class="chat-bubble">Hi, do you do emergency furnace repair? My heat just went out and it's -20 outside.</div></div>
+          <div class="chat-msg out"><div class="chat-bubble">Hey — yes, we cover emergency furnace calls 24/7. Can I get your address and a phone number? Dave (the owner) will call you back within 15 minutes. He's the only one out tonight, so he'll be there fast.</div></div>
+          <div class="chat-msg in"><div class="chat-bubble">120 Smith St, Guelph. 519-555-0123.</div></div>
+          <div class="chat-msg out"><div class="chat-bubble">Perfect. Got it logged — Dave just got the alert. He'll call you in under 15 min. Stay warm. 🔥</div></div>
+          <p class="chat-meta">Real example. Logged at 11:47 PM. Customer booked at 12:09 AM.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IS -->
+<section class="what-is">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="badge">In plain English</span>
+      <h2>What's an AI agent, actually?</h2>
+    </div>
+    <div class="what-grid">
+      <div class="what-card reveal">
+        <h3>Think of it as a digital employee.</h3>
+        <p>If you've ever wished you had a person who could reply to every form submission instantly, follow up with prospects who didn't book, or answer the same five questions a hundred times a week without losing patience — that's what an AI agent does.</p>
+        <p>Unlike a chatbot that spits out canned replies, an AI agent is trained on <em>your</em> business — your services, your pricing, your tone, your edge cases. It reads context, makes decisions, and writes in your voice.</p>
+        <p>And unlike a person, it costs $50–$200/month to run instead of $4,000+, never takes a sick day, and replies in under a minute, every time.</p>
+      </div>
+      <div class="what-card reveal" style="background: linear-gradient(135deg, var(--accent-soft), #fff); border-color: var(--accent);">
+        <h3 style="color: var(--text);">When it's the right move</h3>
+        <ul style="padding-left: 18px;">
+          <li>You're losing leads after hours and on weekends</li>
+          <li>Quote follow-up is falling through the cracks</li>
+          <li>You answer the same 5 customer questions every week</li>
+          <li>You're a one-person shop and can't grow without help</li>
+          <li>You want to sleep without missing inquiries</li>
+        </ul>
+        <p style="margin-top: 16px; font-size: 0.92rem; color: var(--text-muted);">If two or more of those sound familiar, an AI agent will pay for itself inside a month.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section id="use-cases">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="badge">Use cases</span>
+      <h2>Four AI agents I build right now.</h2>
+      <p>Each one handles a real job that's currently costing you time, money, or both. Pick the one that hurts most. I've built all four for real businesses.</p>
+    </div>
+    <div class="use-grid">
+
+      <div class="use-card featured reveal">
+        <span class="use-tag">Most popular</span>
+        <div class="use-icon">⚡</div>
+        <h3>Lead-response agent</h3>
+        <p>Replies to every form submission, email inquiry, or chat message in under 60 seconds — 24/7. Trained on your services so it gives accurate answers, not generic ones.</p>
+        <ul>
+          <li>Replies in your voice within seconds</li>
+          <li>Asks qualifying questions (budget, timeline, urgency)</li>
+          <li>Books the call directly to your calendar</li>
+          <li>Texts you the second a hot lead comes in</li>
+        </ul>
+      </div>
+
+      <div class="use-card reveal">
+        <div class="use-icon">📞</div>
+        <span class="use-tag">For service businesses</span>
+        <h3>Quote follow-up agent</h3>
+        <p>You sent a quote a week ago. They didn't reply. The agent does — politely, on a schedule, until you get a yes or a clean no. No more leaving money on the table.</p>
+        <ul>
+          <li>Follows up at 3, 7, 14, and 30 days</li>
+          <li>Handles objections and reschedules</li>
+          <li>Knows when to stop chasing</li>
+          <li>Reports back on which prospects went cold</li>
+        </ul>
+      </div>
+
+      <div class="use-card reveal">
+        <div class="use-icon">🎧</div>
+        <span class="use-tag">For shops &amp; service</span>
+        <h3>Customer service agent</h3>
+        <p>Answers the same five questions every customer asks — hours, pricing, what you cover, how to book — without you ever picking up the phone. Escalates anything weird to you.</p>
+        <ul>
+          <li>Trained on your FAQs, hours, and policies</li>
+          <li>Handles bookings and reschedules</li>
+          <li>Sends real humans your way when needed</li>
+          <li>Available on web, SMS, or WhatsApp</li>
+        </ul>
+      </div>
+
+      <div class="use-card reveal">
+        <div class="use-icon">📋</div>
+        <span class="use-tag">For trades &amp; contractors</span>
+        <h3>Booking &amp; intake agent</h3>
+        <p>Walks every new customer through the intake — what's the job, where, when, photos if needed — then drops a clean ticket into your inbox so you can quote without back-and-forth.</p>
+        <ul>
+          <li>Collects address, scope, photos, timeline</li>
+          <li>Filters tire-kickers and out-of-area calls</li>
+          <li>Books site visits to your calendar</li>
+          <li>Sends you everything in one tidy email</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="badge badge-dark">How I build it</span>
+      <h2>From kickoff to live in 1–2 weeks.</h2>
+      <p>No 6-month enterprise consulting. No PhD required. Just a fast build, a real test run, and a working agent in your business.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step reveal">
+        <h3>Discovery + scope</h3>
+        <p>30-min call to figure out exactly what job the agent will do — and what it shouldn't. I map the conversation flows and pick the right tools.</p>
+      </div>
+      <div class="process-step reveal">
+        <h3>Build + train</h3>
+        <p>I build the agent on the right stack (Claude, OpenAI, or local), train it on your business docs, and wire it into your forms, email, or SMS.</p>
+      </div>
+      <div class="process-step reveal">
+        <h3>Test + go live</h3>
+        <p>I test it against real-world cases together, fine-tune the voice, and ship it. You get a control panel, monthly check-ins, and a kill switch if anything goes sideways.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="badge">Pricing</span>
+      <h2>Honest pricing. No "enterprise" tier.</h2>
+      <p>One-time setup gets your agent built and live. Monthly run cost covers the AI infrastructure (it's mostly tokens to OpenAI/Anthropic) plus my ongoing tuning. Cancel any time.</p>
+    </div>
+    <div class="pricing-grid">
+
+      <div class="pricing-card reveal">
+        <h3 class="pricing-name">Starter agent</h3>
+        <div class="pricing-price">$1,500 <span class="small">+ $50/mo</span></div>
+        <p class="pricing-blurb">One agent, one job. Lead response or simple FAQ. Live in 1 week.</p>
+        <ul>
+          <li>Single use case</li>
+          <li>Trained on your basics</li>
+          <li>Email or web channel</li>
+          <li>Monthly check-in</li>
+        </ul>
+        <a href="mailto:hello@overhauled.ai" class="btn btn-ghost" style="width:100%;">Email us →</a>
+      </div>
+
+      <div class="pricing-card featured reveal">
+        <span class="badge" style="margin-bottom: 4px;">Most popular</span>
+        <h3 class="pricing-name">Working agent</h3>
+        <div class="pricing-price">$3,500 <span class="small">+ $150/mo</span></div>
+        <p class="pricing-blurb">A real digital employee — handles leads, follow-ups, and books to your calendar.</p>
+        <ul>
+          <li>Up to 3 use cases</li>
+          <li>Trained on your full business</li>
+          <li>Multi-channel (web + email + SMS)</li>
+          <li>Weekly tuning, monthly reports</li>
+          <li>30-day money-back guarantee</li>
+        </ul>
+        <a href="mailto:hello@overhauled.ai" class="btn btn-primary" style="width:100%;">Email us →</a>
+      </div>
+
+      <div class="pricing-card reveal">
+        <h3 class="pricing-name">Custom build</h3>
+        <div class="pricing-price">From $7,500 <span class="small">+ usage</span></div>
+        <p class="pricing-blurb">Multi-agent systems, deep integrations, or anything that needs custom tooling.</p>
+        <ul>
+          <li>Multiple agents working together</li>
+          <li>CRM / inventory / booking integration</li>
+          <li>Voice or phone-call agents</li>
+          <li>Hands-on monthly support</li>
+        </ul>
+        <a href="mailto:hello@overhauled.ai" class="btn btn-ghost" style="width:100%;">Email us →</a>
+      </div>
+
+    </div>
+    <p style="text-align: center; margin-top: 36px; color: var(--text-soft); font-size: 0.92rem;">
+      💬 Not sure which fits? <a href="mailto:hello@overhauled.ai" style="color: var(--accent-dark); border-bottom: 1px solid var(--accent); font-weight: 700;">Email us</a> — I'll tell you what's worth building (and what isn't).
+    </p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background: var(--bg-soft);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="badge">FAQ</span>
+      <h2>The honest questions everyone asks.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Will it sound like a robot?</div>
+        <div class="faq-a"><p>If I build it right, no. I train every agent on your real customer conversations, your tone, and your way of writing. Most of my clients' customers can't tell. The trick is restraint — short messages, your voice, real answers.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if it says something wrong?</div>
+        <div class="faq-a"><p>Two safeguards: a strict "what it can and can't talk about" boundary, and a kill switch you can hit any time. I also flag every conversation that goes off-script so you can review weekly. Realistically, the rare odd reply is still better than the lead going to voicemail at 11pm.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do I need to be technical?</div>
+        <div class="faq-a"><p>Not at all. You give me your services, FAQs, hours, and any quote forms or emails you've already written. I do the building. You get a simple dashboard with a chat preview and an on/off switch.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can it actually book to my calendar?</div>
+        <div class="faq-a"><p>Yes — Calendly, Google Calendar, Acuity, or your own booking tool. The agent handles the back-and-forth (when works for you?, what's the job?, what's the address?) and drops the meeting straight in.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What does the monthly cost actually cover?</div>
+        <div class="faq-a"><p>About 60% of it is API costs to OpenAI or Anthropic (each conversation costs a few cents). The other 40% covers ongoing tuning, monitoring, and my time when something needs adjusting. I pass the API costs through at cost — no markup.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I cancel?</div>
+        <div class="faq-a"><p>Any time, no penalty. The Working Agent tier has a 30-day money-back guarantee on the setup fee too. If it doesn't pay for itself in the first month, you get the setup back.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you build voice agents (phone calls)?</div>
+        <div class="faq-a"><p>Yes — under the Custom Build tier. Voice is more complex (handling interruptions, accents, real-time latency), so I treat it as a custom project. Most small businesses don't need voice yet — text-based agents handle 90% of the use cases.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Where does my data live?</div>
+        <div class="faq-a"><p>Your conversation data lives in my infrastructure (I use Anthropic and OpenAI on enterprise-tier accounts that don't train on your data). I never sell or share customer data. You can export everything any time and delete it on cancel.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <span class="badge badge-dark">Free · 30 minutes · No commitment</span>
+    <h2>See what an AI agent could do for your business.</h2>
+    <p>Email us or fill out our contact form. We'll look at where you're losing leads, time, or sleep — and tell you whether an AI agent is the right fix (or whether something else is). No sales pitch, no pressure.</p>
+    <a href="mailto:hello@overhauled.ai" class="btn btn-primary btn-lg">📧 Email hello@overhauled.ai</a>
+    <p style="margin-top: 24px; font-size: 0.88rem;">
+      Booking 2 new AI agent projects this month. Next available start: <strong style="color: #fff;" class="next-start">about a week out</strong>.
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Overhauled.ai · <a href="/">Back to home</a> · <a href="mailto:hello@overhauled.ai">hello@overhauled.ai</a></p>
+  </div>
+</footer>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', () => item.classList.toggle('open'));
+  });
+  // Reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => obs.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('visible'));
+  }
+
+  // Rolling "next start" date — today + 7 days, snapped past weekends.
+  (function () {
+    const d = new Date();
+    d.setDate(d.getDate() + 7);
+    if (d.getDay() === 0) d.setDate(d.getDate() + 1); // Sun -> Mon
+    if (d.getDay() === 6) d.setDate(d.getDate() + 2); // Sat -> Mon
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const text = months[d.getMonth()] + ' ' + d.getDate();
+    document.querySelectorAll('.next-start').forEach(el => { el.textContent = text; });
+  })();
+</script>
+</body>
+</html>

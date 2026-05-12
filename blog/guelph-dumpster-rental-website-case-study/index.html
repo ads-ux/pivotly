@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study: Building the Website for Guelph Dumpster Rental | Overhauled.ai</title>
+  <meta name="description" content="How we built a conversion-focused website for Guelph Dumpster Rental — a flat-rate bin rental service covering Guelph, Cambridge, KW, and surrounding area." />
+  <link rel="canonical" href="https://overhauled.ai/blog/guelph-dumpster-rental-website-case-study/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7H4493NWB"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-E7H4493NWB');</script>
+  <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1452794856103590');fbq('track','PageView');</script>
+  <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1452794856103590&ev=PageView&noscript=1"/></noscript>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Case Study: Building the Website for Guelph Dumpster Rental",
+    "description": "How we built a conversion-focused website for Guelph Dumpster Rental — a flat-rate bin rental service covering Guelph, Cambridge, KW, and surrounding area.",
+    "url": "https://overhauled.ai/blog/guelph-dumpster-rental-website-case-study/",
+    "datePublished": "2025-05-11",
+    "dateModified": "2025-05-11",
+    "author": { "@type": "Person", "name": "Greg", "worksFor": { "@type": "Organization", "name": "Overhauled.ai" } },
+    "publisher": { "@type": "Organization", "name": "Overhauled.ai", "url": "https://overhauled.ai/" },
+    "mainEntityOfPage": "https://overhauled.ai/blog/guelph-dumpster-rental-website-case-study/",
+    "about": { "@type": "LocalBusiness", "name": "Guelph Dumpster Rental", "url": "https://guelphdumpsterrental.com/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://overhauled.ai/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://overhauled.ai/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Guelph Dumpster Rental Case Study", "item": "https://overhauled.ai/blog/guelph-dumpster-rental-website-case-study/" }
+      ]
+    }
+  }
+  </script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#ffffff;--bg-soft:#f8fafc;--bg-dark:#0b1120;--border:#e2e8f0;--text:#0f172a;--text-muted:#475569;--text-soft:#64748b;--accent:#84cc16;--accent-dark:#65a30d;--accent-soft:#ecfccb;--radius:14px;--container:760px}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+    a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+    nav{border-bottom:1px solid var(--border);padding:0 2rem}
+    .nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .logo{font-size:1.2rem;font-weight:800;color:var(--text);text-decoration:none}.logo span{color:var(--accent-dark)}
+    .nav-links{display:flex;gap:2rem;font-size:.9rem;font-weight:500}.nav-links a{color:var(--text-muted)}.nav-links a:hover{color:var(--text);text-decoration:none}
+    .nav-cta{background:var(--accent);color:#fff;font-weight:700;font-size:.875rem;padding:.5rem 1.1rem;border-radius:8px;text-decoration:none}.nav-cta:hover{background:var(--accent-dark);text-decoration:none}
+    .article-wrap{max-width:var(--container);margin:0 auto;padding:3rem 2rem 5rem}
+    .breadcrumb{font-size:.82rem;color:var(--text-soft);margin-bottom:2rem}.breadcrumb a{color:var(--accent-dark)}
+    .post-tag{display:inline-block;background:var(--accent-soft);color:var(--accent-dark);font-size:.75rem;font-weight:700;padding:.2rem .65rem;border-radius:6px;margin-bottom:1rem;text-transform:uppercase;letter-spacing:.04em}
+    h1{font-size:2rem;font-weight:800;color:var(--text);line-height:1.25;margin-bottom:1.25rem}
+    .post-meta{font-size:.85rem;color:var(--text-soft);margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}.post-meta strong{color:var(--text-muted)}
+    h2{font-size:1.3rem;font-weight:700;color:var(--text);margin:2.5rem 0 .85rem}
+    p{color:var(--text-muted);margin-bottom:1.25rem;font-size:1rem}
+    ul{padding-left:1.5rem;margin-bottom:1.25rem}li{color:var(--text-muted);margin-bottom:.5rem;font-size:1rem}
+    strong{color:var(--text)}
+    .site-link{display:inline-flex;align-items:center;gap:.5rem;background:var(--bg-soft);border:1px solid var(--border);border-radius:8px;padding:.6rem 1rem;font-size:.9rem;font-weight:600;color:var(--accent-dark);margin:1rem 0}
+    .site-link:hover{background:var(--accent-soft);text-decoration:none}
+    .callout{background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:8px;padding:1rem 1.25rem;margin:1.75rem 0}.callout p{color:var(--text);margin:0;font-size:.95rem}
+    .result-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0}
+    .result-card{background:var(--bg-soft);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem}
+    .result-card .label{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--text-soft);margin-bottom:.4rem}
+    .result-card p{margin:0;font-size:.95rem;color:var(--text)}
+    .cta-box{background:var(--bg-dark);color:#f1f5f9;border-radius:var(--radius);padding:2.5rem;margin-top:3.5rem;text-align:center}
+    .cta-box h2{color:#fff;margin:0 0 .75rem;font-size:1.4rem}.cta-box p{color:#94a3b8;margin-bottom:1.5rem}
+    .cta-btn{display:inline-block;background:var(--accent);color:#fff;font-weight:700;padding:.85rem 1.75rem;border-radius:10px;font-size:1rem;text-decoration:none}.cta-btn:hover{background:var(--accent-dark);text-decoration:none}
+    footer{background:var(--bg-dark);color:#94a3b8;padding:2rem}
+    .footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:.875rem}
+    footer a{color:#94a3b8}footer a:hover{color:var(--accent)}
+    @media(max-width:640px){h1{font-size:1.5rem}.nav-links{display:none}.result-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">Overhauled<span>.ai</span></a>
+    <div class="nav-links">
+      <a href="/#services">Services</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#faq">FAQ</a>
+    </div>
+    <a href="mailto:hello@overhauled.ai" class="nav-cta">Get in touch →</a>
+  </div>
+</nav>
+
+<div class="article-wrap">
+  <div class="breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Guelph Dumpster Rental Case Study</div>
+
+  <span class="post-tag">Case Study</span>
+  <h1>Case Study: Building the Website for Guelph Dumpster Rental</h1>
+  <div class="post-meta">By <strong>Greg</strong> · Overhauled.ai · May 2025 · 4 min read</div>
+
+  <p>Bin rental is one of those services where the buying decision happens fast. Someone is cleaning out a house, doing a renovation, or clearing a job site — they need a bin today or tomorrow, they want to know the price upfront, and they're not going to spend twenty minutes on a website to figure it out.</p>
+
+  <p>That's the entire design brief for Guelph Dumpster Rental: get the right person to the right information in as few steps as possible, then make it easy to book.</p>
+
+  <a href="https://guelphdumpsterrental.com/" target="_blank" rel="noopener" class="site-link">🚛 Visit guelphdumpsterrental.com →</a>
+
+  <h2>The business</h2>
+
+  <p>Guelph Dumpster Rental delivers 10 and 15-yard bins across Guelph, Cambridge, Kitchener, Waterloo, Milton, Fergus, and Elora. Flat-rate pricing, same-day delivery available, and a phone number that actually gets answered: 519.710.8722.</p>
+
+  <p>The service area is a key differentiator. A lot of bin rental companies in the region only cover Guelph proper. Being explicit about serving KW, Cambridge, Milton, Fergus, and Elora opens up a significantly larger market — and the website needed to make that clear to both humans and search engines.</p>
+
+  <h2>What we focused on</h2>
+
+  <p>Trades and service businesses like this live or die on a few things online: showing up when someone searches, making the price obvious so the phone doesn't ring with tire-kickers, and converting the visitor into a booking before they click over to a competitor.</p>
+
+  <p>The key decisions we made:</p>
+
+  <ul>
+    <li><strong>Price transparency above the fold</strong> — "flat-rate pricing, no surprises" is in the headline. People searching for bin rental have usually been burned by hidden fees before. Calling that out immediately filters in the right customers.</li>
+    <li><strong>60-second quote form</strong> — rather than a generic contact form, the site has a quick quote flow that collects the right info upfront. Less friction for the customer, less back-and-forth for the owner.</li>
+    <li><strong>Service area as SEO signal</strong> — every city in the service area is named explicitly in the copy and in the LocalBusiness schema. "Serving Guelph, Cambridge, Kitchener, Waterloo, Milton, Fergus, and Elora" isn't just for humans — it tells Google exactly which local searches to rank it for.</li>
+    <li><strong>How it works section</strong> — bin rental is simple, but a lot of first-timers don't know what size they need, how long they can keep it, or what happens at pickup. A short process section eliminates those questions before they become calls.</li>
+    <li><strong>Phone number prominent everywhere</strong> — for trades services, a portion of customers will always want to call. The number is in the nav, in the hero, and in the footer. No hunting required.</li>
+  </ul>
+
+  <h2>The local SEO build</h2>
+
+  <p>Bin rental is a competitive local search term. "Dumpster rental Guelph", "bin rental Guelph", "roll-off bin Guelph" — there are established players in this space. Getting traction meant building the technical foundation right from launch.</p>
+
+  <p>We included full LocalBusiness schema with service area, pricing range, and contact details. The page title targets "bin rental in Guelph and area" — which is higher volume than "dumpster rental" in this market because Canadians typically say "bin" not "dumpster." Small things like that matter when you're competing for the same handful of keywords.</p>
+
+  <div class="callout">
+    <p><strong>One thing trades businesses often miss:</strong> the difference between "bin rental Guelph" and "bin rental in Guelph" in a page title isn't significant on its own — but getting the natural, local phrasing right across title, H1, meta description, and body copy adds up to a meaningfully stronger signal than generic copy.</p>
+  </div>
+
+  <h2>What the site delivers</h2>
+
+  <div class="result-grid">
+    <div class="result-card">
+      <div class="label">For customers</div>
+      <p>Price upfront, fast quote, easy booking — no runaround</p>
+    </div>
+    <div class="result-card">
+      <div class="label">For the owner</div>
+      <p>Qualified leads who already know the price, less time on the phone qualifying</p>
+    </div>
+    <div class="result-card">
+      <div class="label">For search engines</div>
+      <p>Clear service area, schema markup, local keyword targeting across all 7 cities served</p>
+    </div>
+    <div class="result-card">
+      <div class="label">For mobile visitors</div>
+      <p>Fast load, tap-to-call phone number, form that works on any screen size</p>
+    </div>
+  </div>
+
+  <p>This is a good example of what a well-built trades website should look like. It's not flashy — it doesn't need to be. It's fast, clear, honest about price, and built to rank for the searches that matter. That's the job.</p>
+
+  <p>If you run a trades or service business in Guelph and your website isn't doing that for you, take a look at our <a href="/website-designer-guelph/">new website service</a> or our <a href="/local-seo-guelph/">local SEO service</a> — both built for exactly this kind of business.</p>
+
+  <div class="cta-box">
+    <h2>Run a trades or service business in Guelph?</h2>
+    <p>Email us or fill out our quick contact form. We'll look at your current site, check how you're ranking locally, and give you a straight answer on what's worth fixing.</p>
+    <a href="mailto:hello@overhauled.ai" class="cta-btn">Get in touch →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span>© 2025 Overhauled.ai · Guelph, ON · <a href="mailto:hello@overhauled.ai">hello@overhauled.ai</a></span>
+    <div style="display:flex;gap:1.5rem;"><a href="/blog/">Blog</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div>
+  </div>
+</footer>
+</body>
+</html>

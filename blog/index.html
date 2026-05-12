@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Overhauled.ai — Websites, Tech & AI for Small Business in Guelph</title>
+  <meta name="description" content="Plain-English guides on websites, local SEO, and AI tools for small businesses in Guelph, Ontario. Written by Greg at Overhauled.ai." />
+  <link rel="canonical" href="https://overhauled.ai/blog/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7H4493NWB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E7H4493NWB');
+  </script>
+  <!-- Meta Pixel -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1452794856103590');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" alt=""
+  src="https://www.facebook.com/tr?id=1452794856103590&ev=PageView&noscript=1"/></noscript>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Overhauled.ai Blog",
+    "url": "https://overhauled.ai/blog/",
+    "description": "Plain-English guides on websites, local SEO, and AI tools for small businesses in Guelph, Ontario.",
+    "publisher": {
+      "@type": "LocalBusiness",
+      "name": "Overhauled.ai",
+      "url": "https://overhauled.ai/"
+    }
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #ffffff;
+      --bg-soft: #f8fafc;
+      --bg-dark: #0b1120;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --text-soft: #64748b;
+      --accent: #84cc16;
+      --accent-dark: #65a30d;
+      --accent-soft: #ecfccb;
+      --radius: 14px;
+      --shadow-sm: 0 1px 3px rgba(15,23,42,0.08);
+      --shadow-md: 0 4px 12px rgba(15,23,42,0.1);
+      --container: 1100px;
+    }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+
+    /* NAV */
+    nav { border-bottom: 1px solid var(--border); padding: 0 2rem; }
+    .nav-inner { max-width: var(--container); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { font-size: 1.2rem; font-weight: 800; color: var(--text); }
+    .logo span { color: var(--accent-dark); }
+    .nav-links { display: flex; gap: 2rem; font-size: 0.9rem; font-weight: 500; color: var(--text-muted); }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { background: var(--accent); color: #fff; font-weight: 700; font-size: 0.875rem; padding: 0.5rem 1.1rem; border-radius: 8px; }
+    .nav-cta:hover { background: var(--accent-dark); }
+
+    /* HERO */
+    .blog-hero { background: var(--bg-soft); border-bottom: 1px solid var(--border); padding: 4rem 2rem; }
+    .blog-hero-inner { max-width: var(--container); margin: 0 auto; }
+    .breadcrumb { font-size: 0.85rem; color: var(--text-soft); margin-bottom: 1rem; }
+    .breadcrumb a { color: var(--accent-dark); }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .blog-hero h1 { font-size: 2.25rem; font-weight: 800; color: var(--text); margin-bottom: 0.75rem; }
+    .blog-hero p { font-size: 1.05rem; color: var(--text-muted); max-width: 560px; }
+
+    /* POSTS GRID */
+    .posts-section { max-width: var(--container); margin: 0 auto; padding: 4rem 2rem; }
+    .posts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; }
+    .post-card { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: box-shadow 0.2s, transform 0.2s; background: #fff; }
+    .post-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .post-card-body { padding: 1.5rem; }
+    .post-tag { display: inline-block; background: var(--accent-soft); color: var(--accent-dark); font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 6px; margin-bottom: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .post-card h2 { font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 0.6rem; line-height: 1.4; }
+    .post-card h2 a:hover { color: var(--accent-dark); }
+    .post-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; }
+    .post-meta { display: flex; align-items: center; gap: 0.75rem; font-size: 0.8rem; color: var(--text-soft); }
+    .post-meta .dot { color: var(--border); }
+    .read-more { font-size: 0.85rem; font-weight: 600; color: var(--accent-dark); }
+    .read-more:hover { text-decoration: underline; }
+
+    /* FOOTER */
+    footer { background: var(--bg-dark); color: #94a3b8; padding: 2.5rem 2rem; margin-top: 4rem; }
+    .footer-inner { max-width: var(--container); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.875rem; }
+    footer a { color: #94a3b8; }
+    footer a:hover { color: var(--accent); }
+
+    @media (max-width: 640px) {
+      .blog-hero h1 { font-size: 1.6rem; }
+      .nav-links { display: none; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">Overhauled<span>.ai</span></a>
+    <div class="nav-links">
+      <a href="/#services">Services</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#faq">FAQ</a>
+    </div>
+    <a href="mailto:hello@overhauled.ai" class="nav-cta">Get in touch →</a>
+  </div>
+</nav>
+
+<div class="blog-hero">
+  <div class="blog-hero-inner">
+    <div class="breadcrumb"><a href="/">Home</a> / Blog</div>
+    <h1>Plain-English Guides for Small Business Owners</h1>
+    <p>No jargon. No upsells. Just honest advice on websites, SEO, and AI tools for businesses in Guelph and beyond.</p>
+  </div>
+</div>
+
+<div class="posts-section">
+  <div class="posts-grid">
+
+    <div class="post-card">
+      <div class="post-card-body">
+        <span class="post-tag">Case Study</span>
+        <h2><a href="/blog/pizzacam-guelph-website-case-study/">Case Study: Building the Website for PizzaCam Guelph — the Viral Robot Pizza Kiosk at UoG</a></h2>
+        <p>895K+ reach on TikTok, a camera that became the attraction, and a 24/7 robot that bakes pizza in 3 minutes. Here's how we built the site to match.</p>
+        <div class="post-meta">
+          <span>Greg · Overhauled.ai</span>
+          <span class="dot">·</span>
+          <span>5 min read</span>
+          <span class="dot">·</span>
+          <span>May 2025</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-card-body">
+        <span class="post-tag">Case Study</span>
+        <h2><a href="/blog/guelph-dumpster-rental-website-case-study/">Case Study: Building the Website for Guelph Dumpster Rental</a></h2>
+        <p>A trades website that shows price upfront, generates qualified leads, and ranks across 7 cities in the service area. Here's how it was built.</p>
+        <div class="post-meta">
+          <span>Greg · Overhauled.ai</span>
+          <span class="dot">·</span>
+          <span>4 min read</span>
+          <span class="dot">·</span>
+          <span>May 2025</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-card-body">
+        <span class="post-tag">Pricing</span>
+        <h2><a href="/blog/how-much-does-a-website-cost-in-guelph/">How Much Does a Website Cost in Guelph? (2025 Honest Breakdown)</a></h2>
+        <p>Freelancer, agency, DIY — here's what you'll actually pay and what you actually get at each price point.</p>
+        <div class="post-meta">
+          <span>Greg · Overhauled.ai</span>
+          <span class="dot">·</span>
+          <span>5 min read</span>
+          <span class="dot">·</span>
+          <span>May 2025</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-card-body">
+        <span class="post-tag">Local SEO</span>
+        <h2><a href="/blog/why-your-guelph-business-isnt-showing-up-on-google/">Why Your Guelph Business Isn't Showing Up on Google</a></h2>
+        <p>The five most common reasons local businesses disappear from search results — and exactly how to fix each one.</p>
+        <div class="post-meta">
+          <span>Greg · Overhauled.ai</span>
+          <span class="dot">·</span>
+          <span>6 min read</span>
+          <span class="dot">·</span>
+          <span>May 2025</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-card-body">
+        <span class="post-tag">AI</span>
+        <h2><a href="/blog/what-is-an-ai-agent-for-small-business/">What Is an AI Agent — And Does My Small Business Actually Need One?</a></h2>
+        <p>Not all the hype, just the practical answer: what AI agents do, what they cost, and whether yours is a good fit.</p>
+        <div class="post-meta">
+          <span>Greg · Overhauled.ai</span>
+          <span class="dot">·</span>
+          <span>5 min read</span>
+          <span class="dot">·</span>
+          <span>May 2025</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-card-body">
+        <span class="post-tag">Website Fixes</span>
+        <h2><a href="/blog/signs-your-website-needs-a-repair/">5 Signs Your Business Website Is Costing You Customers</a></h2>
+        <p>Most broken websites don't crash — they just quietly lose you leads. Here's how to tell if yours is one of them.</p>
+        <div class="post-meta">
+          <span>Greg · Overhauled.ai</span>
+          <span class="dot">·</span>
+          <span>4 min read</span>
+          <span class="dot">·</span>
+          <span>May 2025</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span>© 2025 Overhauled.ai · Guelph, ON · <a href="mailto:hello@overhauled.ai">hello@overhauled.ai</a></span>
+    <div style="display:flex;gap:1.5rem;">
+      <a href="/">Home</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
