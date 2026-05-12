@@ -9,142 +9,191 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 <link rel="canonical" href="https://overhauled.ai/contact" />
+<link rel="icon" href="/favicon.ico" />
 <style>
   :root {
+    --bg: #ffffff;
+    --bg-soft: #f8fafc;
     --bg-dark: #0b1120;
-    --border: rgba(255,255,255,0.12);
-    --text: #f1f5f9;
-    --text-muted: #94a3b8;
+    --surface: #ffffff;
+    --border: #e2e8f0;
+    --text: #0f172a;
+    --text-muted: #475569;
+    --text-soft: #64748b;
+    --text-on-dark: #f1f5f9;
+    --text-on-dark-muted: #94a3b8;
     --accent: #84cc16;
     --accent-dark: #65a30d;
-    --warm: #fb923c;
+    --accent-soft: #ecfccb;
+    --shadow-sm: 0 1px 2px rgba(15,23,42,0.06), 0 1px 3px rgba(15,23,42,0.08);
+    --shadow-md: 0 4px 6px -1px rgba(15,23,42,0.08), 0 2px 4px -2px rgba(15,23,42,0.06);
+    --shadow-lg: 0 20px 25px -5px rgba(15,23,42,0.08), 0 8px 10px -6px rgba(15,23,42,0.06);
     --radius: 14px;
     --radius-lg: 20px;
+    --container: 1100px;
   }
-  *,*::before,*::after { box-sizing: border-box; }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
-    margin: 0; min-height: 100vh;
+    margin: 0;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: var(--bg-dark);
+    background: var(--bg);
     color: var(--text);
     line-height: 1.6;
+    font-size: 16px;
     -webkit-font-smoothing: antialiased;
-    background-image:
-      radial-gradient(ellipse at top right, rgba(132,204,22,0.15), transparent 50%),
-      radial-gradient(ellipse at bottom left, rgba(99,102,241,0.10), transparent 50%);
   }
-  a { color: var(--accent); text-decoration: none; }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; text-decoration: none; }
   h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 16px; }
-  h2 { font-size: 1.4rem; font-weight: 800; margin: 0 0 12px; }
+  h2 { font-size: 1.2rem; font-weight: 800; margin: 0 0 8px; letter-spacing: -0.01em; }
   p { color: var(--text-muted); margin: 0 0 14px; }
-  .container { max-width: 920px; margin: 0 auto; padding: 32px 24px; }
+  .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
 
-  /* Nav */
-  .nav { display: flex; align-items: center; justify-content: space-between; padding: 8px 0 32px; }
-  .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.1rem; color: #fff; }
-  .logo-icon { width: 32px; height: 32px; background: var(--accent); border-radius: 9px; display: grid; place-items: center; }
-  .logo-icon svg { width: 18px; height: 18px; fill: var(--bg-dark); }
-  .nav-back { font-size: 0.9rem; color: var(--text-muted); }
-  .nav-back:hover { color: var(--accent); }
-
-  /* Hero */
-  .hero { text-align: center; padding: 24px 0 40px; }
-  .badge {
-    display: inline-flex; align-items: center; gap: 6px;
-    padding: 6px 14px;
-    background: rgba(132,204,22,0.15);
-    color: var(--accent);
-    border-radius: 999px;
-    font-size: 0.78rem; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.04em;
-    margin-bottom: 18px;
-  }
-  .hero p.lede { font-size: 1.15rem; max-width: 580px; margin: 0 auto; }
-
-  /* Card */
-  .contact-card {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: 36px;
+  /* ---- NAV ---- */
+  .nav-wrapper {
+    position: sticky; top: 0; z-index: 100;
+    border-bottom: 1px solid var(--border);
+    background: rgba(255,255,255,0.92);
     backdrop-filter: blur(12px);
-    box-shadow: 0 30px 60px -20px rgba(0,0,0,0.5);
   }
-  @media (max-width: 600px) { .contact-card { padding: 24px; } }
-
-  /* Layout */
-  .grid-split {
-    display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; align-items: start;
+  .nav {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px; gap: 24px;
   }
-  @media (max-width: 780px) { .grid-split { grid-template-columns: 1fr; } }
+  .logo { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 1.1rem; letter-spacing: -0.02em; }
+  .logo-icon { width: 28px; height: 28px; background: var(--text); border-radius: 7px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .logo-icon svg { width: 14px; height: 14px; fill: var(--accent); }
+  .logo-word span { color: var(--accent-dark); }
+  .nav-links { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: 4px; }
+  .nav-links a { font-size: 0.95rem; font-weight: 500; color: var(--text-soft); padding: 6px 10px; border-radius: 6px; transition: color 0.15s; }
+  .nav-links a:hover { color: var(--text); }
+  .nav-links a.active { color: var(--text); font-weight: 700; }
+  .btn-nav { display: inline-flex; align-items: center; padding: 8px 16px; border-radius: 7px; background: var(--text); color: #fff; font-size: 0.85rem; font-weight: 700; transition: background 0.15s; }
+  .btn-nav:hover { background: #1e293b; }
+  .hamburger { display: none; background: none; border: none; font-size: 1.4rem; cursor: pointer; padding: 4px; }
+  .mobile-menu { display: none; flex-direction: column; gap: 4px; padding: 12px 24px 16px; border-top: 1px solid var(--border); background: #fff; }
+  .mobile-menu a { padding: 10px 0; font-size: 1rem; font-weight: 600; color: var(--text); border-bottom: 1px solid var(--border); }
+  .mobile-menu.open { display: flex; }
+  @media (max-width: 800px) { .nav-links { display: none; } .hamburger { display: block; } }
 
-  /* Info panel */
-  .info-panel h2 { color: var(--text); margin-bottom: 8px; }
-  .info-panel > p { margin-bottom: 24px; }
-
-  .info-item {
-    display: flex; align-items: flex-start; gap: 14px;
-    padding: 16px 0;
+  /* ---- HERO ---- */
+  .hero {
+    text-align: center;
+    padding: 64px 24px 48px;
+    background: var(--bg-soft);
     border-bottom: 1px solid var(--border);
   }
-  .info-item:last-child { border-bottom: none; }
-  .info-icon {
-    width: 38px; height: 38px; flex-shrink: 0;
-    background: rgba(132,204,22,0.12);
-    border-radius: 10px;
-    display: grid; place-items: center;
+  .badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent-soft); color: var(--accent-dark);
+    font-size: 0.78rem; font-weight: 700; padding: 5px 14px;
+    border-radius: 99px; letter-spacing: 0.04em; text-transform: uppercase;
+    margin-bottom: 20px;
   }
-  .info-icon svg { width: 18px; height: 18px; stroke: var(--accent); }
-  .info-label { font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 3px; }
-  .info-value { font-size: 0.95rem; font-weight: 600; color: var(--text); }
-  .info-value a { color: var(--text); }
-  .info-value a:hover { color: var(--accent); }
+  .hero h1 { color: var(--text); }
+  .hero h1 span {
+    background: linear-gradient(135deg, var(--accent-dark), #a3e635);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .hero .lede { font-size: 1.1rem; max-width: 540px; margin: 0 auto; color: var(--text-muted); }
 
-  /* Form */
-  form .field { margin-bottom: 18px; }
-  form label { display: block; font-size: 0.85rem; font-weight: 700; color: var(--text-muted); margin-bottom: 6px; }
-  form input, form textarea, form select {
-    width: 100%; padding: 14px 16px;
-    border-radius: 12px;
+  /* ---- MAIN CONTENT ---- */
+  .page-body { padding: 56px 0 80px; }
+
+  /* ---- CARD ---- */
+  .contact-card {
+    background: var(--surface);
     border: 1px solid var(--border);
-    background: rgba(0,0,0,0.25);
-    color: #fff;
-    font-size: 0.97rem;
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    box-shadow: var(--shadow-lg);
+  }
+  @media (max-width: 640px) { .contact-card { padding: 24px; } }
+
+  /* ---- GRID ---- */
+  .grid-split {
+    display: grid; grid-template-columns: 1fr 1.5fr; gap: 48px; align-items: start;
+  }
+  @media (max-width: 780px) { .grid-split { grid-template-columns: 1fr; gap: 36px; } }
+
+  /* ---- LEFT PANEL ---- */
+  .info-panel h2 { color: var(--text); }
+  .info-panel > p { margin-bottom: 16px; font-size: 0.9rem; }
+
+  .problem-list { display: flex; flex-direction: column; gap: 7px; margin-bottom: 20px; }
+  .problem-btn {
+    display: block; width: 100%; text-align: left;
+    padding: 10px 14px;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text-muted);
+    font-size: 0.85rem; font-weight: 500;
     font-family: inherit;
-    transition: border-color 0.15s ease, background 0.15s ease;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+    line-height: 1.4;
+  }
+  .problem-btn:hover {
+    background: var(--accent-soft);
+    border-color: var(--accent-dark);
+    color: var(--text);
+  }
+  .problem-btn.selected {
+    background: var(--accent-soft);
+    border-color: var(--accent-dark);
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .contact-meta { font-size: 0.82rem; color: var(--text-soft); }
+  .contact-meta a { color: var(--accent-dark); font-weight: 600; }
+  .contact-meta a:hover { color: var(--text); }
+
+  /* ---- FORM ---- */
+  form .field { margin-bottom: 18px; }
+  form label { display: block; font-size: 0.82rem; font-weight: 700; color: var(--text); margin-bottom: 6px; letter-spacing: 0.01em; }
+  form input, form textarea, form select {
+    width: 100%; padding: 13px 16px;
+    border-radius: 10px;
+    border: 1.5px solid var(--border);
+    background: var(--bg-soft);
+    color: var(--text);
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
     resize: none;
   }
-  form input::placeholder, form textarea::placeholder { color: rgba(255,255,255,0.3); }
+  form input::placeholder, form textarea::placeholder { color: var(--text-soft); }
   form input:focus, form textarea:focus, form select:focus {
     outline: 0;
-    border-color: var(--accent);
-    background: rgba(0,0,0,0.35);
+    border-color: var(--accent-dark);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(132,204,22,0.15);
   }
-  form select { appearance: none; cursor: pointer; }
-  form select option { background: #1e293b; color: #fff; }
+  form select { appearance: none; cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748b' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
 
-  .btn {
-    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-    width: 100%;
-    padding: 15px 24px;
-    background: var(--accent);
-    color: var(--bg-dark);
-    font-weight: 800;
-    font-size: 1rem;
-    border: 0;
-    border-radius: 999px;
+  .btn-submit {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    width: 100%; padding: 15px 24px;
+    background: var(--text); color: #fff;
+    font-weight: 800; font-size: 1rem;
+    border: 0; border-radius: 10px;
     cursor: pointer;
-    transition: transform 0.15s ease, background 0.15s ease;
+    transition: background 0.15s, transform 0.15s;
+    font-family: inherit;
   }
-  .btn:hover { background: var(--accent-dark); color: #fff; transform: translateY(-1px); }
-  .btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
-  .form-note { font-size: 0.82rem; color: var(--text-muted); text-align: center; margin: 12px 0 0; }
+  .btn-submit:hover { background: #1e293b; transform: translateY(-1px); box-shadow: var(--shadow-md); }
+  .btn-submit:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+  .form-note { font-size: 0.8rem; color: var(--text-soft); text-align: center; margin: 10px 0 0; }
 
-  /* Success */
+  /* ---- SUCCESS ---- */
   .success {
     display: none;
-    background: rgba(132,204,22,0.08);
-    border: 1px solid rgba(132,204,22,0.4);
+    background: var(--accent-soft);
+    border: 1.5px solid var(--accent-dark);
     border-radius: var(--radius);
     padding: 32px;
     text-align: center;
@@ -152,178 +201,198 @@
   .success.show { display: block; animation: fadeIn 0.4s ease; }
   @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
   .success-icon { font-size: 2.4rem; margin-bottom: 10px; }
-  .success-title { font-size: 1.15rem; font-weight: 800; color: #fff; margin-bottom: 8px; }
+  .success-title { font-size: 1.15rem; font-weight: 800; color: var(--text); margin-bottom: 8px; }
   .success-body { font-size: 0.92rem; color: var(--text-muted); }
+  .success-body a { color: var(--accent-dark); font-weight: 600; }
 
-  /* Error */
+  /* ---- ERROR ---- */
   .error-msg {
     display: none;
-    background: rgba(239,68,68,0.1);
-    border: 1px solid rgba(239,68,68,0.35);
+    background: #fef2f2;
+    border: 1.5px solid #fca5a5;
     border-radius: 10px;
     padding: 12px 16px;
     font-size: 0.88rem;
-    color: #fca5a5;
+    color: #dc2626;
     margin-bottom: 16px;
   }
+  .error-msg a { color: #dc2626; font-weight: 600; }
   .error-msg.show { display: block; }
 
-  /* Problem buttons */
-  .problem-list { display: flex; flex-direction: column; gap: 8px; margin-top: 4px; }
-  .problem-btn {
-    display: block; width: 100%; text-align: left;
-    padding: 10px 14px;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    color: var(--text-muted);
+  /* ---- FOOTER ---- */
+  .footer {
+    background: var(--bg-dark);
+    text-align: center;
+    padding: 28px 24px;
+    color: var(--text-on-dark-muted);
     font-size: 0.85rem;
-    font-family: inherit;
-    cursor: pointer;
-    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
-    line-height: 1.4;
   }
-  .problem-btn:hover { background: rgba(132,204,22,0.08); border-color: rgba(132,204,22,0.4); color: var(--text); }
-  .problem-btn.selected { background: rgba(132,204,22,0.12); border-color: var(--accent); color: var(--text); }
-
-  .footer { text-align: center; padding: 40px 0 24px; color: var(--text-muted); font-size: 0.85rem; }
+  .footer a { color: var(--text-on-dark-muted); transition: color 0.15s; }
+  .footer a:hover { color: var(--accent); }
 </style>
 </head>
 <body>
 
-<div class="container">
-
-  <nav class="nav">
+<!-- =============== NAV =============== -->
+<header class="nav-wrapper">
+  <nav class="nav container" aria-label="Main navigation">
     <a href="/" class="logo">
       <div class="logo-icon">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
       </div>
-      overhauled.ai
+      <span class="logo-word">overhauled<span>.ai</span></span>
     </a>
-    <a class="nav-back" href="/">← Back to home</a>
+    <ul class="nav-links">
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#ai-agents">AI Agents</a></li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/#work">Work</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/contact" class="btn-nav active">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
   </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/#services">Services</a>
+    <a href="/#ai-agents">AI Agents</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/#work">Work</a>
+    <a href="/about">About</a>
+    <a href="/blog/">Blog</a>
+    <a href="/contact">Contact</a>
+  </div>
+</header>
 
-  <header class="hero">
-    <span class="badge">Reply within one business day</span>
-    <h1>Sound like any of <span style="background: linear-gradient(135deg, var(--accent), var(--warm)); -webkit-background-clip: text; background-clip: text; color: transparent;">these?</span></h1>
-    <p class="lede">Most small business owners reach out because of one of these problems. If something here sounds familiar — let's talk.</p>
-  </header>
+<!-- =============== HERO =============== -->
+<section class="hero">
+  <span class="badge">Reply within one business day</span>
+  <h1>Sound like any of <span>these?</span></h1>
+  <p class="lede">Most small business owners reach out because of one of these problems. If something here sounds familiar — let's talk.</p>
+</section>
 
-  <div class="contact-card">
-    <div class="grid-split">
+<!-- =============== BODY =============== -->
+<div class="page-body">
+  <div class="container">
+    <div class="contact-card">
+      <div class="grid-split">
 
-      <!-- Problems panel -->
-      <div class="info-panel">
-        <h2>Common problems we fix</h2>
-        <p>Click one to pre-fill the form.</p>
+        <!-- Problems panel -->
+        <div class="info-panel">
+          <h2>Common problems we fix</h2>
+          <p>Click one to pre-fill the form.</p>
 
-        <div class="problem-list">
-          <button type="button" class="problem-btn" data-topic="My website is slow or broken">
-            🐌 My website is slow or looks broken
-          </button>
-          <button type="button" class="problem-btn" data-topic="My contact form isn't working">
-            📭 My contact form stopped working and I'm missing leads
-          </button>
-          <button type="button" class="problem-btn" data-topic="Not showing up on Google or AI search">
-            🔍 I'm not showing up on Google — or in ChatGPT / Perplexity
-          </button>
-          <button type="button" class="problem-btn" data-topic="I need a new website">
-            🏗️ I need a new website built properly
-          </button>
-          <button type="button" class="problem-btn" data-topic="Leads are falling through the cracks">
-            🕳️ Leads are coming in but nothing is following up on them
-          </button>
-          <button type="button" class="problem-btn" data-topic="I need a booking or scheduling system">
-            📅 I need a way for customers to book or schedule online
-          </button>
-          <button type="button" class="problem-btn" data-topic="My CRM is a mess or I don't have one">
-            🗂️ My CRM is a mess — or I don't have one at all
-          </button>
-          <button type="button" class="problem-btn" data-topic="I want to automate repetitive tasks with AI">
-            🤖 I'm doing the same repetitive tasks every day and want to automate them
-          </button>
-          <button type="button" class="problem-btn" data-topic="I need help with my mailing list">
-            📧 My mailing list isn't growing — or I'm not sending anything
-          </button>
-          <button type="button" class="problem-btn" data-topic="I can't keep up with social media">
-            📱 I can't keep up with posting on social media
-          </button>
-          <button type="button" class="problem-btn" data-topic="My website looks broken on phones">
-            📵 My website looks terrible on phones
-          </button>
-          <button type="button" class="problem-btn" data-topic="I don't know where to start">
-            🤷 I don't know where to start — I just know something isn't working
-          </button>
+          <div class="problem-list">
+            <button type="button" class="problem-btn" data-topic="My website is slow or broken">
+              🐌 My website is slow or looks broken
+            </button>
+            <button type="button" class="problem-btn" data-topic="My contact form isn't working">
+              📭 My contact form stopped working and I'm missing leads
+            </button>
+            <button type="button" class="problem-btn" data-topic="Not showing up on Google or AI search">
+              🔍 I'm not showing up on Google — or in ChatGPT / Perplexity
+            </button>
+            <button type="button" class="problem-btn" data-topic="I need a new website">
+              🏗️ I need a new website built properly
+            </button>
+            <button type="button" class="problem-btn" data-topic="Leads are falling through the cracks">
+              🕳️ Leads are coming in but nothing is following up on them
+            </button>
+            <button type="button" class="problem-btn" data-topic="I need a booking or scheduling system">
+              📅 I need a way for customers to book or schedule online
+            </button>
+            <button type="button" class="problem-btn" data-topic="My CRM is a mess or I don't have one">
+              🗂️ My CRM is a mess — or I don't have one at all
+            </button>
+            <button type="button" class="problem-btn" data-topic="I want to automate repetitive tasks with AI">
+              🤖 I'm doing the same repetitive tasks every day and want to automate them
+            </button>
+            <button type="button" class="problem-btn" data-topic="I need help with my mailing list">
+              📧 My mailing list isn't growing — or I'm not sending anything
+            </button>
+            <button type="button" class="problem-btn" data-topic="I can't keep up with social media">
+              📱 I can't keep up with posting on social media
+            </button>
+            <button type="button" class="problem-btn" data-topic="My website looks broken on phones">
+              📵 My website looks terrible on phones
+            </button>
+            <button type="button" class="problem-btn" data-topic="I don't know where to start">
+              🤷 I don't know where to start — I just know something isn't working
+            </button>
+          </div>
+
+          <p class="contact-meta">Call or email: <a href="tel:+15199425698">(519) 942-5698</a> · <a href="mailto:hello@overhauled.ai">hello@overhauled.ai</a></p>
         </div>
 
-        <p style="font-size:0.8rem;margin-top:16px;">Call or email: <a href="tel:+15199425698">(519) 942-5698</a> · <a href="mailto:hello@overhauled.ai">hello@overhauled.ai</a></p>
-      </div>
+        <!-- Form panel -->
+        <div>
+          <div class="error-msg" id="errorMsg">Something went wrong — please try again or email us at <a href="mailto:hello@overhauled.ai">hello@overhauled.ai</a>.</div>
 
-      <!-- Form panel -->
-      <div>
-        <div class="error-msg" id="errorMsg">Something went wrong — please try again or email us directly at <a href="mailto:hello@overhauled.ai">hello@overhauled.ai</a>.</div>
+          <form id="contactForm" novalidate>
+            <!-- Honeypot -->
+            <p style="display:none;"><label>Don't fill this out: <input name="bot-field" id="botField" tabindex="-1" autocomplete="off" /></label></p>
 
-        <form id="contactForm" novalidate>
-          <!-- Honeypot -->
-          <p style="display:none;"><label>Don't fill this out: <input name="bot-field" id="botField" tabindex="-1" autocomplete="off" /></label></p>
+            <div class="field">
+              <label for="name">Your name <span style="color:var(--accent-dark)">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Dave Smith" required autocomplete="name" />
+            </div>
 
-          <div class="field">
-            <label for="name">Your name <span style="color:var(--accent)">*</span></label>
-            <input type="text" id="name" name="name" placeholder="Dave Smith" required autocomplete="name" />
+            <div class="field">
+              <label for="email">Email address <span style="color:var(--accent-dark)">*</span></label>
+              <input type="email" id="email" name="email" placeholder="dave@yourbusiness.com" required autocomplete="email" />
+            </div>
+
+            <div class="field">
+              <label for="subject">What's this about?</label>
+              <select id="subject" name="subject">
+                <option value="">What's going on?…</option>
+                <option value="My website is slow or broken">My website is slow or looks broken</option>
+                <option value="My contact form isn't working">My contact form stopped working</option>
+                <option value="Not showing up on Google or AI search">I'm not showing up on Google or AI search</option>
+                <option value="I need a new website">I need a new website built properly</option>
+                <option value="Leads are falling through the cracks">Leads aren't being followed up on</option>
+                <option value="I need a booking or scheduling system">I need online booking or scheduling</option>
+                <option value="My CRM is a mess or I don't have one">My CRM is a mess — or I don't have one</option>
+                <option value="I want to automate repetitive tasks with AI">I want to automate repetitive tasks with AI</option>
+                <option value="I need help with my mailing list">My mailing list isn't working</option>
+                <option value="I can't keep up with social media">I can't keep up with social media</option>
+                <option value="My website looks broken on phones">My website looks broken on phones</option>
+                <option value="I don't know where to start">I don't know where to start</option>
+                <option value="Something else">Something else</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">Message <span style="color:var(--accent-dark)">*</span></label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us a bit about your business and what you're looking for…" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit" id="submitBtn">
+              <span>Send message</span>
+              <span>→</span>
+            </button>
+            <p class="form-note">No pitch. No follow-up unless you want one.</p>
+          </form>
+
+          <div class="success" id="success">
+            <div class="success-icon">✅</div>
+            <div class="success-title">Message sent — thanks!</div>
+            <p class="success-body">We'll get back to you within one business day. Or reach us directly at <a href="mailto:hello@overhauled.ai">hello@overhauled.ai</a>.</p>
           </div>
-
-          <div class="field">
-            <label for="email">Email address <span style="color:var(--accent)">*</span></label>
-            <input type="email" id="email" name="email" placeholder="dave@yourbusiness.com" required autocomplete="email" />
-          </div>
-
-          <div class="field">
-            <label for="subject">What's this about?</label>
-            <select id="subject" name="subject">
-              <option value="">What's going on?…</option>
-              <option value="My website is slow or broken">My website is slow or looks broken</option>
-              <option value="My contact form isn't working">My contact form stopped working</option>
-              <option value="Not showing up on Google or AI search">I'm not showing up on Google or AI search</option>
-              <option value="I need a new website">I need a new website built properly</option>
-              <option value="Leads are falling through the cracks">Leads aren't being followed up on</option>
-              <option value="I need a booking or scheduling system">I need online booking or scheduling</option>
-              <option value="My CRM is a mess or I don't have one">My CRM is a mess — or I don't have one</option>
-              <option value="I want to automate repetitive tasks with AI">I want to automate repetitive tasks with AI</option>
-              <option value="I need help with my mailing list">My mailing list isn't working</option>
-              <option value="I can't keep up with social media">I can't keep up with social media</option>
-              <option value="My website looks broken on phones">My website looks broken on phones</option>
-              <option value="I don't know where to start">I don't know where to start</option>
-              <option value="Something else">Something else</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="message">Message <span style="color:var(--accent)">*</span></label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell us a bit about your business and what you're looking for…" required></textarea>
-          </div>
-
-          <button type="submit" class="btn" id="submitBtn">
-            <span>Send message</span>
-            <span>→</span>
-          </button>
-          <p class="form-note">No pitch. No follow-up unless you want one.</p>
-        </form>
-
-        <div class="success" id="success">
-          <div class="success-icon">✅</div>
-          <div class="success-title">Message sent — thanks!</div>
-          <p class="success-body">We'll get back to you within one business day. In the meantime, feel free to email us directly at <a href="mailto:hello@overhauled.ai">hello@overhauled.ai</a>.</p>
         </div>
-      </div>
 
+      </div>
     </div>
   </div>
-
-  <footer class="footer">
-    © 2026 Overhauled.ai · Built in Guelph, ON · <a href="/">Home</a>
-  </footer>
-
 </div>
+
+<!-- =============== FOOTER =============== -->
+<footer class="footer">
+  © 2026 Overhauled.ai · Guelph, ON ·
+  <a href="/">Home</a> ·
+  <a href="/privacy/">Privacy</a> ·
+  <a href="/terms/">Terms</a>
+</footer>
 
 <script>
   const form      = document.getElementById('contactForm');
@@ -332,24 +401,22 @@
   const errorMsg  = document.getElementById('errorMsg');
   const botField  = document.getElementById('botField');
 
+  // Hamburger
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  });
+
   // Problem button → pre-fill subject dropdown
   document.querySelectorAll('.problem-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const topic = btn.dataset.topic;
       const select = document.getElementById('subject');
-      // Set matching option
       for (let i = 0; i < select.options.length; i++) {
-        if (select.options[i].value === topic) {
-          select.selectedIndex = i;
-          break;
-        }
+        if (select.options[i].value === topic) { select.selectedIndex = i; break; }
       }
-      // Highlight selected button
       document.querySelectorAll('.problem-btn').forEach(b => b.classList.remove('selected'));
       btn.classList.add('selected');
-      // Scroll to form smoothly
       document.getElementById('contactForm').scrollIntoView({ behavior: 'smooth', block: 'center' });
-      // Focus the message field
       setTimeout(() => document.getElementById('message').focus(), 400);
     });
   });
@@ -389,7 +456,6 @@
       console.error('Submission error:', err);
     }
 
-    // Show success regardless — the server may have received it fine
     form.style.display = 'none';
     success.classList.add('show');
   });
