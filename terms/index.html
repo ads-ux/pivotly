@@ -4,11 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terms of Service | Overhauled.ai</title>
-  <meta name="description" content="Terms of Service for Overhauled.ai — the terms that govern our web design and digital marketing services." />
+  <meta name="description" content="Terms of Service for Overhauled.ai — the terms that govern our web design, tech, and AI agent services." />
+  <meta name="robots" content="noindex" />
   <link rel="canonical" href="https://overhauled.ai/terms/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="icon" href="/favicon.ico" />
   <!-- Google Analytics GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7H4493NWB"></script>
   <script>
@@ -19,133 +21,270 @@
   </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #0b1120;
-      color: #e2e8f0;
-      line-height: 1.7;
+    :root {
+      --bg: #ffffff;
+      --bg-soft: #f8fafc;
+      --bg-dark: #0b1120;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --text-soft: #64748b;
+      --accent: #84cc16;
+      --accent-dark: #65a30d;
+      --accent-soft: #ecfccb;
+      --radius: 14px;
+      --nav-h: 64px;
+      --container: 1100px;
     }
-    a { color: #84cc16; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; }
+    a { color: inherit; text-decoration: none; }
 
-    header {
-      padding: 1.25rem 2rem;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+    /* ---- NAV ---- */
+    .nav-wrapper {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
     }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #fff;
+    .nav { display: flex; align-items: center; justify-content: space-between; max-width: var(--container); margin: 0 auto; padding: 0 2rem; height: var(--nav-h); }
+    .logo { display: flex; align-items: center; gap: 8px; font-size: 1.15rem; font-weight: 800; color: var(--text); }
+    .logo-icon { width: 28px; height: 28px; background: var(--text); border-radius: 7px; display: flex; align-items: center; justify-content: center; }
+    .logo-icon svg { width: 16px; height: 16px; fill: var(--accent); }
+    .logo-word span { color: var(--accent-dark); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--text-muted); transition: color 0.15s; }
+    .nav-links a:hover { color: var(--text); }
+    .btn-nav { background: var(--text); color: #fff !important; font-weight: 700 !important; font-size: 0.875rem !important; padding: 0.5rem 1.2rem; border-radius: 8px; transition: background 0.15s !important; }
+    .btn-nav:hover { background: #1e293b !important; color: #fff !important; }
+    .hamburger { display: none; background: none; border: none; font-size: 1.4rem; cursor: pointer; color: var(--text); }
+    .mobile-menu { display: none; flex-direction: column; gap: 0; border-top: 1px solid var(--border); background: #fff; }
+    .mobile-menu a { padding: 1rem 2rem; font-size: 0.95rem; font-weight: 500; color: var(--text-muted); border-bottom: 1px solid var(--border); }
+    .mobile-menu a:hover { background: var(--bg-soft); color: var(--text); }
+    .mobile-menu.open { display: flex; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: block; }
     }
-    .logo span { color: #84cc16; }
 
-    .container {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 4rem 2rem;
+    /* ---- PAGE ---- */
+    .legal-hero {
+      background: var(--bg-soft);
+      border-bottom: 1px solid var(--border);
+      padding: 56px 2rem 48px;
     }
-    h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 0.5rem;
+    .legal-hero-inner { max-width: 760px; margin: 0 auto; }
+    .badge {
+      display: inline-block; background: var(--accent-soft); color: var(--accent-dark);
+      font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.75rem;
+      border-radius: 6px; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem;
     }
-    .updated {
-      font-size: 0.875rem;
-      color: #94a3b8;
-      margin-bottom: 3rem;
-    }
-    h2 {
-      font-size: 1.125rem;
-      font-weight: 600;
-      color: #fff;
-      margin: 2.5rem 0 0.75rem;
-    }
-    p, li {
-      color: #cbd5e1;
-      font-size: 0.9375rem;
-    }
-    ul {
-      padding-left: 1.5rem;
-      margin-top: 0.5rem;
-    }
-    li { margin-bottom: 0.4rem; }
+    .legal-hero h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 800; color: var(--text); margin-bottom: 0.5rem; }
+    .legal-hero p { font-size: 1rem; color: var(--text-muted); }
 
-    footer {
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding: 2rem;
-      text-align: center;
-      color: #64748b;
-      font-size: 0.875rem;
+    .legal-body { padding: 64px 2rem 96px; }
+    .legal-content { max-width: 760px; margin: 0 auto; }
+
+    .updated-tag {
+      display: inline-block;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 0.82rem;
+      color: var(--text-soft);
+      margin-bottom: 48px;
     }
-    footer a { color: #94a3b8; }
-    footer a:hover { color: #84cc16; }
+    .updated-tag strong { color: var(--text); }
+
+    .legal-content h2 {
+      font-size: 1.05rem; font-weight: 700; color: var(--text);
+      margin: 40px 0 10px; padding-top: 8px;
+      border-top: 1px solid var(--border);
+    }
+    .legal-content h2:first-of-type { border-top: none; margin-top: 0; }
+    .legal-content p { font-size: 0.94rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 12px; }
+    .legal-content ul { margin: 6px 0 16px 0; padding-left: 0; display: flex; flex-direction: column; gap: 6px; }
+    .legal-content li { font-size: 0.93rem; color: var(--text-muted); padding-left: 18px; position: relative; line-height: 1.65; }
+    .legal-content li::before { content: "–"; position: absolute; left: 0; color: var(--accent-dark); font-weight: 700; }
+    .legal-content a { color: var(--accent-dark); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+
+    /* ---- FOOTER ---- */
+    .site-footer {
+      background: var(--bg-dark); color: #94a3b8;
+      padding: 56px 2rem 32px;
+    }
+    .footer-grid {
+      max-width: var(--container); margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px; margin-bottom: 48px;
+    }
+    .footer-logo { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+    .footer-logo-icon { width: 26px; height: 26px; background: var(--accent); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+    .footer-logo-icon svg { width: 14px; height: 14px; fill: #0b1120; }
+    .footer-brand-name { font-size: 1.05rem; font-weight: 800; color: #fff; }
+    .footer-brand-name span { color: var(--accent); }
+    .footer-blurb { font-size: 0.875rem; line-height: 1.65; color: #64748b; max-width: 260px; }
+    .footer-col h4 { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #475569; margin-bottom: 16px; }
+    .footer-col a { display: block; font-size: 0.875rem; color: #94a3b8; margin-bottom: 10px; transition: color 0.15s; }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom { max-width: var(--container); margin: 0 auto; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 0.82rem; color: #475569; }
+    .footer-bottom a { color: #64748b; }
+    .footer-bottom a:hover { color: #94a3b8; }
+    @media (max-width: 768px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
 
-<header>
-  <a href="/" class="logo">Overhauled<span>.ai</span></a>
+<!-- NAV -->
+<header class="nav-wrapper">
+  <nav class="nav" aria-label="Main navigation">
+    <a href="/" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+      </div>
+      <span class="logo-word">overhauled<span>.ai</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/ai-agents-guelph/">AI Agents</a></li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/#work">Work</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/contact" class="btn-nav">Get in touch →</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
+  </nav>
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="/#services">Services</a>
+    <a href="/ai-agents-guelph/">AI Agents</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/#work">Work</a>
+    <a href="/about">About</a>
+    <a href="/blog/">Blog</a>
+    <a href="/contact">Get in touch →</a>
+  </nav>
 </header>
 
-<div class="container">
-  <h1>Terms of Service</h1>
-  <p class="updated">Last updated: May 2025</p>
+<!-- HERO -->
+<section class="legal-hero">
+  <div class="legal-hero-inner">
+    <span class="badge">Legal</span>
+    <h1>Terms of Service</h1>
+    <p>The terms that govern our web design, tech, and AI agent services.</p>
+  </div>
+</section>
 
-  <p>These Terms of Service govern your use of the Overhauled.ai website and any services provided by Overhauled.ai ("we", "our", or "us"), a web design and digital marketing business based in Guelph, Ontario. By using our website or engaging our services, you agree to these terms.</p>
+<!-- BODY -->
+<section class="legal-body">
+  <div class="legal-content">
 
-  <h2>Services</h2>
-  <p>Overhauled.ai provides web design, website maintenance, local SEO, and AI-powered business automation services to small businesses, primarily in Guelph and the surrounding area. Specific deliverables, timelines, and pricing are agreed upon in writing before work begins.</p>
+    <div class="updated-tag"><strong>Last updated:</strong> May 2026</div>
 
-  <h2>Project Agreements</h2>
-  <p>Each project is governed by a separate written agreement or proposal that outlines scope, pricing, payment terms, and timelines. These Terms of Service apply in addition to any project-specific agreement. In the event of a conflict, the project agreement takes precedence.</p>
+    <p>These Terms of Service govern your use of the Overhauled.ai website and any services provided by Overhauled.ai ("we", "our", or "us"), a web design, tech, and AI automation business based in Guelph, Ontario, Canada. We work with clients worldwide. By using our website or engaging our services, you agree to these terms.</p>
 
-  <h2>Payment</h2>
-  <ul>
-    <li>A 50% deposit is required before work begins on any new project.</li>
-    <li>The remaining balance is due upon project completion, before final files or access are handed over.</li>
-    <li>Monthly retainer services are billed at the start of each month.</li>
-    <li>Invoices are due within 14 days of receipt unless otherwise agreed.</li>
-    <li>Late payments may result in work being paused until the account is settled.</li>
-  </ul>
+    <h2>Services</h2>
+    <p>Overhauled.ai provides web design, website maintenance, local SEO, and AI-powered business automation services to small businesses everywhere. Specific deliverables, timelines, and pricing are agreed upon in writing before work begins.</p>
 
-  <h2>Revisions and Scope</h2>
-  <p>Our standard project pricing includes a defined number of revision rounds as specified in your proposal. Work outside the agreed scope will be quoted and billed separately. We aim to be flexible and will always communicate before any additional charges are applied.</p>
+    <h2>Project Agreements</h2>
+    <p>Each project is governed by a separate written agreement or proposal that outlines scope, pricing, payment terms, and timelines. These Terms of Service apply in addition to any project-specific agreement. In the event of a conflict, the project agreement takes precedence.</p>
 
-  <h2>Client Responsibilities</h2>
-  <p>To complete your project on time, we may need content, images, login credentials, or feedback from you. Delays caused by late delivery of client materials may push back the project timeline. We are not responsible for delays caused by the client.</p>
+    <h2>Payment</h2>
+    <ul>
+      <li>A 50% deposit is required before work begins on any new project.</li>
+      <li>The remaining balance is due upon project completion, before final files or access are handed over.</li>
+      <li>Monthly retainer services are billed at the start of each month.</li>
+      <li>Invoices are due within 14 days of receipt unless otherwise agreed.</li>
+      <li>Late payments may result in work being paused until the account is settled.</li>
+    </ul>
 
-  <h2>Intellectual Property</h2>
-  <p>Upon receipt of full payment, you own the final website files and content we create for you. We retain the right to display completed work in our portfolio unless you request otherwise in writing. Third-party assets (fonts, stock photos, plugins) remain subject to their respective licences.</p>
+    <h2>Revisions and Scope</h2>
+    <p>Our standard project pricing includes a defined number of revision rounds as specified in your proposal. Work outside the agreed scope will be quoted and billed separately. We aim to be flexible and will always communicate before any additional charges are applied.</p>
 
-  <h2>Hosting and Maintenance</h2>
-  <p>We do not provide hosting directly. We can recommend and help set up hosting with third-party providers. If we manage hosting or maintenance on your behalf, those terms are covered in a separate service agreement.</p>
+    <h2>Client Responsibilities</h2>
+    <p>To complete your project on time, we may need content, images, login credentials, or feedback from you. Delays caused by late delivery of client materials may push back the project timeline. We are not responsible for delays caused by the client.</p>
 
-  <h2>Limitation of Liability</h2>
-  <p>To the fullest extent permitted by law, Overhauled.ai shall not be liable for any indirect, incidental, or consequential damages arising from use of our services. Our total liability for any claim shall not exceed the amount paid by you for the specific service giving rise to the claim.</p>
+    <h2>Intellectual Property</h2>
+    <p>Upon receipt of full payment, you own the final website files and content we create for you. We retain the right to display completed work in our portfolio unless you request otherwise in writing. Third-party assets (fonts, stock photos, plugins) remain subject to their respective licences.</p>
 
-  <h2>Warranties</h2>
-  <p>We warrant that our work will be completed with reasonable skill and care. We do not guarantee specific rankings, traffic levels, or business outcomes from SEO or marketing services, as these depend on many factors outside our control.</p>
+    <h2>Hosting and Maintenance</h2>
+    <p>We do not provide hosting directly. We can recommend and help set up hosting with third-party providers. If we manage hosting or maintenance on your behalf, those terms are covered in a separate service agreement.</p>
 
-  <h2>Termination</h2>
-  <p>Either party may terminate a project with 14 days written notice. You will be invoiced for all work completed up to the termination date. The deposit is non-refundable once work has commenced.</p>
+    <h2>Limitation of Liability</h2>
+    <p>To the fullest extent permitted by law, Overhauled.ai shall not be liable for any indirect, incidental, or consequential damages arising from use of our services. Our total liability for any claim shall not exceed the amount paid by you for the specific service giving rise to the claim.</p>
 
-  <h2>Governing Law</h2>
-  <p>These terms are governed by the laws of the Province of Ontario and the federal laws of Canada applicable therein.</p>
+    <h2>Warranties</h2>
+    <p>We warrant that our work will be completed with reasonable skill and care. We do not guarantee specific rankings, traffic levels, or business outcomes from SEO or marketing services, as these depend on many factors outside our control.</p>
 
-  <h2>Changes to These Terms</h2>
-  <p>We may update these Terms of Service from time to time. Continued use of our services after changes are posted constitutes acceptance of the updated terms.</p>
+    <h2>Termination</h2>
+    <p>Either party may terminate a project with 14 days written notice. You will be invoiced for all work completed up to the termination date. The deposit is non-refundable once work has commenced.</p>
 
-  <h2>Contact Us</h2>
-  <p>Questions about these terms? Email us at <a href="mailto:hello@overhauled.ai">hello@overhauled.ai</a>.</p>
-</div>
+    <h2>Governing Law</h2>
+    <p>These terms are governed by the laws of the Province of Ontario and the federal laws of Canada applicable therein.</p>
 
-<footer>
-  <p>&copy; 2025 Overhauled.ai &nbsp;|&nbsp; Guelph, Ontario &nbsp;|&nbsp; <a href="/">Home</a> &nbsp;|&nbsp; <a href="/privacy/">Privacy Policy</a></p>
+    <h2>Changes to These Terms</h2>
+    <p>We may update these Terms of Service from time to time. The "Last updated" date at the top of this page reflects the most recent revision.</p>
+
+    <h2>Contact Us</h2>
+    <p>Questions about these terms? Email us at <a href="mailto:hello@overhauled.ai">hello@overhauled.ai</a> or call <a href="tel:+15199425698">(519) 942-5698</a>.</p>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">
+        <div class="footer-logo-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+        </div>
+        <span class="footer-brand-name">overhauled<span>.ai</span></span>
+      </div>
+      <p class="footer-blurb">Websites, tech support, and AI agents for small businesses everywhere.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="/website-designer-guelph/">New websites</a>
+      <a href="/website-repair-guelph/">Website fixes</a>
+      <a href="/local-seo-guelph/">Local SEO</a>
+      <a href="/ai-agents-guelph/">AI agents</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="/about">About</a>
+      <a href="/#work">Work</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <a href="tel:+15199425698">(519) 942-5698</a>
+      <a href="mailto:hello@overhauled.ai">hello@overhauled.ai</a>
+      <a href="https://www.linkedin.com/in/markhurson/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="/contact">Get in touch →</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Overhauled.ai · Guelph, ON</span>
+    <div style="display:flex;gap:1.5rem;">
+      <a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a>
+    </div>
+  </div>
 </footer>
 
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+</script>
 </body>
 </html>
