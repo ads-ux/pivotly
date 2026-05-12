@@ -1,0 +1,32 @@
+# ----------------------------------------------------------------------
+# Netlify config for overhauled.ai
+# ----------------------------------------------------------------------
+
+[build]
+  publish = "."
+
+# Pretty URLs for the new pages — keep .html on disk, serve at clean path
+[[redirects]]
+  from = "/ai-agents"
+  to   = "/ai-agents.html"
+  status = 200
+
+[[redirects]]
+  from = "/health-check"
+  to   = "/health-check.html"
+  status = 200
+
+# .html versions: 301-redirect to clean URL (force=true overrides static serving)
+[[redirects]]
+  from   = "/ai-agents.html"
+  to     = "/ai-agents"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/health-check.html"
+  to     = "/health-check"
+  status = 301
+  force  = true
+
+# Existing pages keep .html (no rewrite needed for contact/privacy/thank-you)
