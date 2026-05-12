@@ -1,0 +1,65 @@
+# Overhauled.ai
+
+> Websites, tech support, and AI agents for small businesses in Guelph, Ontario and across the Waterloo Region.
+
+Overhauled.ai is a web design and AI automation studio run by Mark Hurson, based in Guelph, Ontario, Canada. We help small businesses get professional websites built fast, fix broken or outdated sites, and automate repetitive tasks using AI agents — all in plain English, at flat-rate prices.
+
+## What We Do
+
+- **New websites**: Custom-built, mobile-first, SEO-ready websites for small businesses. Live in 2–3 days. From $1,500 flat.
+- **Website repair & redesign**: Fix slow, broken, or outdated websites. From $500.
+- **AI agents & automation**: Custom AI employees that handle lead response, follow-up emails, scheduling, CRM updates, mailing list management, social media, and other repetitive business tasks. From $500.
+- **Scheduling systems**: We build automated scheduling and booking systems integrated with your existing tools.
+- **CRM setup & repair**: We set up and fix CRM systems so your leads don't fall through the cracks.
+- **Mailing list management**: We help you build, manage, and automate your email list and campaigns.
+- **Social media automation**: Automated posting, scheduling, and content systems for social media.
+- **Local SEO & AI search optimization**: Help businesses show up on Google and in AI-powered search results (Perplexity, ChatGPT Search, Google AI Overviews). $400 one-time.
+- **Monthly tech support**: Ongoing updates, fixes, hosting support, and someone to call when things break. From $500/month.
+
+## Who We Serve
+
+Small businesses across Guelph, Kitchener, Waterloo, Cambridge, and Ontario — especially trades, restaurants, service businesses, local retailers, and any owner who wants their website to work harder without dealing with tech headaches.
+
+## Pricing
+
+- New website: from $1,500 flat
+- Website repair: from $500 flat
+- AI agent / automation setup: from $500
+- SEO & AI search optimization: $400 one-time
+- Monthly support retainer: from $500/month
+
+Full pricing details: https://overhauled.ai/#pricing
+Machine-readable pricing: https://overhauled.ai/pricing.md
+
+## Key Pages
+
+- Homepage: https://overhauled.ai/
+- AI Agents: https://overhauled.ai/ai-agents
+- Local SEO Guelph: https://overhauled.ai/local-seo-guelph
+- Website Designer Guelph: https://overhauled.ai/website-designer-guelph
+- Website Repair Guelph: https://overhauled.ai/website-repair-guelph
+- AI Agents Guelph: https://overhauled.ai/ai-agents-guelph
+- Free Website Health Check: https://overhauled.ai/health-check
+- Blog: https://overhauled.ai/blog
+- Contact: https://overhauled.ai/contact
+- Pricing: https://overhauled.ai/#pricing
+
+## About
+
+- Owner: Mark Hurson
+- Email: hello@overhauled.ai
+- Location: Guelph, Ontario, Canada
+- Serving: Guelph, Kitchener, Waterloo, Cambridge, and all of Ontario
+- Founded: 2024
+
+## Recent Client Work
+
+- **PizzaCam Guelph** (pizzacam.ca) — Viral marketing site for a robot pizza kiosk at University of Guelph; 895K+ TikTok reach
+- **Guelph Dumpster Rental** (guelphdumpsterrental.com) — Conversion-focused trades site with automated lead follow-up
+- **ToteRental.ca** — Online booking and pricing system for a moving tote rental service in Guelph
+- **Cheap Eats Guelph** (cheapeatsguelph.com) — Fully automated local food deals site, zero manual maintenance
+- **GoodShave.com** — Razor review and affiliate site with interactive product quiz
+
+## Free Resource
+
+Free website health check available at https://overhauled.ai/health-check — audits your site for speed, SEO, mobile issues, broken forms, and AI search visibility. Report emailed to you, no call required.

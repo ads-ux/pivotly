@@ -168,6 +168,24 @@
   }
   .error-msg.show { display: block; }
 
+  /* Problem buttons */
+  .problem-list { display: flex; flex-direction: column; gap: 8px; margin-top: 4px; }
+  .problem-btn {
+    display: block; width: 100%; text-align: left;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+    line-height: 1.4;
+  }
+  .problem-btn:hover { background: rgba(132,204,22,0.08); border-color: rgba(132,204,22,0.4); color: var(--text); }
+  .problem-btn.selected { background: rgba(132,204,22,0.12); border-color: var(--accent); color: var(--text); }
+
   .footer { text-align: center; padding: 40px 0 24px; color: var(--text-muted); font-size: 0.85rem; }
 </style>
 </head>
@@ -187,57 +205,58 @@
 
   <header class="hero">
     <span class="badge">Reply within one business day</span>
-    <h1>Let's talk about <span style="background: linear-gradient(135deg, var(--accent), var(--warm)); -webkit-background-clip: text; background-clip: text; color: transparent;">your website</span></h1>
-    <p class="lede">Whether you have a project in mind, a question about what we do, or just want an honest opinion on something — drop us a message.</p>
+    <h1>Sound like any of <span style="background: linear-gradient(135deg, var(--accent), var(--warm)); -webkit-background-clip: text; background-clip: text; color: transparent;">these?</span></h1>
+    <p class="lede">Most small business owners reach out because of one of these problems. If something here sounds familiar — let's talk.</p>
   </header>
 
   <div class="contact-card">
     <div class="grid-split">
 
-      <!-- Info panel -->
+      <!-- Problems panel -->
       <div class="info-panel">
-        <h2>Get in touch</h2>
-        <p>No sales pressure. Just a straight conversation.</p>
+        <h2>Common problems we fix</h2>
+        <p>Click one to pre-fill the form.</p>
 
-        <div class="info-item">
-          <div class="info-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          </div>
-          <div>
-            <div class="info-label">Email</div>
-            <div class="info-value"><a href="mailto:hello@overhauled.ai">hello@overhauled.ai</a></div>
-          </div>
+        <div class="problem-list">
+          <button type="button" class="problem-btn" data-topic="My website is slow or broken">
+            🐌 My website is slow or looks broken
+          </button>
+          <button type="button" class="problem-btn" data-topic="My contact form isn't working">
+            📭 My contact form stopped working and I'm missing leads
+          </button>
+          <button type="button" class="problem-btn" data-topic="Not showing up on Google or AI search">
+            🔍 I'm not showing up on Google — or in ChatGPT / Perplexity
+          </button>
+          <button type="button" class="problem-btn" data-topic="I need a new website">
+            🏗️ I need a new website built properly
+          </button>
+          <button type="button" class="problem-btn" data-topic="Leads are falling through the cracks">
+            🕳️ Leads are coming in but nothing is following up on them
+          </button>
+          <button type="button" class="problem-btn" data-topic="I need a booking or scheduling system">
+            📅 I need a way for customers to book or schedule online
+          </button>
+          <button type="button" class="problem-btn" data-topic="My CRM is a mess or I don't have one">
+            🗂️ My CRM is a mess — or I don't have one at all
+          </button>
+          <button type="button" class="problem-btn" data-topic="I want to automate repetitive tasks with AI">
+            🤖 I'm doing the same repetitive tasks every day and want to automate them
+          </button>
+          <button type="button" class="problem-btn" data-topic="I need help with my mailing list">
+            📧 My mailing list isn't growing — or I'm not sending anything
+          </button>
+          <button type="button" class="problem-btn" data-topic="I can't keep up with social media">
+            📱 I can't keep up with posting on social media
+          </button>
+          <button type="button" class="problem-btn" data-topic="My website looks broken on phones">
+            📵 My website looks terrible on phones
+          </button>
+          <button type="button" class="problem-btn" data-topic="I don't know where to start">
+            🤷 I don't know where to start — I just know something isn't working
+          </button>
         </div>
 
-        <div class="info-item">
-          <div class="info-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <div>
-            <div class="info-label">Location</div>
-            <div class="info-value">Guelph, Ontario, Canada</div>
-          </div>
-        </div>
-
-        <div class="info-item">
-          <div class="info-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <div>
-            <div class="info-label">Response time</div>
-            <div class="info-value">Within one business day</div>
-          </div>
-        </div>
-
-        <div class="info-item">
-          <div class="info-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          </div>
-          <div>
-            <div class="info-label">Free website audit</div>
-            <div class="info-value"><a href="/health-check">Fill out our health check →</a></div>
-          </div>
-        </div>
+        <p style="font-size:0.8rem;margin-top:16px;">Or email directly: <a href="mailto:hello@overhauled.ai">hello@overhauled.ai</a></p>
       </div>
 
       <!-- Form panel -->
@@ -261,13 +280,19 @@
           <div class="field">
             <label for="subject">What's this about?</label>
             <select id="subject" name="subject">
-              <option value="">Select a topic…</option>
-              <option value="New website">I need a new website</option>
-              <option value="Scheduling system">Build a scheduling system</option>
-              <option value="CRM help">Fix or set up my CRM</option>
-              <option value="Mailing list">Help with my mailing list</option>
-              <option value="Social media">Social media help</option>
-              <option value="AI employees / automation">Build AI employees to automate tasks</option>
+              <option value="">What's going on?…</option>
+              <option value="My website is slow or broken">My website is slow or looks broken</option>
+              <option value="My contact form isn't working">My contact form stopped working</option>
+              <option value="Not showing up on Google or AI search">I'm not showing up on Google or AI search</option>
+              <option value="I need a new website">I need a new website built properly</option>
+              <option value="Leads are falling through the cracks">Leads aren't being followed up on</option>
+              <option value="I need a booking or scheduling system">I need online booking or scheduling</option>
+              <option value="My CRM is a mess or I don't have one">My CRM is a mess — or I don't have one</option>
+              <option value="I want to automate repetitive tasks with AI">I want to automate repetitive tasks with AI</option>
+              <option value="I need help with my mailing list">My mailing list isn't working</option>
+              <option value="I can't keep up with social media">I can't keep up with social media</option>
+              <option value="My website looks broken on phones">My website looks broken on phones</option>
+              <option value="I don't know where to start">I don't know where to start</option>
               <option value="Something else">Something else</option>
             </select>
           </div>
@@ -306,6 +331,28 @@
   const success   = document.getElementById('success');
   const errorMsg  = document.getElementById('errorMsg');
   const botField  = document.getElementById('botField');
+
+  // Problem button → pre-fill subject dropdown
+  document.querySelectorAll('.problem-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const topic = btn.dataset.topic;
+      const select = document.getElementById('subject');
+      // Set matching option
+      for (let i = 0; i < select.options.length; i++) {
+        if (select.options[i].value === topic) {
+          select.selectedIndex = i;
+          break;
+        }
+      }
+      // Highlight selected button
+      document.querySelectorAll('.problem-btn').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      // Scroll to form smoothly
+      document.getElementById('contactForm').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // Focus the message field
+      setTimeout(() => document.getElementById('message').focus(), 400);
+    });
+  });
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
