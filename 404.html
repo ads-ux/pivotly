@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | Overhauled.ai</title>
+  <meta name="description" content="This page doesn't exist — but your website problems do. Let's fix them." />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-dark: #0b1120;
+      --accent: #84cc16;
+      --accent-dark: #65a30d;
+      --text-on-dark: #f1f5f9;
+      --text-soft: #94a3b8;
+      --border-dark: rgba(255,255,255,0.08);
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-on-dark);
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    .error-code {
+      font-size: clamp(6rem, 20vw, 10rem);
+      font-weight: 900;
+      line-height: 1;
+      color: var(--accent);
+      letter-spacing: -4px;
+      margin-bottom: 8px;
+    }
+
+    .headline {
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-weight: 800;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+
+    .subtext {
+      font-size: 1rem;
+      color: var(--text-soft);
+      max-width: 440px;
+      line-height: 1.65;
+      margin-bottom: 40px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 56px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.15s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #0b1120;
+    }
+    .btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text-on-dark);
+      border: 1.5px solid var(--border-dark);
+    }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      font-size: 0.88rem;
+      color: var(--text-soft);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+
+    .divider {
+      width: 48px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+      margin: 0 auto 32px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="error-code">404</div>
+  <div class="divider"></div>
+  <h1 class="headline">This page doesn't exist.</h1>
+  <p class="subtext">
+    The link might be broken, the page might have moved, or you may have typed a URL with a typo.
+    Either way — your website problems are real, and we can fix those.
+  </p>
+
+  <div class="btn-group">
+    <a href="/" class="btn btn-primary">← Back to home</a>
+    <a href="/contact" class="btn btn-ghost">Get in touch →</a>
+  </div>
+
+  <nav class="nav-links">
+    <a href="/">Home</a>
+    <a href="/ai-agents">AI Agents</a>
+    <a href="/health-check">Free Health Check</a>
+    <a href="/blog">Blog</a>
+    <a href="/contact">Contact</a>
+  </nav>
+
+</body>
+</html>

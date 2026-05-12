@@ -1,7 +1,7 @@
 # Pricing — Overhauled.ai
 
 Web design, AI agents, and tech support for small businesses in Guelph, Ontario.
-Contact: hello@overhauled.ai | https://overhauled.ai
+Contact: hello@overhauled.ai | (519) 942-5698 | https://overhauled.ai
 
 ---
 
@@ -23,14 +23,14 @@ Contact: hello@overhauled.ai | https://overhauled.ai
 
 ## AI Agent Setup
 
-- Price: From $500 (one-time setup)
+- Price: From $1,500 (one-time setup) + monthly infrastructure fee
 - Includes: Custom AI agent built for your business — lead response, follow-up emails, scheduling, CRM updates, mailing list, social media, or other automations
 - Best for: Businesses that want to automate repetitive tasks without hiring more staff
 - Quote: Email hello@overhauled.ai with subject "AI Agent Quote"
 
 ## Scheduling System
 
-- Price: From $500 (one-time setup)
+- Price: From $1,500 (one-time setup) + monthly infrastructure fee
 - Includes: Automated booking and scheduling integrated with your existing calendar and tools
 - Best for: Service businesses that take appointments or bookings
 
@@ -42,12 +42,12 @@ Contact: hello@overhauled.ai | https://overhauled.ai
 
 ## Mailing List Help
 
-- Price: From $500 (one-time setup) or included in monthly retainer
+- Price: From $1,500 (one-time setup) + monthly infrastructure fee or included in monthly retainer
 - Includes: Build, migrate, or automate your email list and campaigns
 
 ## Social Media Automation
 
-- Price: From $500 (one-time setup) or included in monthly retainer
+- Price: From $1,500 (one-time setup) + monthly infrastructure fee or included in monthly retainer
 - Includes: Automated posting, scheduling, and content systems for Instagram, Facebook, etc.
 
 ## SEO & AI Search Optimization

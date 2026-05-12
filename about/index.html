@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Mark Hurson | Overhauled.ai — Websites & AI for Small Business in Guelph</title>
+  <meta name="description" content="Mark Hurson built a performance ad network to 2B+ monthly impressions, owns a PizzaForno franchise, and has been investing in domains since 2001. Now he builds websites and AI agents for small businesses in Guelph, Ontario." />
+  <link rel="canonical" href="https://overhauled.ai/about" />
+  <meta property="og:title" content="About Mark Hurson | Overhauled.ai" />
+  <meta property="og:description" content="Built a performance ad network to 2B+ monthly impressions. Owns a PizzaForno franchise. Domain investor since 2001. Now I build websites and AI agents for small businesses in Guelph, Ontario." />
+  <meta property="og:url" content="https://overhauled.ai/about" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://overhauled.ai/og-image.png" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mark Hurson",
+    "jobTitle": "Web Designer & AI Builder",
+    "url": "https://overhauled.ai/about",
+    "email": "hello@overhauled.ai",
+    "telephone": "+1-519-942-5698",
+    "image": "https://overhauled.ai/markprofilenew.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Guelph",
+      "addressRegion": "Ontario",
+      "addressCountry": "CA"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Overhauled.ai",
+      "url": "https://overhauled.ai"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/markhurson/"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-soft: #f8fafc;
+      --bg-dark: #0b1120;
+      --surface: #ffffff;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --text-soft: #64748b;
+      --text-on-dark: #f1f5f9;
+      --text-on-dark-muted: #94a3b8;
+      --accent: #84cc16;
+      --accent-dark: #65a30d;
+      --accent-soft: #ecfccb;
+      --shadow-sm: 0 1px 2px rgba(15,23,42,0.06), 0 1px 3px rgba(15,23,42,0.08);
+      --shadow-md: 0 4px 6px -1px rgba(15,23,42,0.08), 0 2px 4px -2px rgba(15,23,42,0.06);
+      --shadow-lg: 0 20px 25px -5px rgba(15,23,42,0.1), 0 8px 10px -6px rgba(15,23,42,0.08);
+      --radius: 14px;
+      --radius-lg: 20px;
+      --container: 1200px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    h1,h2,h3,h4 { font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 0.5em; }
+    h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); font-weight: 900; }
+    h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+    h3 { font-size: 1.15rem; font-weight: 700; }
+    p { margin: 0 0 1em; color: var(--text-muted); }
+    .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+    /* ---- BUTTONS ---- */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 6px; padding: 12px 22px; border-radius: 8px;
+      font-family: inherit; font-size: 0.95rem; font-weight: 700;
+      cursor: pointer; border: none; transition: all 0.15s ease;
+      text-decoration: none; white-space: nowrap;
+    }
+    .btn-primary { background: var(--text); color: #fff; }
+    .btn-primary:hover { background: #1e293b; transform: translateY(-1px); box-shadow: var(--shadow-md); }
+    .btn-accent { background: var(--accent); color: var(--text); }
+    .btn-accent:hover { background: var(--accent-dark); color: #fff; transform: translateY(-1px); box-shadow: var(--shadow-md); }
+    .btn-ghost { background: transparent; color: var(--text); border: 1.5px solid var(--border); }
+    .btn-ghost:hover { background: var(--bg-soft); }
+    .btn-lg { padding: 15px 30px; font-size: 1.05rem; border-radius: 10px; }
+    .btn-sm { padding: 8px 16px; font-size: 0.85rem; border-radius: 7px; }
+
+    /* ---- BADGE ---- */
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--accent-soft); color: var(--accent-dark);
+      font-size: 0.8rem; font-weight: 700; padding: 5px 12px;
+      border-radius: 99px; letter-spacing: 0.03em; text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .badge-dark { background: rgba(255,255,255,0.08); color: var(--accent); }
+
+    /* ---- NAV ---- */
+    .nav-wrapper {
+      position: sticky; top: 0; z-index: 100;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px; gap: 24px;
+    }
+    .logo { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 1.1rem; letter-spacing: -0.02em; }
+    .logo-icon { width: 28px; height: 28px; background: var(--text); border-radius: 7px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .logo-icon svg { width: 14px; height: 14px; fill: var(--accent); }
+    .logo-word span { color: var(--accent-dark); }
+    .nav-links { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: 4px; }
+    .nav-links a { font-size: 0.95rem; font-weight: 500; color: var(--text-soft); padding: 6px 10px; border-radius: 6px; transition: color 0.15s; }
+    .nav-links a:hover { color: var(--text); }
+    .hamburger { display: none; background: none; border: none; font-size: 1.4rem; cursor: pointer; padding: 4px; }
+    .mobile-menu { display: none; flex-direction: column; gap: 4px; padding: 12px 24px 16px; border-top: 1px solid var(--border); background: #fff; }
+    .mobile-menu a { padding: 10px 0; font-size: 1rem; font-weight: 600; color: var(--text); border-bottom: 1px solid var(--border); }
+    .mobile-menu.open { display: flex; }
+    @media (max-width: 800px) {
+      .nav-links { display: none; }
+      .hamburger { display: block; }
+    }
+
+    /* ---- HERO ---- */
+    .about-hero {
+      padding: 80px 0 60px;
+      background: var(--bg-dark);
+      color: var(--text-on-dark);
+    }
+    .about-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 60px;
+      align-items: center;
+    }
+    @media (max-width: 800px) {
+      .about-hero-grid { grid-template-columns: 1fr; gap: 36px; }
+    }
+    .about-photo-wrap {
+      position: relative;
+    }
+    .about-photo-wrap img {
+      width: 100%;
+      max-width: 380px;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      object-fit: cover;
+      aspect-ratio: 4/5;
+    }
+    @media (max-width: 800px) {
+      .about-photo-wrap img { max-width: 260px; margin: 0 auto; aspect-ratio: 1/1; object-position: top; }
+    }
+    .about-hero-text h1 { color: #fff; margin-bottom: 6px; }
+    .about-hero-text .role { font-size: 1.1rem; color: var(--accent); font-weight: 700; margin-bottom: 20px; }
+    .about-hero-text p { color: var(--text-on-dark-muted); font-size: 1.05rem; line-height: 1.75; }
+    .about-hero-text p:last-of-type { margin-bottom: 32px; }
+    .hero-contact-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-contact-links a {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.9rem; font-weight: 600; color: var(--text-on-dark-muted);
+      transition: color 0.15s;
+    }
+    .hero-contact-links a:hover { color: var(--accent); }
+
+    /* ---- STATS BAR ---- */
+    .stats-bar {
+      background: var(--accent);
+      padding: 28px 0;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      text-align: center;
+    }
+    @media (max-width: 700px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+    .stat-num { font-size: 2rem; font-weight: 900; color: var(--text); line-height: 1; letter-spacing: -0.03em; }
+    .stat-label { font-size: 0.82rem; font-weight: 600; color: #374151; margin-top: 4px; }
+
+    /* ---- SECTIONS ---- */
+    .section { padding: 72px 0; }
+    .section-soft { background: var(--bg-soft); }
+    .section-dark { background: var(--bg-dark); color: var(--text-on-dark); }
+    .section-dark p { color: var(--text-on-dark-muted); }
+    .section-dark h2 { color: #fff; }
+
+    .section-header { margin-bottom: 40px; }
+
+    /* ---- VENTURES ---- */
+    .ventures { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+    .venture-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--bg-soft); border: 1px solid var(--border);
+      border-radius: 99px; padding: 8px 16px;
+      font-size: 0.85rem; font-weight: 600; color: var(--text);
+    }
+    .venture-pill .vp-year { font-weight: 400; color: var(--text-soft); font-size: 0.8rem; }
+
+    /* ---- STORY ---- */
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    @media (max-width: 800px) { .story-grid { grid-template-columns: 1fr; gap: 40px; } }
+    .story-body p { font-size: 1.05rem; line-height: 1.8; }
+    .story-body p + p { margin-top: 0; }
+
+    /* ---- VALUES ---- */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 800px) { .values-grid { grid-template-columns: 1fr; } }
+    .value-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: box-shadow 0.2s;
+    }
+    .value-card:hover { box-shadow: var(--shadow-md); }
+    .value-icon { font-size: 1.6rem; margin-bottom: 12px; }
+    .value-card h3 { font-size: 1rem; margin-bottom: 8px; }
+    .value-card p { font-size: 0.9rem; margin: 0; }
+
+    /* ---- WORK ---- */
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 900px) { .work-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 580px) { .work-grid { grid-template-columns: 1fr; } }
+    .work-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+    .work-card .wc-tag {
+      display: inline-block; font-size: 0.72rem; font-weight: 700;
+      background: rgba(132,204,22,0.15); color: var(--accent);
+      padding: 3px 10px; border-radius: 99px; margin-bottom: 12px;
+      text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .work-card h3 { font-size: 1rem; color: #fff; margin-bottom: 8px; }
+    .work-card p { font-size: 0.88rem; color: var(--text-on-dark-muted); margin: 0; }
+
+    /* ---- FINAL CTA ---- */
+    .final-cta {
+      background: var(--bg-dark);
+      padding: 80px 0;
+      text-align: center;
+      color: var(--text-on-dark);
+    }
+    .final-cta h2 { color: #fff; margin-bottom: 16px; }
+    .final-cta p { color: var(--text-on-dark-muted); max-width: 520px; margin: 0 auto 36px; font-size: 1.05rem; }
+    .cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-ghost-dark {
+      background: transparent; color: var(--text-on-dark);
+      border: 1.5px solid rgba(255,255,255,0.18);
+    }
+    .btn-ghost-dark:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ---- FOOTER ---- */
+    .footer { background: var(--bg-dark); padding: 56px 0 32px; color: var(--text-on-dark); border-top: 1px solid rgba(255,255,255,0.06); }
+    .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+    @media (max-width: 800px) { .footer-top { grid-template-columns: 1fr 1fr; gap: 30px; } }
+    .footer .logo-word { color: #fff; }
+    .footer-blurb { font-size: 0.9rem; margin-top: 14px; max-width: 280px; color: var(--text-on-dark-muted); }
+    .footer-col h4 { color: #fff; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 14px; }
+    .footer-col a { display: block; color: var(--text-on-dark-muted); margin-bottom: 8px; font-size: 0.92rem; transition: color 0.15s; }
+    .footer-col a:hover { color: var(--accent); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: var(--text-on-dark-muted); gap: 16px; flex-wrap: wrap; }
+    .footer-bottom a { color: var(--text-on-dark-muted); transition: color 0.15s; }
+    .footer-bottom a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+<!-- =============== NAV =============== -->
+<header class="nav-wrapper">
+  <nav class="nav container" aria-label="Main navigation">
+    <a href="/" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+      </div>
+      <span class="logo-word">overhauled<span>.ai</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#ai-agents">AI Agents</a></li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/#work">Work</a></li>
+      <li><a href="/about" style="color:var(--text);">About</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/contact" class="btn btn-primary btn-sm">Get in touch →</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/#services">Services</a>
+    <a href="/#ai-agents">AI Agents</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/#work">Work</a>
+    <a href="/about">About</a>
+    <a href="/blog/">Blog</a>
+    <a href="/contact" class="btn btn-primary btn-sm" style="color:#fff;">Get in touch →</a>
+  </div>
+</header>
+
+<!-- =============== HERO =============== -->
+<section class="about-hero">
+  <div class="container">
+    <div class="about-hero-grid">
+      <div class="about-photo-wrap">
+        <img src="/markprofilenew.jpg" alt="Mark Hurson — founder of Overhauled.ai" loading="eager" />
+      </div>
+      <div class="about-hero-text">
+        <span class="badge badge-dark">About</span>
+        <h1>Mark Hurson</h1>
+        <p class="role">Founder, Overhauled.ai · Guelph, Ontario</p>
+        <p>I built a private performance ad network (Vrume) to 2 billion monthly impressions. I own a pizza vending machine franchise at the University of Guelph. I've been investing in domain names since 2001. I've run a men's shaving brand, worked in ad sales, and studied marketing at Humber College in the late '90s.</p>
+        <p>I built Overhauled.ai because running real businesses taught me exactly what breaks — and most web designers have never had to deal with any of it.</p>
+        <div class="hero-contact-links">
+          <a href="tel:+15199425698">📞 (519) 942-5698</a>
+          <a href="mailto:hello@overhauled.ai">✉️ hello@overhauled.ai</a>
+          <a href="https://www.linkedin.com/in/markhurson/" target="_blank" rel="noopener">🔗 LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== STATS BAR =============== -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div>
+        <div class="stat-num">9+</div>
+        <div class="stat-label">Years running Vrume ad network</div>
+      </div>
+      <div>
+        <div class="stat-num">2B+</div>
+        <div class="stat-label">Monthly ad impressions at Vrume</div>
+      </div>
+      <div>
+        <div class="stat-num">25yr</div>
+        <div class="stat-label">Domain investing since 2001</div>
+      </div>
+      <div>
+        <div class="stat-num">48hr</div>
+        <div class="stat-label">Average website fix turnaround</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- =============== VENTURES =============== -->
+<section class="section" style="padding:40px 0;border-bottom:1px solid var(--border);">
+  <div class="container">
+    <p style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-soft);margin-bottom:14px;">Businesses I've built &amp; run</p>
+    <div class="ventures">
+      <span class="venture-pill">🌐 Vrume — Performance Ad Network <span class="vp-year">2016 – present</span></span>
+      <span class="venture-pill">🍕 PizzaForno Guelph — Franchise Owner <span class="vp-year">2022 – present</span></span>
+      <span class="venture-pill">🌍 Domain Portfolio Investor <span class="vp-year">2001 – present</span></span>
+      <span class="venture-pill">🪒 Goodshave.com — E-commerce Brand <span class="vp-year">2015 – 2016</span></span>
+      <span class="venture-pill">📡 Greenpoint Ads — Biz Dev <span class="vp-year">2012 – 2015</span></span>
+      <span class="venture-pill">🎓 Humber College — Marketing &amp; Advertising <span class="vp-year">1996 – 1998</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- =============== STORY =============== -->
+<section class="section">
+  <div class="container">
+    <div class="story-grid">
+      <div>
+        <span class="badge">The story</span>
+        <h2>Why I started this.</h2>
+      </div>
+      <div class="story-body">
+        <p>I've been building and running businesses since the late '90s — domain investing since 2001, ad sales, e-commerce, a shaving brand I launched on Shopify, and eventually Vrume, a private performance ad network I built from scratch to 2 billion monthly impressions across 150+ countries.</p>
+        <p>Along the way I also became a PizzaForno franchise owner in Guelph. If you've seen the viral pizza vending machine at the University of Guelph — that's mine. The doorbell stunt was my idea.</p>
+        <p>Running all of those businesses meant dealing with every website and tech problem in the book. Broken forms. Contact pages that sent leads nowhere. Sites that ranked for nothing. Booking systems that didn't exist. I didn't learn how to fix these things in a course — I learned them because I was losing money when they didn't work.</p>
+        <p>Overhauled.ai is a one-person operation. You talk to me, I do the work, and I stand behind it. No junior contractors, no hand-offs, no runaround.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== VALUES =============== -->
+<section class="section section-soft">
+  <div class="container">
+    <div class="section-header" style="text-align:center;">
+      <span class="badge">How I work</span>
+      <h2>What you can count on.</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">🎯</div>
+        <h3>Flat-rate quotes upfront</h3>
+        <p>You get the price before anything starts. No hourly billing surprises, no scope creep invoices. What I quote is what you pay.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">⚡</div>
+        <h3>Fast turnaround</h3>
+        <p>Most fixes are done in 24–48 hours. New websites go live in 2–3 days. If it's urgent, just say so — fast is something I'm built for.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🗣️</div>
+        <h3>Plain English, always</h3>
+        <p>I won't hide behind jargon. You don't need to know what DNS, SSL, or Core Web Vitals means. I'll tell you what's wrong and how I'm fixing it.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">📞</div>
+        <h3>You talk to me directly</h3>
+        <p>No account managers, no support tickets. Call or email me directly. I'm the one who built it and I'm the one who answers.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🔑</div>
+        <h3>You own everything</h3>
+        <p>Your domain, your files, your content — 100% yours when we're done. I don't hold anything hostage. If you ever want to move on, you take it all with you.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🛡️</div>
+        <h3>30-day support included</h3>
+        <p>Every project comes with 30 days of free support after launch. Something breaks or looks off — I fix it, no questions asked.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== WORK =============== -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-dark">Work</span>
+      <h2>Things I've built.</h2>
+    </div>
+    <div class="work-grid">
+      <div class="work-card">
+        <span class="wc-tag">Website + SEO</span>
+        <h3>GuelphDumpsterRental.com</h3>
+        <p>Full site built in 48 hours — mobile-first, Google-ready, with a contact form that actually works and a blog to pull in local traffic over time.</p>
+      </div>
+      <div class="work-card">
+        <span class="wc-tag">Viral marketing</span>
+        <h3>PizzaCam Guelph</h3>
+        <p>Site built around a 24/7 robot pizza kiosk at UoG — tied to 895K+ TikTok reach. The camera was the hook. The site converted it.</p>
+      </div>
+      <div class="work-card">
+        <span class="wc-tag">Booking system</span>
+        <h3>ToteRental.ca</h3>
+        <p>Online booking and pricing for a moving tote rental company in the Tri-Cities. Automated confirmations, reminders, and lead notifications built in.</p>
+      </div>
+      <div class="work-card">
+        <span class="wc-tag">Local directory</span>
+        <h3>CheapEatsGuelph.com</h3>
+        <p>A weekly-updated deals site for Guelph restaurants. Automated posting, submission handling, and a clean card-based layout built to drive repeat traffic.</p>
+      </div>
+      <div class="work-card">
+        <span class="wc-tag">AI Agent</span>
+        <h3>Lead Response Automation</h3>
+        <p>AI agents built for service businesses that reply to new inquiries in under a minute — in the owner's voice — 24 hours a day, 7 days a week.</p>
+      </div>
+      <div class="work-card">
+        <span class="wc-tag">AI Search</span>
+        <h3>AI SEO Implementation</h3>
+        <p>Built the full AI search visibility stack — llms.txt, structured data, machine-readable pricing, explicit bot allowlisting — so clients show up in Perplexity, ChatGPT, and AI Overviews.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== FINAL CTA =============== -->
+<section class="final-cta">
+  <div class="container">
+    <span class="badge badge-dark">Free · No commitment · Plain English</span>
+    <h2>Ready to sort out your website?</h2>
+    <p>Tell me what's broken, what you need, or what you're not sure about. I'll give you a straight answer and a flat-rate quote — no runaround.</p>
+    <div class="cta-buttons">
+      <a href="/contact" class="btn btn-accent btn-lg">Fill out our contact form →</a>
+      <a href="/health-check" class="btn btn-ghost-dark btn-lg">Free website health check</a>
+    </div>
+    <p style="margin-top:24px;font-size:0.88rem;color:var(--text-on-dark-muted);">
+      Or reach me directly: <a href="tel:+15199425698" style="color:var(--accent);">(519) 942-5698</a> · <a href="mailto:hello@overhauled.ai" style="color:var(--accent);">hello@overhauled.ai</a>
+    </p>
+  </div>
+</section>
+
+<!-- =============== FOOTER =============== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href="/" class="logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+          </div>
+          <span class="logo-word">overhauled<span>.ai</span></span>
+        </a>
+        <p class="footer-blurb">Websites, tech support, and AI agents for small businesses across Ontario.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="/website-designer-guelph/">New websites</a>
+        <a href="/website-repair-guelph/">Website fixes</a>
+        <a href="/local-seo-guelph/">Local SEO</a>
+        <a href="/ai-agents-guelph/">AI agents</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/about">About</a>
+        <a href="/#work">Work</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/blog/">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="tel:+15199425698">(519) 942-5698</a>
+        <a href="mailto:hello@overhauled.ai">hello@overhauled.ai</a>
+        <a href="https://www.linkedin.com/in/markhurson/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.google.com/search?q=Overhauled.ai+Guelph+reviews" target="_blank" rel="noopener">Google Reviews</a>
+        <a href="/contact">Get in touch →</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Overhauled.ai · Guelph, ON</span>
+      <div style="display:flex;gap:18px;">
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+</script>
+
+</body>
+</html>

@@ -29,4 +29,27 @@
   status = 301
   force  = true
 
-# Existing pages keep .html (no rewrite needed for contact/privacy/thank-you)
+# Force /contact to serve the new contact/index.html (overrides legacy contact.html)
+[[redirects]]
+  from   = "/contact"
+  to     = "/contact/index.html"
+  status = 200
+  force  = true
+
+[[redirects]]
+  from   = "/contact.html"
+  to     = "/contact"
+  status = 301
+  force  = true
+
+# Pretty URL for /about
+[[redirects]]
+  from = "/about"
+  to   = "/about/index.html"
+  status = 200
+
+[[redirects]]
+  from   = "/about.html"
+  to     = "/about"
+  status = 301
+  force  = true
