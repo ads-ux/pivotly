@@ -1,32 +1,26 @@
 # Overhauled.ai
 
-> Websites, tech support, and AI agents for small businesses in Guelph, Ontario and across the Waterloo Region.
+> Websites and AI automation for small businesses everywhere.
 
-Overhauled.ai is a web design and AI automation studio run by Mark Hurson, based in Guelph, Ontario, Canada. We help small businesses get professional websites built fast, fix broken or outdated sites, and automate repetitive tasks using AI agents — all in plain English, at flat-rate prices.
+Overhauled.ai is a web design and AI automation studio run by Mark Hurson, based in Guelph, Ontario, Canada. We help small business owners get professional websites built fast, fix sites that are losing leads, and add AI-powered automation that handles the repetitive work — all at flat-rate prices with no tech jargon.
 
 ## What We Do
 
-- **New websites**: Custom-built, mobile-first, SEO-ready websites for small businesses. Live in 2–3 days. From $1,500 flat.
-- **Website repair & redesign**: Fix slow, broken, or outdated websites. From $500.
-- **AI agents & automation**: Custom AI employees that handle lead response, follow-up emails, scheduling, CRM updates, mailing list management, social media, and other repetitive business tasks. From $500.
-- **Scheduling systems**: We build automated scheduling and booking systems integrated with your existing tools.
-- **CRM setup & repair**: We set up and fix CRM systems so your leads don't fall through the cracks.
-- **Mailing list management**: We help you build, manage, and automate your email list and campaigns.
-- **Social media automation**: Automated posting, scheduling, and content systems for social media.
-- **Local SEO & AI search optimization**: Help businesses show up on Google and in AI-powered search results (Perplexity, ChatGPT Search, Google AI Overviews). $400 one-time.
-- **Monthly tech support**: Ongoing updates, fixes, hosting support, and someone to call when things break. From $500/month.
+Three core packages:
+
+- **Lead Leak Audit ($297)**: A full diagnostic of your existing website — what's broken, what's costing you leads, and what to fix first. Delivered in 48 hours. If nothing needs fixing, we tell you that.
+- **Lead Machine (from $2,997)**: A fast, mobile-first, SEO-ready website built to convert. Flat rate, you own everything, no ongoing fees.
+- **Autopilot Plan (from $397/month)**: AI agents and automation for your business — instant lead replies, quote follow-up, appointment booking, FAQ handling, and after-hours coverage. Flat monthly rate, cancel anytime.
 
 ## Who We Serve
 
-Small businesses across Guelph, Kitchener, Waterloo, Cambridge, and Ontario — especially trades, restaurants, service businesses, local retailers, and any owner who wants their website to work harder without dealing with tech headaches.
+Small business owners everywhere — especially trades, service businesses, clinics, consultants, and local retailers who want their website to work harder and their inbox to stop running their day.
 
 ## Pricing
 
-- New website: from $1,500 flat
-- Website repair: from $500 flat
-- AI agent / automation setup: from $500
-- SEO & AI search optimization: $400 one-time
-- Monthly support retainer: from $500/month
+- Lead Leak Audit: $297 (one-time, 48-hour turnaround)
+- Lead Machine: from $2,997 (one-time, flat rate, you own everything)
+- Autopilot Plan: from $397/month (flat monthly, cancel anytime)
 
 Full pricing details: https://overhauled.ai/#pricing
 Machine-readable pricing: https://overhauled.ai/pricing.md
@@ -34,32 +28,36 @@ Machine-readable pricing: https://overhauled.ai/pricing.md
 ## Key Pages
 
 - Homepage: https://overhauled.ai/
-- AI Agents: https://overhauled.ai/ai-agents
-- Local SEO Guelph: https://overhauled.ai/local-seo-guelph
-- Website Designer Guelph: https://overhauled.ai/website-designer-guelph
-- Website Repair Guelph: https://overhauled.ai/website-repair-guelph
-- AI Agents Guelph: https://overhauled.ai/ai-agents-guelph
-- Free Website Health Check: https://overhauled.ai/health-check
-- Blog: https://overhauled.ai/blog
-- Contact: https://overhauled.ai/contact
+- Blog: https://overhauled.ai/blog/
+- Contact: https://overhauled.ai/contact/
 - Pricing: https://overhauled.ai/#pricing
+- AI Agents: https://overhauled.ai/ai-agents/
+- About: https://overhauled.ai/about/
+
+## Blog
+
+- What Is an AI Agent for Small Business: https://overhauled.ai/blog/what-is-an-ai-agent-for-small-business/
+- 5 Signs Your Website Is Costing You Customers: https://overhauled.ai/blog/signs-your-website-needs-a-repair/
+- Why Your Business Isn't Showing Up on Google: https://overhauled.ai/blog/why-your-guelph-business-isnt-showing-up-on-google/
+- How Much Does a Website Cost: https://overhauled.ai/blog/how-much-does-a-website-cost-in-guelph/
+- Case Study — PizzaCam Guelph: https://overhauled.ai/blog/pizzacam-guelph-website-case-study/
+- Case Study — Guelph Dumpster Rental: https://overhauled.ai/blog/guelph-dumpster-rental-website-case-study/
 
 ## About
 
 - Owner: Mark Hurson
 - Email: hello@overhauled.ai
+- Phone: (519) 942-5698
 - Location: Guelph, Ontario, Canada
-- Serving: Guelph, Kitchener, Waterloo, Cambridge, and all of Ontario
-- Founded: 2024
+- Serving: Small businesses everywhere
 
 ## Recent Client Work
 
-- **PizzaCam Guelph** (pizzacam.ca) — Viral marketing site for a robot pizza kiosk at University of Guelph; 895K+ TikTok reach
+- **PizzaCam Guelph** (pizzacam.ca) — Website for a viral 24/7 robot pizza kiosk at University of Guelph; 1M+ total social reach
 - **Guelph Dumpster Rental** (guelphdumpsterrental.com) — Conversion-focused trades site with automated lead follow-up
-- **ToteRental.ca** — Online booking and pricing system for a moving tote rental service in Guelph
+- **ToteRental.ca** — Online booking and pricing system for a moving tote rental service
 - **Cheap Eats Guelph** (cheapeatsguelph.com) — Fully automated local food deals site, zero manual maintenance
-- **GoodShave.com** — Razor review and affiliate site with interactive product quiz
 
-## Free Resource
+## Last Updated
 
-Free website health check available at https://overhauled.ai/health-check — audits your site for speed, SEO, mobile issues, broken forms, and AI search visibility. Report emailed to you, no call required.
+May 2026

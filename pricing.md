@@ -1,83 +1,40 @@
 # Pricing — Overhauled.ai
 
-Web design, AI agents, and tech support for small businesses in Guelph, Ontario.
+Websites and AI automation for small businesses everywhere.
 Contact: hello@overhauled.ai | (519) 942-5698 | https://overhauled.ai
 
 ---
 
-## New Website
+## Lead Leak Audit
 
-- Price: From $1,500 flat (one-time)
-- Turnaround: Live in 2–3 days
-- Includes: Custom design, mobile-first build, SEO-ready, contact form, 30 days free support
-- Best for: Small businesses that need a professional website built fast
-- Quote: Email hello@overhauled.ai with subject "New Website Quote"
+- Price: $297 (one-time)
+- Turnaround: 48 hours
+- Includes: Full diagnostic of your existing website — broken forms, mobile issues, slow load times, missing calls-to-action, SEO gaps, and AI search visibility. Written report with prioritised fixes.
+- Best for: Businesses with an existing site that isn't generating enquiries
+- Note: If nothing needs fixing, we'll tell you that too
+- Quote: Email hello@overhauled.ai with subject "Lead Leak Audit"
 
-## Website Repair or Redesign
+## Lead Machine
 
-- Price: From $500 flat (one-time)
-- Turnaround: Typically 1–2 days depending on scope
-- Includes: Fix broken layouts, forms, speed issues, mobile problems, or full redesign
-- Best for: Businesses with an existing site that's slow, broken, or outdated
-- Quote: Email hello@overhauled.ai with subject "Website Repair Quote"
+- Price: From $2,997 (one-time, flat rate)
+- Turnaround: Live in days, not weeks
+- Includes: Custom-built, mobile-first, SEO-ready website. Contact form, LocalBusiness schema, Google Analytics, fast hosting setup. You own everything — no ongoing platform fees.
+- Best for: Businesses that need a new website built to convert
+- Quote: Email hello@overhauled.ai with subject "Lead Machine Quote"
 
-## AI Agent Setup
+## Autopilot Plan
 
-- Price: From $1,500 (one-time setup) + monthly infrastructure fee
-- Includes: Custom AI agent built for your business — lead response, follow-up emails, scheduling, CRM updates, mailing list, social media, or other automations
-- Best for: Businesses that want to automate repetitive tasks without hiring more staff
-- Quote: Email hello@overhauled.ai with subject "AI Agent Quote"
-
-## Scheduling System
-
-- Price: From $1,500 (one-time setup) + monthly infrastructure fee
-- Includes: Automated booking and scheduling integrated with your existing calendar and tools
-- Best for: Service businesses that take appointments or bookings
-
-## CRM Setup & Repair
-
-- Price: From $500 (one-time)
-- Includes: Set up or fix your CRM so leads are tracked, followed up, and don't fall through the cracks
-- Best for: Businesses losing leads because nothing is organized
-
-## Mailing List Help
-
-- Price: From $1,500 (one-time setup) + monthly infrastructure fee or included in monthly retainer
-- Includes: Build, migrate, or automate your email list and campaigns
-
-## Social Media Automation
-
-- Price: From $1,500 (one-time setup) + monthly infrastructure fee or included in monthly retainer
-- Includes: Automated posting, scheduling, and content systems for Instagram, Facebook, etc.
-
-## SEO & AI Search Optimization
-
-- Price: $400 (one-time)
-- Includes: Full audit + optimization for Google search and AI-powered search engines (Perplexity, ChatGPT Search, Google AI Overviews)
-- Deliverable: Written report with specific fixes + implementation of technical changes
-- Best for: Businesses not showing up on Google or in AI search results
-
-## Monthly Tech Support Retainer
-
-- Price: From $500/month
-- Includes: Ongoing site updates, bug fixes, hosting support, content changes, and a direct line to Mark
-- First month: 30-day money-back guarantee
-- Best for: Businesses that want ongoing coverage without managing it themselves
-
----
-
-## Free Resources
-
-- Free Website Health Check: https://overhauled.ai/health-check
-  - No call required. Report emailed within minutes.
-  - Checks: speed, mobile, SEO, broken forms, AI search visibility
+- Price: From $397/month
+- Commitment: Month-to-month, cancel anytime
+- Includes: AI agents and automation for your business — instant lead reply (within 60 seconds), automated quote follow-up, appointment booking, FAQ handling, after-hours coverage, and ongoing management
+- Best for: Service businesses with steady enquiry volume who want to respond faster and close more jobs
+- Note: No per-message fees, no surprise platform charges. One flat monthly rate.
+- Quote: Email hello@overhauled.ai with subject "Autopilot Plan"
 
 ---
 
 ## Notes
 
-- All prices are in CAD
-- Flat-rate quotes provided upfront — no surprise invoices
+- Flat-rate pricing — you know the cost before work begins
 - Custom quotes available for larger or more complex projects
-- Serving Guelph, Kitchener, Waterloo, Cambridge, and all of Ontario
 - Last updated: May 2026
