@@ -4,24 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Mark Hurson | Overhauled.ai, Websites & AI for Small Business in Guelph</title>
-  <meta name="description" content="Mark Hurson built a performance ad network to 2B+ monthly impressions, owns a PizzaForno franchise, and has been investing in domains since 2001. Now he builds websites and AI agents for small businesses in Guelph, Ontario." />
+  <meta name="description" content="Mark Hurson built a performance ad network to 2B+ monthly impressions, owns a PizzaForno franchise, and has been investing in domains since 2001. He builds websites and AI agents for small businesses in Guelph that actually generate leads." />
   <link rel="canonical" href="https://overhauled.ai/about" />
   <meta property="og:title" content="About Mark Hurson | Overhauled.ai" />
-  <meta property="og:description" content="Built a performance ad network to 2B+ monthly impressions. Owns a PizzaForno franchise. Domain investor since 2001. Now I build websites and AI agents for small businesses in Guelph, Ontario." />
+  <meta property="og:description" content="Most web designers have never run a business. I have. 2B+ impressions, a pizza vending franchise, 25 years of domain investing. Now I fix websites that are costing small businesses real money." />
   <meta property="og:url" content="https://overhauled.ai/about" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://overhauled.ai/og-image.png" />
-  <link rel="icon" href="/favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7H4493NWB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E7H4493NWB');
+  </script>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Mark Hurson",
-    "jobTitle": "Web Designer & AI Builder",
+    "jobTitle": "Small Business Operator & Digital Strategist",
     "url": "https://overhauled.ai/about",
     "email": "hello@overhauled.ai",
     "telephone": "+1-519-942-5698",
@@ -215,6 +223,22 @@
     }
     .venture-pill .vp-year { font-weight: 400; color: var(--text-soft); font-size: 0.8rem; }
 
+    /* ---- WHY DIFFERENT ---- */
+    .diff-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 800px) { .diff-grid { grid-template-columns: 1fr; } }
+    .diff-card {
+      border-left: 3px solid var(--accent);
+      padding: 22px 24px;
+      background: var(--bg-soft);
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+    .diff-card h3 { font-size: 1rem; margin-bottom: 8px; }
+    .diff-card p { font-size: 0.92rem; margin: 0; }
+
     /* ---- STORY ---- */
     .story-grid {
       display: grid;
@@ -225,6 +249,54 @@
     @media (max-width: 800px) { .story-grid { grid-template-columns: 1fr; gap: 40px; } }
     .story-body p { font-size: 1.05rem; line-height: 1.8; }
     .story-body p + p { margin-top: 0; }
+
+    /* ---- OUTCOMES ---- */
+    .outcomes-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 700px) { .outcomes-grid { grid-template-columns: 1fr; } }
+    .outcome-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 20px 22px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .outcome-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+    .outcome-item h3 { font-size: 0.98rem; margin-bottom: 4px; }
+    .outcome-item p { font-size: 0.88rem; margin: 0; }
+
+    /* ---- FOR / NOT FOR ---- */
+    .for-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    @media (max-width: 700px) { .for-grid { grid-template-columns: 1fr; } }
+    .for-col { padding: 28px; border-radius: var(--radius); }
+    .for-col.is-for { background: #f0fdf4; border: 1px solid #bbf7d0; }
+    .for-col.not-for { background: #fff7f7; border: 1px solid #fecaca; }
+    .for-col h3 { font-size: 1rem; margin-bottom: 16px; }
+    .for-col.is-for h3 { color: #15803d; }
+    .for-col.not-for h3 { color: #dc2626; }
+    .for-list { list-style: none; margin: 0; padding: 0; }
+    .for-list li {
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      font-size: 0.93rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .for-list li:last-child { border-bottom: none; }
+    .for-list li .check { flex-shrink: 0; font-weight: 700; margin-top: 1px; }
+    .is-for .check { color: #16a34a; }
+    .not-for .check { color: #dc2626; }
 
     /* ---- VALUES ---- */
     .values-grid {
@@ -316,9 +388,9 @@
       <li><a href="/#work">Work</a></li>
       <li><a href="/about" style="color:var(--text);">About</a></li>
       <li><a href="/blog/">Blog</a></li>
-      <li><a href="/contact" class="btn btn-primary btn-sm">Get in touch →</a></li>
+      <li><a href="/#check" class="btn btn-primary btn-sm">Free Website Check &rarr;</a></li>
     </ul>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">&#9776;</button>
   </nav>
   <div class="mobile-menu" id="mobileMenu">
     <a href="/#services">Services</a>
@@ -327,7 +399,7 @@
     <a href="/#work">Work</a>
     <a href="/about">About</a>
     <a href="/blog/">Blog</a>
-    <a href="/contact" class="btn btn-primary btn-sm" style="color:#fff;">Get in touch →</a>
+    <a href="/#check" class="btn btn-primary btn-sm" style="color:#fff;">Free Website Check &rarr;</a>
   </div>
 </header>
 
@@ -341,13 +413,14 @@
       <div class="about-hero-text">
         <span class="badge badge-dark">About</span>
         <h1>Mark Hurson</h1>
-        <p class="role">Founder, Overhauled.ai · Guelph, Ontario</p>
-        <p>I built a private performance ad network to 2 billion monthly impressions. I own a pizza vending machine franchise at the University of Guelph. I've been investing in domain names since 2001. I've run a men's shaving brand, worked in ad sales, and studied marketing at Humber College in the late '90s.</p>
-        <p>I built Overhauled.ai because running real businesses taught me exactly what breaks, and most web designers have never had to deal with any of it.</p>
+        <p class="role">Founder, Overhauled.ai &middot; Guelph, Ontario</p>
+        <p>Most web designers have never run a real business. They've never chased a lead, stressed about a slow week, or watched a competitor rank above them on Google. I have, for 25 years across multiple businesses.</p>
+        <p>I built a private ad network to 2 billion monthly impressions. I own a PizzaForno franchise at the University of Guelph. I've been buying and selling domain names since 2001. I know exactly what a broken website costs a business, because I've paid that cost myself.</p>
+        <p>I built Overhauled.ai to fix it for small businesses who don't have time to figure it out alone.</p>
         <div class="hero-contact-links">
-          <a href="tel:+15199425698">📞 (519) 942-5698</a>
-          <a href="mailto:hello@overhauled.ai">✉️ hello@overhauled.ai</a>
-          <a href="https://www.linkedin.com/in/markhurson/" target="_blank" rel="noopener">🔗 LinkedIn</a>
+          <a href="tel:+15199425698">&#128222; (519) 942-5698</a>
+          <a href="mailto:hello@overhauled.ai">&#9993;&#65039; hello@overhauled.ai</a>
+          <a href="https://www.linkedin.com/in/markhurson/" target="_blank" rel="noopener">&#128279; LinkedIn</a>
         </div>
       </div>
     </div>
@@ -359,12 +432,12 @@
   <div class="container">
     <div class="stats-grid">
       <div>
-        <div class="stat-num">9+</div>
-        <div class="stat-label">Years running the ad network</div>
+        <div class="stat-num">30+</div>
+        <div class="stat-label">Small businesses helped</div>
       </div>
       <div>
         <div class="stat-num">2B+</div>
-        <div class="stat-label">Monthly impressions across the network</div>
+        <div class="stat-label">Monthly ad impressions built</div>
       </div>
       <div>
         <div class="stat-num">25yr</div>
@@ -372,7 +445,7 @@
       </div>
       <div>
         <div class="stat-num">48hr</div>
-        <div class="stat-label">Average website fix turnaround</div>
+        <div class="stat-label">Average build and fix turnaround</div>
       </div>
     </div>
   </div>
@@ -383,73 +456,182 @@
   <div class="container">
     <p style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-soft);margin-bottom:14px;">Businesses I've built &amp; run</p>
     <div class="ventures">
-      <span class="venture-pill">🌐 Private Performance Ad Network <span class="vp-year">2016, present</span></span>
-      <span class="venture-pill">🍕 PizzaForno Guelph, Franchise Owner <span class="vp-year">2022, present</span></span>
-      <span class="venture-pill">🌍 Domain Portfolio Investor <span class="vp-year">2001, present</span></span>
-      <span class="venture-pill">🪒 Goodshave.com, E-commerce Brand <span class="vp-year">2015, 2016</span></span>
-      <span class="venture-pill">📡 Greenpoint Ads, Biz Dev <span class="vp-year">2012, 2015</span></span>
-      <span class="venture-pill">🎓 Humber College, Marketing &amp; Advertising <span class="vp-year">1996, 1998</span></span>
+      <span class="venture-pill">&#127760; Private Performance Ad Network <span class="vp-year">2016, present</span></span>
+      <span class="venture-pill">&#127829; PizzaForno Guelph, Franchise Owner <span class="vp-year">2022, present</span></span>
+      <span class="venture-pill">&#127757; Domain Portfolio Investor <span class="vp-year">2001, present</span></span>
+      <span class="venture-pill">&#129394; Goodshave.com, E-commerce Brand <span class="vp-year">2015, 2016</span></span>
+      <span class="venture-pill">&#128225; Greenpoint Ads, Biz Dev <span class="vp-year">2012, 2015</span></span>
+      <span class="venture-pill">&#127891; Humber College, Marketing &amp; Advertising <span class="vp-year">1996, 1998</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- =============== WHY DIFFERENT =============== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header" style="text-align:center;max-width:640px;margin:0 auto 40px;">
+      <span class="badge">Why I'm different</span>
+      <h2>Not a web designer. An operator who builds websites.</h2>
+      <p style="font-size:1.05rem;">There's a big difference between someone who makes websites look nice and someone who understands what a website is supposed to do for a business.</p>
+    </div>
+    <div class="diff-grid">
+      <div class="diff-card">
+        <h3>I've been the client</h3>
+        <p>I've had broken contact forms cost me real jobs. I've watched leads go cold because nobody followed up. I've had a site that ranked for nothing. I'm not guessing what that feels like, I lived it across multiple businesses.</p>
+      </div>
+      <div class="diff-card">
+        <h3>I build for outcomes, not aesthetics</h3>
+        <p>My goal isn't a pretty screenshot to put in a portfolio. It's that you get more leads, more booked jobs, and fewer headaches. The two things aren't always the same.</p>
+      </div>
+      <div class="diff-card">
+        <h3>You get me, not a hand-off</h3>
+        <p>No account managers, no junior contractors, no support tickets. You call or email me directly. I built it and I'm the one who answers. That's not common in this industry.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- =============== STORY =============== -->
-<section class="section">
+<section class="section section-soft">
   <div class="container">
     <div class="story-grid">
       <div>
         <span class="badge">The story</span>
         <h2>Why I started this.</h2>
+        <p style="font-size:1rem;color:var(--text-muted);">The short version: 25 years of building real businesses taught me exactly what breaks, and most web designers have never had to deal with any of it.</p>
       </div>
       <div class="story-body">
-        <p>I've been building and running businesses since the late '90s, domain investing since 2001, ad sales, e-commerce, a shaving brand I launched on Shopify, and eventually a private performance ad network I built from scratch to 2 billion monthly impressions across 150+ countries.</p>
-        <p>Along the way I also became a PizzaForno franchise owner in Guelph. If you've seen the viral pizza vending machine at the University of Guelph, that's mine. The doorbell stunt was my idea.</p>
-        <p>Running all of those businesses meant dealing with every website and tech problem in the book. Broken forms. Contact pages that sent leads nowhere. Sites that ranked for nothing. Booking systems that didn't exist. I didn't learn how to fix these things in a course, I learned them because I was losing money when they didn't work.</p>
-        <p>On top of that, I've spent thousands of hours learning AI, not to talk about it, but to actually use it. I know what it can do for a small business right now, what it can't, and how to build it so it runs in the background and makes your operation smarter without you having to think about it. You shouldn't have to spend years figuring that out yourself.</p>
-        <p>What I'm here to do is simple: fix the tech that's been holding your business back, and automate as much of the repetitive work as we can so you can focus on what actually matters. You tell me what's broken or what's eating your time, I'll handle the rest.</p>
-        <p>Overhauled.ai is a one-person operation. You talk to me, I do the work, and I stand behind it. No junior contractors, no hand-offs, no runaround.</p>
+        <p>I've been building and running businesses since the late '90s. Domain investing since 2001. Ad sales. E-commerce. An ad network I grew from nothing to 2 billion monthly impressions across 150+ countries. A PizzaForno franchise at the University of Guelph (yes, the viral pizza vending machine is mine). Along the way, I dealt with every website and tech problem in the book.</p>
+        <p>Broken forms. Contact pages sending leads to spam. Sites invisible on Google. Booking requests that slipped through the cracks because there was no system. I didn't learn how to fix those things from a course. I learned because I was losing money when they didn't work.</p>
+        <p>Overhauled.ai is a one-person operation. You talk to me, I do the work, I stand behind it. I'm not here to sell you a retainer and hand you off to someone you've never met. I'm here because I know what a functioning website is actually worth to a small business owner, and I want to give you that.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== OUTCOMES =============== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header" style="text-align:center;max-width:600px;margin:0 auto 40px;">
+      <span class="badge">What changes</span>
+      <h2>What working with me actually does for your business.</h2>
+    </div>
+    <div class="outcomes-grid">
+      <div class="outcome-item">
+        <div class="outcome-icon">&#9889;</div>
+        <div>
+          <h3>Leads get a reply in under 2 minutes, any time of day</h3>
+          <p>AI agents reply to new inquiries instantly, in your voice, even at 2am. The lead that came in while you were on a job doesn't go cold.</p>
+        </div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-icon">&#128196;</div>
+        <div>
+          <h3>Quotes that go unanswered get followed up automatically</h3>
+          <p>A follow-up sequence runs in the background and chases warm leads who never replied. You don't have to remember to do it.</p>
+        </div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-icon">&#127919;</div>
+        <div>
+          <h3>Local customers actually find you on Google</h3>
+          <p>Your site is optimized for the searches that matter: people in your area, looking for what you sell, ready to book.</p>
+        </div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-icon">&#11088;</div>
+        <div>
+          <h3>Happy customers leave Google reviews automatically</h3>
+          <p>After a job is done, a review request goes out on its own. More 5-star reviews, less chasing people to ask.</p>
+        </div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-icon">&#128197;</div>
+        <div>
+          <h3>Appointments book themselves</h3>
+          <p>No more phone tag. Booking requests, confirmations, and reminders handled automatically. Zero admin time on your end.</p>
+        </div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-icon">&#128274;</div>
+        <div>
+          <h3>You own everything, forever</h3>
+          <p>Your domain, your files, your content. No monthly platform fees to keep your site alive. No hostage-taking if you ever want to move on.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== WHO THIS IS FOR =============== -->
+<section class="section section-soft">
+  <div class="container">
+    <div class="section-header" style="text-align:center;max-width:580px;margin:0 auto 40px;">
+      <span class="badge">Fit check</span>
+      <h2>Who this is for. And who it isn't.</h2>
+    </div>
+    <div class="for-grid">
+      <div class="for-col is-for">
+        <h3>&#10003; This is a good fit if you...</h3>
+        <ul class="for-list">
+          <li><span class="check">&#10003;</span> Run a local service business and want more booked jobs from your site</li>
+          <li><span class="check">&#10003;</span> Are tired of chasing leads manually or watching quotes go cold</li>
+          <li><span class="check">&#10003;</span> Want a straight answer and a flat price, not a sales process</li>
+          <li><span class="check">&#10003;</span> Need it done fast, not in six months with 12 rounds of revisions</li>
+          <li><span class="check">&#10003;</span> Want to talk to the person actually doing the work</li>
+        </ul>
+      </div>
+      <div class="for-col not-for">
+        <h3>&#10007; This probably isn't the right fit if you...</h3>
+        <ul class="for-list">
+          <li><span class="check">&#10007;</span> Need a large team, multiple stakeholders, or a formal agency process</li>
+          <li><span class="check">&#10007;</span> Want a logo refresh or brand overhaul (that's not what I do)</li>
+          <li><span class="check">&#10007;</span> Are shopping for the cheapest price you can find</li>
+          <li><span class="check">&#10007;</span> Don't actually care if your site generates leads, just want something online</li>
+          <li><span class="check">&#10007;</span> Have a project that needs a team of developers</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
 <!-- =============== VALUES =============== -->
-<section class="section section-soft">
+<section class="section">
   <div class="container">
     <div class="section-header" style="text-align:center;">
       <span class="badge">How I work</span>
-      <h2>What you can count on.</h2>
+      <h2>No surprises. No runaround. No handoffs.</h2>
     </div>
     <div class="values-grid">
       <div class="value-card">
-        <div class="value-icon">🎯</div>
-        <h3>Flat-rate quotes upfront</h3>
+        <div class="value-icon">&#127919;</div>
+        <h3>Flat-rate quotes, upfront</h3>
         <p>You get the price before anything starts. No hourly billing surprises, no scope creep invoices. What I quote is what you pay.</p>
       </div>
       <div class="value-card">
-        <div class="value-icon">⚡</div>
+        <div class="value-icon">&#9889;</div>
         <h3>Fast turnaround</h3>
-        <p>Most fixes are done in 24–48 hours. New websites go live in 2–3 days. If it's urgent, just say so, fast is something I'm built for.</p>
+        <p>Most fixes done in 24 to 48 hours. New websites live in under 2 weeks. If it's urgent, say so. Fast is something I'm built for.</p>
       </div>
       <div class="value-card">
-        <div class="value-icon">🗣️</div>
+        <div class="value-icon">&#128483;&#65039;</div>
         <h3>Plain English, always</h3>
         <p>I won't hide behind jargon. You don't need to know what DNS, SSL, or Core Web Vitals means. I'll tell you what's wrong and how I'm fixing it.</p>
       </div>
       <div class="value-card">
-        <div class="value-icon">📞</div>
+        <div class="value-icon">&#128222;</div>
         <h3>You talk to me directly</h3>
-        <p>No account managers, no support tickets. Call or email me directly. I'm the one who built it and I'm the one who answers.</p>
+        <p>No account managers, no support tickets. Call or email me directly. I built it and I'm the one who answers.</p>
       </div>
       <div class="value-card">
-        <div class="value-icon">🔑</div>
+        <div class="value-icon">&#128273;</div>
         <h3>You own everything</h3>
-        <p>Your domain, your files, your content, 100% yours when we're done. I don't hold anything hostage. If you ever want to move on, you take it all with you.</p>
+        <p>Your domain, your files, your content, 100% yours. I don't hold anything hostage. If you ever want to move on, you take it all with you.</p>
       </div>
       <div class="value-card">
-        <div class="value-icon">🛡️</div>
+        <div class="value-icon">&#128737;&#65039;</div>
         <h3>30-day support included</h3>
-        <p>Every project comes with 30 days of free support after launch. Something breaks or looks off, I fix it, no questions asked.</p>
+        <p>Every project comes with 30 days of free support after launch. Something breaks or looks off, I fix it. No questions asked.</p>
       </div>
     </div>
   </div>
@@ -500,15 +682,15 @@
 <!-- =============== FINAL CTA =============== -->
 <section class="final-cta">
   <div class="container">
-    <span class="badge badge-dark">Free · No commitment · Plain English</span>
-    <h2>Ready to sort out your website?</h2>
-    <p>Tell me what's broken, what you need, or what you're not sure about. I'll give you a straight answer and a flat-rate quote, no runaround.</p>
+    <span class="badge badge-dark">Free &middot; No commitment &middot; Plain English</span>
+    <h2>Find out exactly what your site is costing you.</h2>
+    <p>Request a free website check. I'll look at your site, find where it's losing leads, and send you a plain-English breakdown within 24 hours. No pitch. No invoice. No obligation.</p>
     <div class="cta-buttons">
-      <a href="/contact" class="btn btn-accent btn-lg">Fill out our contact form →</a>
-      <a href="/health-check" class="btn btn-ghost-dark btn-lg">Free website health check</a>
+      <a href="/#check" class="btn btn-accent btn-lg">Find my lead leaks, free &rarr;</a>
+      <a href="/contact" class="btn btn-ghost-dark btn-lg">Send me a message</a>
     </div>
     <p style="margin-top:24px;font-size:0.88rem;color:var(--text-on-dark-muted);">
-      Or reach me directly: <a href="tel:+15199425698" style="color:var(--accent);">(519) 942-5698</a> · <a href="mailto:hello@overhauled.ai" style="color:var(--accent);">hello@overhauled.ai</a>
+      Or reach me directly: <a href="tel:+15199425698" style="color:var(--accent);">(519) 942-5698</a> &middot; <a href="mailto:hello@overhauled.ai" style="color:var(--accent);">hello@overhauled.ai</a> &middot; Based in Guelph, ON
     </p>
   </div>
 </section>
@@ -547,11 +729,11 @@
         <a href="mailto:hello@overhauled.ai">hello@overhauled.ai</a>
         <a href="https://www.linkedin.com/in/markhurson/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://www.google.com/search?q=Overhauled.ai+Guelph+reviews" target="_blank" rel="noopener">Google Reviews</a>
-        <a href="/contact">Get in touch →</a>
+        <a href="/contact">Get in touch &rarr;</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Overhauled.ai · Guelph, ON</span>
+      <span>&copy; 2026 Overhauled.ai &middot; Guelph, ON</span>
       <div style="display:flex;gap:18px;">
         <a href="/privacy/">Privacy</a>
         <a href="/terms/">Terms</a>
