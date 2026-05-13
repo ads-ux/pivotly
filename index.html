@@ -188,6 +188,7 @@
 
   /* ---------- PACKAGES (3-column) ---------- */
   .packages-grid {
+    padding-top: 18px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -209,8 +210,8 @@
   .pkg-card.featured {
     background: linear-gradient(160deg, #0b1120, #162032);
     border-color: rgba(132,204,22,0.4);
+    overflow: visible;
     border-width: 2px;
-    overflow: hidden;
   }
   .pkg-card.featured::before {
     content: "";
