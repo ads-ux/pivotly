@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy | Overhauled.ai</title>
-  <meta name="description" content="Privacy Policy for Overhauled.ai, how we collect, use, and protect your information." />
+  <meta name="description" content="Privacy policy for Overhauled.ai. How we collect, use, and protect your information." />
   <meta name="robots" content="noindex" />
   <link rel="canonical" href="https://overhauled.ai/privacy/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" href="/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="icon" href="/favicon.ico" />
-  <!-- Google Analytics GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7H4493NWB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -22,30 +22,14 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #ffffff;
-      --bg-soft: #f8fafc;
-      --bg-dark: #0b1120;
-      --border: #e2e8f0;
-      --text: #0f172a;
-      --text-muted: #475569;
-      --text-soft: #64748b;
-      --accent: #84cc16;
-      --accent-dark: #65a30d;
-      --accent-soft: #ecfccb;
-      --radius: 14px;
-      --nav-h: 64px;
-      --container: 1100px;
+      --bg: #ffffff; --bg-soft: #f8fafc; --bg-dark: #0b1120;
+      --border: #e2e8f0; --text: #0f172a; --text-muted: #475569; --text-soft: #64748b;
+      --accent: #84cc16; --accent-dark: #65a30d; --accent-soft: #ecfccb;
+      --nav-h: 64px; --container: 1100px;
     }
     body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; }
     a { color: inherit; text-decoration: none; }
-
-    /* ---- NAV ---- */
-    .nav-wrapper {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
+    .nav-wrapper { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
     .nav { display: flex; align-items: center; justify-content: space-between; max-width: var(--container); margin: 0 auto; padding: 0 2rem; height: var(--nav-h); }
     .logo { display: flex; align-items: center; gap: 8px; font-size: 1.15rem; font-weight: 800; color: var(--text); }
     .logo-icon { width: 28px; height: 28px; background: var(--text); border-radius: 7px; display: flex; align-items: center; justify-content: center; }
@@ -55,70 +39,31 @@
     .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--text-muted); transition: color 0.15s; }
     .nav-links a:hover { color: var(--text); }
     .btn-nav { background: var(--text); color: #fff !important; font-weight: 700 !important; font-size: 0.875rem !important; padding: 0.5rem 1.2rem; border-radius: 8px; transition: background 0.15s !important; }
-    .btn-nav:hover { background: #1e293b !important; color: #fff !important; }
+    .btn-nav:hover { background: #1e293b !important; }
     .hamburger { display: none; background: none; border: none; font-size: 1.4rem; cursor: pointer; color: var(--text); }
     .mobile-menu { display: none; flex-direction: column; gap: 0; border-top: 1px solid var(--border); background: #fff; }
     .mobile-menu a { padding: 1rem 2rem; font-size: 0.95rem; font-weight: 500; color: var(--text-muted); border-bottom: 1px solid var(--border); }
     .mobile-menu a:hover { background: var(--bg-soft); color: var(--text); }
     .mobile-menu.open { display: flex; }
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .hamburger { display: block; }
-    }
-
-    /* ---- PAGE ---- */
-    .legal-hero {
-      background: var(--bg-soft);
-      border-bottom: 1px solid var(--border);
-      padding: 56px 2rem 48px;
-    }
+    @media (max-width: 768px) { .nav-links { display: none; } .hamburger { display: block; } }
+    .legal-hero { background: var(--bg-soft); border-bottom: 1px solid var(--border); padding: 56px 2rem 48px; }
     .legal-hero-inner { max-width: 760px; margin: 0 auto; }
-    .badge {
-      display: inline-block; background: var(--accent-soft); color: var(--accent-dark);
-      font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.75rem;
-      border-radius: 6px; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem;
-    }
+    .badge { display: inline-block; background: var(--accent-soft); color: var(--accent-dark); font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 6px; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; }
     .legal-hero h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 800; color: var(--text); margin-bottom: 0.5rem; }
     .legal-hero p { font-size: 1rem; color: var(--text-muted); }
-
     .legal-body { padding: 64px 2rem 96px; }
     .legal-content { max-width: 760px; margin: 0 auto; }
-
-    .updated-tag {
-      display: inline-block;
-      background: var(--bg-soft);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--accent);
-      border-radius: 6px;
-      padding: 8px 14px;
-      font-size: 0.82rem;
-      color: var(--text-soft);
-      margin-bottom: 48px;
-    }
+    .updated-tag { display: inline-block; background: var(--bg-soft); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 6px; padding: 8px 14px; font-size: 0.82rem; color: var(--text-soft); margin-bottom: 48px; }
     .updated-tag strong { color: var(--text); }
-
-    .legal-content h2 {
-      font-size: 1.05rem; font-weight: 700; color: var(--text);
-      margin: 40px 0 10px; padding-top: 8px;
-      border-top: 1px solid var(--border);
-    }
+    .legal-content h2 { font-size: 1.05rem; font-weight: 700; color: var(--text); margin: 40px 0 10px; padding-top: 8px; border-top: 1px solid var(--border); }
     .legal-content h2:first-of-type { border-top: none; margin-top: 0; }
     .legal-content p { font-size: 0.94rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 12px; }
     .legal-content ul { margin: 6px 0 16px 0; padding-left: 0; display: flex; flex-direction: column; gap: 6px; }
     .legal-content li { font-size: 0.93rem; color: var(--text-muted); padding-left: 18px; position: relative; line-height: 1.65; }
     .legal-content li::before { content: "–"; position: absolute; left: 0; color: var(--accent-dark); font-weight: 700; }
     .legal-content a { color: var(--accent-dark); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
-
-    /* ---- FOOTER ---- */
-    .site-footer {
-      background: var(--bg-dark); color: #94a3b8;
-      padding: 56px 2rem 32px;
-    }
-    .footer-grid {
-      max-width: var(--container); margin: 0 auto;
-      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 40px; margin-bottom: 48px;
-    }
+    .site-footer { background: var(--bg-dark); color: #94a3b8; padding: 56px 2rem 32px; }
+    .footer-grid { max-width: var(--container); margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 48px; }
     .footer-logo { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
     .footer-logo-icon { width: 26px; height: 26px; background: var(--accent); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
     .footer-logo-icon svg { width: 14px; height: 14px; fill: #0b1120; }
@@ -131,17 +76,12 @@
     .footer-bottom { max-width: var(--container); margin: 0 auto; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 0.82rem; color: #475569; }
     .footer-bottom a { color: #64748b; }
     .footer-bottom a:hover { color: #94a3b8; }
-    @media (max-width: 768px) {
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 480px) {
-      .footer-grid { grid-template-columns: 1fr; }
-    }
+    @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
 <header class="nav-wrapper">
   <nav class="nav" aria-label="Main navigation">
     <a href="/" class="logo">
@@ -155,7 +95,7 @@
       <li><a href="/#pricing">Pricing</a></li>
       <li><a href="/blog/">Blog</a></li>
       <li><a href="/#faq">FAQ</a></li>
-      <li><a href="/contact" class="btn-nav">Get in touch →</a></li>
+      <li><a href="/contact" class="btn-nav">Get in touch &rarr;</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
   </nav>
@@ -164,11 +104,10 @@
     <a href="/#pricing">Pricing</a>
     <a href="/blog/">Blog</a>
     <a href="/#faq">FAQ</a>
-    <a href="/contact">Get in touch →</a>
+    <a href="/contact">Get in touch &rarr;</a>
   </nav>
 </header>
 
-<!-- HERO -->
 <section class="legal-hero">
   <div class="legal-hero-inner">
     <span class="badge">Legal</span>
@@ -177,19 +116,18 @@
   </div>
 </section>
 
-<!-- BODY -->
 <section class="legal-body">
   <div class="legal-content">
 
-    <div class="updated-tag"><strong>Last updated:</strong> May 2026</div>
+    <div class="updated-tag"><strong>Last updated:</strong> April 2026</div>
 
     <h2>Who We Are</h2>
-    <p>Overhauled.ai is a web services business operated by Mark Hurson, based in Guelph, Ontario, Canada. We build and fix websites and AI systems for small businesses worldwide. You can reach us at <a href="mailto:hello@overhauled.ai">hello@overhauled.ai</a> or by phone at <a href="tel:+15199425698">(519) 942-5698</a>.</p>
+    <p>Overhauled.ai is a web services business operated by Mark Hurson, based in Guelph, Ontario, Canada. We build and fix websites for small businesses. You can reach us at <a href="mailto:hello@overhauled.ai">hello@overhauled.ai</a>.</p>
 
     <h2>What Information We Collect</h2>
     <p>We only collect information you give us directly. This happens when you:</p>
     <ul>
-      <li>Fill out the contact form on our website</li>
+      <li>Fill out the quote request form on our website</li>
       <li>Send us an email</li>
       <li>Contact us by phone</li>
     </ul>
@@ -199,18 +137,19 @@
     <h2>How We Use Your Information</h2>
     <p>We use your information solely to:</p>
     <ul>
-      <li>Respond to your inquiry</li>
+      <li>Respond to your quote request or inquiry</li>
       <li>Communicate with you about your project</li>
       <li>Send you a project proposal or invoice if you become a client</li>
     </ul>
     <p>We do not sell, rent, or share your personal information with third parties for marketing purposes. Ever.</p>
 
     <h2>How We Store Your Information</h2>
-    <p>Contact form submissions are processed via Netlify Forms and delivered to our email inbox. We may store your contact details in a simple spreadsheet or email folder to track project conversations. Email correspondence is stored in our Google Workspace account, which is subject to Google's privacy and security policies.</p>
+    <p>Quote form submissions are received via Netlify Forms and stored securely. We may keep your contact details in our email inbox or a simple project tracker to manage conversations. We do not use a CRM or marketing automation platform to store your data.</p>
+    <p>Email correspondence is stored in our Google Workspace account, which is subject to Google's privacy and security policies.</p>
 
-    <h2>Cookies &amp; Tracking</h2>
-    <p>Our website uses Google Analytics, which sets cookies to track anonymous visitor behaviour. These cookies do not identify you personally. You can disable cookies in your browser settings at any time, or use the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</p>
-    <p>We also use the Meta Pixel (Facebook Pixel) to measure the performance of any advertising we run on Meta platforms. The Meta Pixel may set cookies and collect information about your visit, including pages viewed and actions taken. It does not collect your name or contact details unless you've interacted with a Meta ad. You can opt out of Meta's data collection via <a href="https://www.facebook.com/ads/preferences" target="_blank" rel="noopener">Meta's ad preferences</a> or through your browser's cookie settings.</p>
+    <h2>Cookies</h2>
+    <p>Our website uses Google Analytics, which sets cookies to track anonymous visitor behaviour. These cookies do not identify you personally. You can disable cookies in your browser settings at any time, or use a browser extension to opt out of Google Analytics tracking.</p>
+    <p>We do not use any advertising cookies or third-party tracking pixels beyond Google Analytics.</p>
 
     <h2>Your Rights (PIPEDA &amp; Canadian Privacy Law)</h2>
     <p>As a Canadian business, we operate under Canada's Personal Information Protection and Electronic Documents Act (PIPEDA). You have the right to:</p>
@@ -226,7 +165,7 @@
     <p>We keep your information for as long as needed to complete your project and for a reasonable period afterward (typically up to two years) in case you need to refer back to past work. If you'd like your information removed sooner, just ask.</p>
 
     <h2>Third-Party Services</h2>
-    <p>Our website is hosted on Netlify. Form submissions are processed by Netlify Forms. Analytics are provided by Google Analytics. We also use the Meta Pixel for advertising measurement. Each of these services has its own privacy policy governing how they handle data on our behalf.</p>
+    <p>Our website is hosted on Netlify. Form submissions are processed by Netlify Forms. Analytics are provided by Google Analytics. Each of these services has its own privacy policy governing how they handle data on our behalf.</p>
 
     <h2>Children's Privacy</h2>
     <p>Our services are intended for business owners and adults. We do not knowingly collect information from anyone under the age of 18.</p>
@@ -235,7 +174,7 @@
     <p>We may update this policy from time to time. The "Last updated" date at the top of this page reflects the most recent revision.</p>
 
     <h2>Contact Us</h2>
-    <p>Questions about this privacy policy or how we handle your data? Reach out anytime:</p>
+    <p>Questions about this privacy policy or how we handle your data?</p>
     <ul>
       <li>Email: <a href="mailto:hello@overhauled.ai">hello@overhauled.ai</a></li>
       <li>Phone: <a href="tel:+15199425698">(519) 942-5698</a></li>
@@ -245,7 +184,6 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-grid">
     <div>
@@ -269,11 +207,11 @@
       <a href="tel:+15199425698">(519) 942-5698</a>
       <a href="mailto:hello@overhauled.ai">hello@overhauled.ai</a>
       <a href="https://www.linkedin.com/in/markhurson/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="/contact">Get in touch →</a>
+      <a href="/contact">Get in touch &rarr;</a>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 Overhauled.ai · Guelph, ON</span>
+    <span>&copy; 2026 Overhauled.ai &middot; Guelph, ON</span>
     <div style="display:flex;gap:1.5rem;">
       <a href="/privacy/">Privacy</a>
       <a href="/terms/">Terms</a>
