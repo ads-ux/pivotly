@@ -1017,14 +1017,13 @@
         </div>
         <div>
           <div style="font-size:0.82rem;color:rgba(255,255,255,0.45);margin-bottom:16px;">✅ Checked 30+ sites this month. Average leaks found: 4. Most common: contact form going to spam.</div>
-          <form class="lead-form reveal" id="leadForm" name="websiteCheck" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleLeadForm(event)">
-            <input type="hidden" name="form-name" value="websiteCheck" />
+          <form class="lead-form reveal" id="leadForm" onsubmit="handleLeadForm(event)">
             <p style="display:none;"><label>Don't fill this in: <input name="bot-field" /></label></p>
             <label for="lf-url">Your website URL</label>
             <input type="url" id="lf-url" name="website" placeholder="yourbusiness.com" required />
             <label for="lf-email">Your email</label>
             <input type="email" id="lf-email" name="email" placeholder="you@yourbusiness.com" required />
-            <button type="submit" class="btn btn-accent btn-lg">Show me what I'm losing →</button>
+            <button type="submit" id="leadFormBtn" class="btn btn-accent btn-lg">Show me what I'm losing →</button>
             <p class="lead-form-note">No spam. No sales call. Report back within 24 hours.</p>
           </form>
           <div id="leadFormSuccess" style="display:none;background:rgba(132,204,22,0.1);border:1px solid var(--accent);border-radius:14px;padding:28px;text-align:center;color:#fff;">
@@ -1180,12 +1179,19 @@
 </div>
 
 <script>
-  // Lead form, Netlify submission with success state
+  // Lead form — posts to audit function, shows loading state while running
   function handleLeadForm(e) {
     e.preventDefault();
     const form = e.target;
+    const btn = document.getElementById('leadFormBtn');
     const data = new FormData(form);
-    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(data).toString() })
+    btn.textContent = 'Checking your site…';
+    btn.disabled = true;
+    fetch('/.netlify/functions/audit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(data).toString()
+    })
       .then(() => { document.getElementById('leadFormSuccess').style.display = 'block'; form.style.display = 'none'; })
       .catch(() => { document.getElementById('leadFormSuccess').style.display = 'block'; form.style.display = 'none'; });
   }
