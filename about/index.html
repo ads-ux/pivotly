@@ -148,26 +148,29 @@
       .hamburger { display: block; }
     }
 
-    /* ---- HERO ---- */
-    .about-hero {
-      padding: 80px 0 60px;
+    /* ---- PAGE HEADER ---- */
+    .page-header {
+      text-align: center;
+      padding: 64px 24px 48px;
       background:
         radial-gradient(ellipse at top right, rgba(132,204,22,0.12), transparent 60%),
         radial-gradient(ellipse at bottom left, rgba(251,146,60,0.08), transparent 55%),
         #fff;
       overflow: hidden;
     }
-    .about-hero-grid {
+    .page-header h1 { color: var(--text); margin-bottom: 10px; }
+    .page-header .lede { font-size: 1.1rem; color: var(--text-muted); max-width: 540px; margin: 0 auto; }
+
+    /* ---- INTRO SECTION ---- */
+    .intro-grid {
       display: grid;
       grid-template-columns: 1fr 1.6fr;
       gap: 60px;
       align-items: center;
+      padding: 64px 0;
     }
     @media (max-width: 800px) {
-      .about-hero-grid { grid-template-columns: 1fr; gap: 36px; }
-    }
-    .about-photo-wrap {
-      position: relative;
+      .intro-grid { grid-template-columns: 1fr; gap: 36px; padding: 48px 0; }
     }
     .about-photo-wrap img {
       width: 100%;
@@ -180,10 +183,9 @@
     @media (max-width: 800px) {
       .about-photo-wrap img { max-width: 260px; margin: 0 auto; aspect-ratio: 1/1; object-position: top; }
     }
-    .about-hero-text h1 { color: var(--text); margin-bottom: 6px; }
-    .about-hero-text .role { font-size: 1.1rem; color: var(--accent-dark); font-weight: 700; margin-bottom: 20px; }
-    .about-hero-text p { color: var(--text-muted); font-size: 1.05rem; line-height: 1.75; }
-    .about-hero-text p:last-of-type { margin-bottom: 32px; }
+    .intro-text .role { font-size: 1rem; color: var(--accent-dark); font-weight: 700; margin-bottom: 20px; }
+    .intro-text p { color: var(--text-muted); font-size: 1.05rem; line-height: 1.75; }
+    .intro-text p:last-of-type { margin-bottom: 32px; }
     .hero-contact-links { display: flex; gap: 12px; flex-wrap: wrap; }
     .hero-contact-links a {
       display: inline-flex; align-items: center; gap: 6px;
@@ -406,16 +408,21 @@
   </div>
 </header>
 
-<!-- =============== HERO =============== -->
-<section class="about-hero">
+<!-- =============== PAGE HEADER =============== -->
+<section class="page-header">
+  <span class="badge">About</span>
+  <h1>Mark Hurson</h1>
+  <p class="lede">Most web designers have never run a real business. I have — for 25 years across multiple businesses.</p>
+</section>
+
+<!-- =============== INTRO =============== -->
+<div style="border-bottom: 1px solid var(--border);">
   <div class="container">
-    <div class="about-hero-grid">
+    <div class="intro-grid">
       <div class="about-photo-wrap">
         <img src="/markprofilenew.jpg" alt="Mark Hurson, founder of Overhauled.ai" loading="eager" />
       </div>
-      <div class="about-hero-text">
-        <span class="badge">About</span>
-        <h1>Mark Hurson</h1>
+      <div class="intro-text">
         <p class="role">Founder, Overhauled.ai &middot; Guelph, Ontario</p>
         <p>Most web designers have never run a real business. They've never chased a lead, stressed about a slow week, or watched a competitor rank above them on Google. I have, for 25 years across multiple businesses.</p>
         <p>I built a private ad network to 2 billion monthly impressions. I own a PizzaForno franchise at the University of Guelph. I've been buying and selling domain names since 2001. I know exactly what a broken website costs a business, because I've paid that cost myself.</p>
@@ -428,7 +435,7 @@
       </div>
     </div>
   </div>
-</section>
+</div>
 
 <!-- =============== STATS BAR =============== -->
 <div class="stats-bar">
