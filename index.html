@@ -968,21 +968,23 @@
           </ul>
           <p style="font-size:0.88rem;color:rgba(255,255,255,0.4);">This is the first step of The Lead Leak Audit, for free. If you want the full fix, the $297 is ready when you are.</p>
         </div>
-        <div style="font-size:0.82rem;color:rgba(255,255,255,0.45);margin-bottom:16px;">✅ Checked 30+ sites this month. Average leaks found: 4. Most common: contact form going to spam.</div>
-        <form class="lead-form reveal" id="leadForm" name="websiteCheck" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleLeadForm(event)">
-          <input type="hidden" name="form-name" value="websiteCheck" />
-          <p style="display:none;"><label>Don't fill this in: <input name="bot-field" /></label></p>
-          <label for="lf-url">Your website URL</label>
-          <input type="url" id="lf-url" placeholder="yourbusiness.com" required />
-          <label for="lf-email">Your email</label>
-          <input type="email" id="lf-email" placeholder="you@yourbusiness.com" required />
-          <button type="submit" class="btn btn-accent btn-lg">Show me what I'm losing →</button>
-          <p class="lead-form-note">No spam. No sales call. Report back within 24 hours.</p>
-        </form>
-        <div id="leadFormSuccess" style="display:none;background:rgba(132,204,22,0.1);border:1px solid var(--accent);border-radius:14px;padding:28px;text-align:center;color:#fff;">
-          <div style="font-size:2rem;margin-bottom:8px;">✅</div>
-          <strong style="font-size:1.1rem;display:block;margin-bottom:6px;">Got it, check your inbox.</strong>
-          <span style="color:var(--text-on-dark-muted);font-size:0.92rem;">Your report's on the way. Most arrive within 4 hours.</span>
+        <div>
+          <div style="font-size:0.82rem;color:rgba(255,255,255,0.45);margin-bottom:16px;">✅ Checked 30+ sites this month. Average leaks found: 4. Most common: contact form going to spam.</div>
+          <form class="lead-form reveal" id="leadForm" name="websiteCheck" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleLeadForm(event)">
+            <input type="hidden" name="form-name" value="websiteCheck" />
+            <p style="display:none;"><label>Don't fill this in: <input name="bot-field" /></label></p>
+            <label for="lf-url">Your website URL</label>
+            <input type="url" id="lf-url" placeholder="yourbusiness.com" required />
+            <label for="lf-email">Your email</label>
+            <input type="email" id="lf-email" placeholder="you@yourbusiness.com" required />
+            <button type="submit" class="btn btn-accent btn-lg">Show me what I'm losing →</button>
+            <p class="lead-form-note">No spam. No sales call. Report back within 24 hours.</p>
+          </form>
+          <div id="leadFormSuccess" style="display:none;background:rgba(132,204,22,0.1);border:1px solid var(--accent);border-radius:14px;padding:28px;text-align:center;color:#fff;">
+            <div style="font-size:2rem;margin-bottom:8px;">✅</div>
+            <strong style="font-size:1.1rem;display:block;margin-bottom:6px;">Got it, check your inbox.</strong>
+            <span style="color:var(--text-on-dark-muted);font-size:0.92rem;">Your report's on the way. Most arrive within 4 hours.</span>
+          </div>
         </div>
       </div>
     </div>
