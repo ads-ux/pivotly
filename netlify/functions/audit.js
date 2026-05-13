@@ -622,6 +622,60 @@ async function sendEmail(apiKey, to, subject, html, from = 'Mark @ Overhauled.ai
   return result;
 }
 
+// ─── HubSpot Forms API ───────────────────────────────────────────────────────
+// Submits each free-report lead to HubSpot via the public Forms API.
+// No API key required — the form endpoint is unauthenticated.
+// Form: "Overhauled.ai - Free Report Request"
+// Portal ID: 243026444  |  Form GUID: a4ba9cbf-c543-4e81-be3f-ebe3cd1abd69
+
+const HUBSPOT_PORTAL_ID = '243026444';
+const HUBSPOT_FORM_GUID = 'a4ba9cbf-c543-4e81-be3f-ebe3cd1abd69';
+
+async function addToHubSpot(email, website, name) {
+  try {
+    const firstName = (name && name !== 'there') ? name.split(' ')[0] : '';
+    const lastName  = (name && name !== 'there' && name.split(' ').length > 1) ? name.split(' ').slice(1).join(' ') : '';
+
+    const fields = [
+      { objectTypeId: '0-1', name: 'email',   value: email },
+      { objectTypeId: '0-1', name: 'website', value: website.startsWith('http') ? website : `https://${website}` },
+    ];
+    if (firstName) fields.push({ objectTypeId: '0-1', name: 'firstname', value: firstName });
+    if (lastName)  fields.push({ objectTypeId: '0-1', name: 'lastname',  value: lastName  });
+
+    const payload = JSON.stringify({
+      fields,
+      context: { pageUri: 'https://overhauled.ai', pageName: 'Overhauled.ai Free Report' },
+    });
+
+    await new Promise((resolve, reject) => {
+      const req = https.request({
+        hostname: 'api.hsforms.com',
+        port: 443,
+        path: `/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_GUID}`,
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Content-Length': Buffer.byteLength(payload),
+        },
+      }, (res) => {
+        let d = '';
+        res.on('data', c => (d += c));
+        res.on('end', () => {
+          console.log(`[hubspot] Form submit ${res.statusCode} — ${email}`);
+          resolve({ status: res.statusCode, body: d });
+        });
+      });
+      req.on('error', reject);
+      req.write(payload);
+      req.end();
+    });
+  } catch (err) {
+    // Never block the audit report over a HubSpot failure
+    console.error('[hubspot] Error:', err.message);
+  }
+}
+
 // ─── Handler ──────────────────────────────────────────────────────────────────
 
 exports.handler = async function (event) {
@@ -659,7 +713,7 @@ exports.handler = async function (event) {
     return { statusCode: 400, headers, body: JSON.stringify({ error: 'Missing url or email' }) };
   }
 
-  const apiKey = process.env.RESEND_API_KEY;
+  const apiKey   = process.env.RESEND_API_KEY;
 
   console.log(`[audit] Starting: ${rawUrl} | ${email} | ${name}`);
 
@@ -679,7 +733,7 @@ exports.handler = async function (event) {
   const hostname = audit.hostname || rawUrl;
   const reportHtml = buildReportEmail(name, rawUrl, audit);
 
-  // Send both emails; don't fail if one errors
+  // Send emails + add to HubSpot in parallel; never block on any single failure
   await Promise.allSettled([
     sendEmail(apiKey, email, `Your Overhauled.ai Site Report — ${hostname}`, reportHtml),
     sendEmail(
@@ -688,6 +742,7 @@ exports.handler = async function (event) {
       `[New Audit] ${hostname} · ${name} <${email}>`,
       buildNotifyEmail(name, email, phone, rawUrl, audit)
     ),
+    addToHubSpot(email, rawUrl, name),
   ]);
 
   console.log('[audit] Complete');
