@@ -151,8 +151,11 @@
     /* ---- HERO ---- */
     .about-hero {
       padding: 80px 0 60px;
-      background: var(--bg-dark);
-      color: var(--text-on-dark);
+      background:
+        radial-gradient(ellipse at top right, rgba(132,204,22,0.12), transparent 60%),
+        radial-gradient(ellipse at bottom left, rgba(251,146,60,0.08), transparent 55%),
+        #fff;
+      overflow: hidden;
     }
     .about-hero-grid {
       display: grid;
@@ -177,17 +180,17 @@
     @media (max-width: 800px) {
       .about-photo-wrap img { max-width: 260px; margin: 0 auto; aspect-ratio: 1/1; object-position: top; }
     }
-    .about-hero-text h1 { color: #fff; margin-bottom: 6px; }
-    .about-hero-text .role { font-size: 1.1rem; color: var(--accent); font-weight: 700; margin-bottom: 20px; }
-    .about-hero-text p { color: var(--text-on-dark-muted); font-size: 1.05rem; line-height: 1.75; }
+    .about-hero-text h1 { color: var(--text); margin-bottom: 6px; }
+    .about-hero-text .role { font-size: 1.1rem; color: var(--accent-dark); font-weight: 700; margin-bottom: 20px; }
+    .about-hero-text p { color: var(--text-muted); font-size: 1.05rem; line-height: 1.75; }
     .about-hero-text p:last-of-type { margin-bottom: 32px; }
     .hero-contact-links { display: flex; gap: 12px; flex-wrap: wrap; }
     .hero-contact-links a {
       display: inline-flex; align-items: center; gap: 6px;
-      font-size: 0.9rem; font-weight: 600; color: var(--text-on-dark-muted);
+      font-size: 0.9rem; font-weight: 600; color: var(--text-soft);
       transition: color 0.15s;
     }
-    .hero-contact-links a:hover { color: var(--accent); }
+    .hero-contact-links a:hover { color: var(--accent-dark); }
 
     /* ---- STATS BAR ---- */
     .stats-bar {
@@ -411,7 +414,7 @@
         <img src="/markprofilenew.jpg" alt="Mark Hurson, founder of Overhauled.ai" loading="eager" />
       </div>
       <div class="about-hero-text">
-        <span class="badge badge-dark">About</span>
+        <span class="badge">About</span>
         <h1>Mark Hurson</h1>
         <p class="role">Founder, Overhauled.ai &middot; Guelph, Ontario</p>
         <p>Most web designers have never run a real business. They've never chased a lead, stressed about a slow week, or watched a competitor rank above them on Google. I have, for 25 years across multiple businesses.</p>
